@@ -51,9 +51,6 @@ class Controller {
         void DisplayCDSSensorValue(AnalogInputPin cdsSensor)
         {
 
-            int counter = 5;
-            int i = 0;
-
             LCD.Clear();
             LCD.WriteLine(cdsSensor.Value());
         }
