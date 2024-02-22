@@ -96,25 +96,29 @@ class Controller {
 
             FEHIcon::DrawIconArray(menu, 2, 2, 10, 10, 5, 5, menuLabels, RED, WHITE);
 
-            while (true) {
+            while (actionSelected == false) {
 
                 if (LCD.Touch(&x, &y)) {
 
-                    if (menu[0].Pressed(x, y, 1)) {
+                    if (menu[0].Pressed(x, y, 0)) {
 
                         selection = 0;
+                        actionSelected = true;
 
                     } else if (menu[1].Pressed(x, y, 0)) {
 
                         selection = 1;
+                        actionSelected = true;
 
                     } else if (menu[2].Pressed(x, y, 0)) {
 
                         selection = 2;
+                        actionSelected = true;
 
                     } else if (menu[3].Pressed(x, y, 0)) {
 
                         selection = -1;
+                        actionSelected = true;
 
                     }
                     

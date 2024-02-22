@@ -9,17 +9,17 @@ int main(void)
     char menuLabels[4][20] = { "System Chk", "Run", "Calibrate", "Quit" };
 
 
-    DigitalEncoder leftEncoder(FEHIO::P1_7);
-    DigitalEncoder rightEncoder(FEHIO::P1_0);
+    // DigitalEncoder leftEncoder(FEHIO::P1_7);
+    // DigitalEncoder rightEncoder(FEHIO::P1_0);
 
 
-    //IGWAN Motors
-    FEHMotor leftIGWAN(FEHMotor::Motor0, 9.0);
-    FEHMotor rightIGWAN(FEHMotor::Motor1, 9.0);
+    // //IGWAN Motors
+    // FEHMotor leftIGWAN(FEHMotor::Motor0, 9.0);
+    // FEHMotor rightIGWAN(FEHMotor::Motor1, 9.0);
 
-    //Servo Motors
-    FEHServo plateServo(FEHServo::Servo0);
-    FEHServo armServo(FEHServo::Servo1);
+    // //Servo Motors
+    // FEHServo plateServo(FEHServo::Servo0);
+    // FEHServo armServo(FEHServo::Servo1);
 
 
     float xPos;
@@ -28,28 +28,31 @@ int main(void)
     Controller controller;
     Robot robot;
 
-    int selection = -1;
-
-    selection = controller.GUIControl(menuLabels);
+    int selection = -2;
 
     while (selection != -1) {
+
+        selection = controller.GUIControl(menuLabels);
 
         switch (selection) {
 
             case 0:
 
                 //TODO: Call System check
+                robot.SystemCheck();
                 break;
 
             case 1:
 
                 //TODO: Call run function for course
-                robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
+                //robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
+                //robot.RunProgressCheck1();
                 break;
 
             case 2:
 
                 //TODO: Calibrate various motors
+                robot.Calibrate();
                 break;
 
             default:
