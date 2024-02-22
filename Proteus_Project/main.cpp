@@ -1,14 +1,14 @@
-#pragma once
-
 #include "include/controller.hpp"
 #include "include/robot.hpp"
 
 int main(void)
 {
 
+    const float SPEED = 50;
+
     char menuLabels[4][20] = { "System Chk", "Run", "Calibrate", "Quit" };
 
-/*
+
     DigitalEncoder leftEncoder(FEHIO::P1_7);
     DigitalEncoder rightEncoder(FEHIO::P1_0);
 
@@ -20,27 +20,46 @@ int main(void)
     //Servo Motors
     FEHServo plateServo(FEHServo::Servo0);
     FEHServo armServo(FEHServo::Servo1);
-    */
+
 
     float xPos;
     float yPos;
 
     Controller controller;
+    Robot robot;
 
-    controller.GUIControl(menuLabels);
+    int selection = -1;
 
-    float x = 0;
-    float y = 0;
+    selection = controller.GUIControl(menuLabels);
 
-    bool actionSelected = false;
+    while (selection != -1) {
 
-    LCD.Clear();
+        switch (selection) {
 
-    FEHIcon::Icon menu[4];
+            case 0:
 
-    FEHIcon::DrawIconArray(menu, 2, 2, 10, 10, 5, 5, menuLabels, RED, WHITE);
+                //TODO: Call System check
+                break;
 
+            case 1:
 
+                //TODO: Call run function for course
+                robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
+                break;
+
+            case 2:
+
+                //TODO: Calibrate various motors
+                break;
+
+            default:
+
+                //TODO: Quit out of program, tell user that proteus controller has been quit
+                break;
+
+        }
+
+    }
 
     // controller.SetMotor(leftIGWAN, 15);
     // controller.SetMotor(rightIGWAN, -15);

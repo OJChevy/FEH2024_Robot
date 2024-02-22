@@ -53,6 +53,7 @@ class Controller {
 
             LCD.Clear();
             LCD.WriteLine(cdsSensor.Value());
+            
         }
 
         /**
@@ -69,45 +70,59 @@ class Controller {
 
         }
 
-        void GUIControl(char menuLabels[4][20]) {
+        /**
+         * @author Owen Chevalier
+         * 
+         * Displays and controls the custom GUI on the Proteus display
+         * 
+         * @param menuLabels
+         *      array to store labels for each menu icon
+         * 
+         * @returns an integer value from -1 to 2 that will control different functions of the robot 
+         *          based on a switch statement in main
+        */
+        int GUIControl(char menuLabels[4][20]) {
 
-            // float x = 0;
-            // float y = 0;
+            int selection = -1;
 
-            // bool actionSelected = false;
+            float x = 0;
+            float y = 0;
 
-            // LCD.Clear();
+            bool actionSelected = false;
 
-            // FEHIcon::Icon menu[4];
+            LCD.Clear();
 
-            // FEHIcon::DrawIconArray(menu, 2, 2, 10, 10, 5, 5, menuLabels, RED, WHITE);
+            FEHIcon::Icon menu[4];
 
-            // while (true) {
+            FEHIcon::DrawIconArray(menu, 2, 2, 10, 10, 5, 5, menuLabels, RED, WHITE);
 
-            //     if (LCD.Touch(&x, &y)) {
+            while (true) {
 
-            //         if (menu[0].Pressed(x, y, 1)) {
+                if (LCD.Touch(&x, &y)) {
 
-            //             LCD.Clear();
-            //             LCD.WriteLine("succcess 1");
+                    if (menu[0].Pressed(x, y, 1)) {
 
-            //         } else if (menu[1].Pressed(x, y, 0)) {
+                        selection = 0;
 
-            //             LCD.WriteLine("success 2");
+                    } else if (menu[1].Pressed(x, y, 0)) {
 
-            //         } else if (menu[2].Pressed(x, y, 0)) {
+                        selection = 1;
 
-            //             LCD.WriteLine("success 3");
+                    } else if (menu[2].Pressed(x, y, 0)) {
 
-            //         } else if (menu[3].Pressed(x, y, 0)) {
+                        selection = 2;
 
-            //             LCD.WriteLine("success 4");
+                    } else if (menu[3].Pressed(x, y, 0)) {
 
-            //         }
+                        selection = -1;
+
+                    }
                     
-            //     }
+                }
 
-            // }
+            }
+
+            return selection;
 
         }
 
