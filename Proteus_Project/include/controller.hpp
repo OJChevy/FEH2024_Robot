@@ -20,7 +20,7 @@ class Controller {
          * @param percent
          *      percentage to set motor power to
         */
-        void SetMotor(FEHMotor motor, float percent) {
+        void SetMotor(FEHMotor &motor, float percent) {
 
             motor.SetPercent(percent);
 
@@ -34,7 +34,7 @@ class Controller {
          * @param motor
          *      motor to stop
         */
-        void StopMotor(FEHMotor motor) {
+        void StopMotor(FEHMotor &motor) {
 
             motor.Stop();
 
@@ -48,7 +48,7 @@ class Controller {
          * @param cdsSensor
          *      cdsSensor to display value of to Proteus
         */
-        void DisplayCDSSensorValue(AnalogInputPin cdsSensor)
+        void DisplayCDSSensorValue(AnalogInputPin &cdsSensor)
         {
 
             LCD.Clear();
@@ -63,9 +63,51 @@ class Controller {
          * @param servo
          *      servo motor to calibrate
         */
-        void CalibrateServoArm(FEHServo servo) {
+        void CalibrateServoArm(FEHServo &servo) {
 
             servo.TouchCalibrate();
+
+        }
+
+        void GUIControl(char menuLabels[4][20]) {
+
+            // float x = 0;
+            // float y = 0;
+
+            // bool actionSelected = false;
+
+            // LCD.Clear();
+
+            // FEHIcon::Icon menu[4];
+
+            // FEHIcon::DrawIconArray(menu, 2, 2, 10, 10, 5, 5, menuLabels, RED, WHITE);
+
+            // while (true) {
+
+            //     if (LCD.Touch(&x, &y)) {
+
+            //         if (menu[0].Pressed(x, y, 1)) {
+
+            //             LCD.Clear();
+            //             LCD.WriteLine("succcess 1");
+
+            //         } else if (menu[1].Pressed(x, y, 0)) {
+
+            //             LCD.WriteLine("success 2");
+
+            //         } else if (menu[2].Pressed(x, y, 0)) {
+
+            //             LCD.WriteLine("success 3");
+
+            //         } else if (menu[3].Pressed(x, y, 0)) {
+
+            //             LCD.WriteLine("success 4");
+
+            //         }
+                    
+            //     }
+
+            // }
 
         }
 
