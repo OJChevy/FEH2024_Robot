@@ -6,6 +6,8 @@
 #include <FEHLCD.h>
 #include <FEHServo.h>
 
+#define PI 3.14159265358979323846264338327
+
 class Controller {
 
     public:
@@ -67,6 +69,18 @@ class Controller {
         void CalibrateServoArm(FEHServo &servo) {
 
             servo.TouchCalibrate();
+
+        }
+
+        int ShaftEncoderTransition(float distance, float radius) {
+
+            int numTransitionPerRot = 318;
+
+            int numOfTransitions = 0;
+
+            numOfTransitions = (distance * numTransitionPerRot) / (2.0 * PI * radius);
+
+            return numOfTransitions;
 
         }
 

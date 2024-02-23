@@ -2,6 +2,8 @@
 
 #include "controller.hpp"
 
+#define TURNDISTANCE90 5.5875
+
 class Robot {
 
     Controller controller;
@@ -25,25 +27,51 @@ class Robot {
 
         }
 
-        void SystemCheck() {
+        void SystemCheck(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder) {
+
+            float forwardSpeed = 25;
+            float backwardSpeed = -25;
 
             LCD.Clear();
             LCD.SetFontColor(WHITE);
 
             //TODO: GO FORWARD 1 REVOLUTION
             LCD.Write("Go Forward...   ");
-            Sleep(5.0);
+            controller.SetMotor(leftIGWAN, forwardSpeed);
+            controller.SetMotor(rightIGWAN, forwardSpeed);
+
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < 318);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
+
             LCD.SetFontColor(GREEN);
             LCD.Write("_/");
+
+            Sleep(1.0);
 
             LCD.WriteLine("");
 
             //TODO: GO BACKWARD 1 REVOLUTION
             LCD.SetFontColor(WHITE);
             LCD.Write("Go Backward...   ");
-            Sleep(5.0);
+
+            controller.SetMotor(leftIGWAN, backwardSpeed);
+            controller.SetMotor(rightIGWAN, backwardSpeed);
+
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < 318);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
+
             LCD.SetFontColor(GREEN);
             LCD.Write("_/");
+
+            Sleep(1.0);
 
             //TODO: TURN RIGHT 90 DEGREES
 
@@ -64,13 +92,80 @@ class Robot {
 
         }
 
-        void RunProgressCheck1(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN) {
+        void RunProgressCheck1(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder) {
 
-            //Go forward a little
+            float forwardSpeed = 25;
+            float backwardSpeed = -25;
 
-            //Turn right
 
-            //Go forward
+            float radius = 1.25;
+            float firstDistance = 2;
+            float secondDistance = 16;
+
+            int numOfTransitions = 0;
+
+            //Go forward 2 inches
+            controller.SetMotor(leftIGWAN, forwardSpeed);
+            controller.SetMotor(rightIGWAN, forwardSpeed);
+
+            numOfTransitions = controller.ShaftEncoderTransition(firstDistance, radius);
+
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < numOfTransitions);
+
+            //Turn right 45 degrees
+            controller.SetMotor(leftIGWAN, forwardSpeed);
+            controller.SetMotor(rightIGWAN, backwardSpeed);
+
+            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.5, radius);
+
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
+
+            //Turn left 45 degrees
+            controller.SetMotor(leftIGWAN, backwardSpeed);
+            controller.SetMotor(rightIGWAN, forwardSpeed);
+
+            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.5, radius);
+
+            leftEncoder.ResetCounts();
+
+            while (leftEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
+
+            //Turn right 45 degrees
+            controller.SetMotor(leftIGWAN, forwardSpeed);
+            controller.SetMotor(rightIGWAN, backwardSpeed);
+
+            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.5, radius);
+
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
+
+
+            //Go forward 16 inches
+            controller.SetMotor(leftIGWAN, forwardSpeed);
+            controller.SetMotor(rightIGWAN, forwardSpeed);
+
+            numOfTransitions = controller.ShaftEncoderTransition(secondDistance, radius);
+
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
 
             //Turn left (square up with ramp)
 
