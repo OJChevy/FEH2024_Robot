@@ -48,7 +48,7 @@ int main(void)
 
                 //TODO: Call run function for course
                 //robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
-                //Iteration 11
+                //Iteration 12
                 robot.RunProgressCheck1(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder);
                 break;
 

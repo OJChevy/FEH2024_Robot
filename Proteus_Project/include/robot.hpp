@@ -167,10 +167,6 @@ class Robot {
             controller.StopMotor(leftIGWAN);
             controller.StopMotor(rightIGWAN);
 
-            //Turn left (square up with ramp)
-
-            //Go forward
-
             //Turn left
 
             //Turn right (square up with ticket kiosk)
