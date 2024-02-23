@@ -99,7 +99,7 @@ class Robot {
 
 
             float radius = 1.25;
-            float firstDistance = 2;
+            float firstDistance = 1;
             float secondDistance = 16;
 
             int numOfTransitions = 0;
