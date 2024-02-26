@@ -8,6 +8,7 @@ int main(void)
 
     char menuLabels[4][20] = { "System Chk", "Run", "Calibrate", "Quit" };
 
+    AnalogInputPin cdsSensor(FEHIO::P1_0);
 
     DigitalEncoder leftEncoder(FEHIO::P0_7);
     DigitalEncoder rightEncoder(FEHIO::P0_0);
@@ -20,9 +21,6 @@ int main(void)
     // //Servo Motors
     // FEHServo plateServo(FEHServo::Servo0);
     // FEHServo armServo(FEHServo::Servo1);
-
-    //this is a test commit
-
 
     float xPos;
     float yPos;
@@ -42,13 +40,14 @@ int main(void)
 
                 //TODO: Call System check
                 robot.SystemCheck(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder);
+                //controller.DisplayCDSSensorValue(cdsSensor);
                 break;
 
             case 1:
 
                 //TODO: Call run function for course
                 //robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
-                //Iteration 16
+                //Iteration 47
                 robot.RunProgressCheck1(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder);
                 break;
 
