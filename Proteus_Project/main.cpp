@@ -9,13 +9,13 @@ int main(void)
     char menuLabels[4][20] = { "System Chk", "Run", "Calibrate", "Quit" };
 
 
-    DigitalEncoder leftEncoder(FEHIO::P0_0);
-    DigitalEncoder rightEncoder(FEHIO::P0_7);
+    DigitalEncoder leftEncoder(FEHIO::P0_7);
+    DigitalEncoder rightEncoder(FEHIO::P0_0);
 
 
     //IGWAN Motors
-    FEHMotor leftIGWAN(FEHMotor::Motor1, 9.0);
-    FEHMotor rightIGWAN(FEHMotor::Motor0, 9.0);
+    FEHMotor leftIGWAN(FEHMotor::Motor0, 9.0);
+    FEHMotor rightIGWAN(FEHMotor::Motor1, 9.0);
 
     // //Servo Motors
     // FEHServo plateServo(FEHServo::Servo0);
@@ -48,7 +48,7 @@ int main(void)
 
                 //TODO: Call run function for course
                 //robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
-                //Iteration 12
+                //Iteration 13
                 robot.RunProgressCheck1(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder);
                 break;
 

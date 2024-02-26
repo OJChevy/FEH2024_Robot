@@ -144,4 +144,11 @@ class Controller {
 
         }
 
+        void MoveStraight(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, float forwardSpeed) {
+
+            leftIGWAN.SetPercent(forwardSpeed);
+            rightIGWAN.SetPercent(forwardSpeed);
+
+        }
+
 };

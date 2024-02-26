@@ -100,13 +100,12 @@ class Robot {
 
             float radius = 1.25;
             float firstDistance = 1;
-            float secondDistance = 16;
+            float secondDistance = 38;
 
             int numOfTransitions = 0;
 
             //Go forward 2 inches
-            controller.SetMotor(leftIGWAN, forwardSpeed);
-            controller.SetMotor(rightIGWAN, forwardSpeed);
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
 
             numOfTransitions = controller.ShaftEncoderTransition(firstDistance, radius);
 
@@ -154,9 +153,8 @@ class Robot {
             controller.StopMotor(rightIGWAN);
 
 
-            //Go forward 16 inches
-            controller.SetMotor(leftIGWAN, forwardSpeed);
-            controller.SetMotor(rightIGWAN, forwardSpeed);
+            //Go forward 38 inches (up ramp and 10 inches past ramp)
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
 
             numOfTransitions = controller.ShaftEncoderTransition(secondDistance, radius);
 
@@ -167,9 +165,45 @@ class Robot {
             controller.StopMotor(leftIGWAN);
             controller.StopMotor(rightIGWAN);
 
-            //Turn left
 
+            //Turn left 45 degrees
+            controller.SetMotor(leftIGWAN, backwardSpeed);
+            controller.SetMotor(rightIGWAN, forwardSpeed);
+
+            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.5, radius);
+
+            leftEncoder.ResetCounts();
+
+            while (leftEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
+
+            //Go forward 16 inches to touch kiosk
+             controller.SetMotor(leftIGWAN, forwardSpeed);
+            controller.SetMotor(rightIGWAN, forwardSpeed);
+
+            numOfTransitions = controller.ShaftEncoderTransition(14, radius);
+
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
+            
             //Turn right (square up with ticket kiosk)
+            controller.SetMotor(leftIGWAN, forwardSpeed);
+            controller.SetMotor(rightIGWAN, backwardSpeed);
+
+            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.5, radius);
+
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
 
             //Turn left
 
