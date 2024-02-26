@@ -180,7 +180,7 @@ class Robot {
             controller.StopMotor(rightIGWAN);
 
             //Go forward 16 inches to touch kiosk
-             controller.SetMotor(leftIGWAN, forwardSpeed);
+            controller.SetMotor(leftIGWAN, forwardSpeed);
             controller.SetMotor(rightIGWAN, forwardSpeed);
 
             numOfTransitions = controller.ShaftEncoderTransition(14, radius);
@@ -196,7 +196,7 @@ class Robot {
             controller.SetMotor(leftIGWAN, forwardSpeed);
             controller.SetMotor(rightIGWAN, backwardSpeed);
 
-            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.5, radius);
+            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.65, radius);
 
             rightEncoder.ResetCounts();
 
@@ -205,7 +205,39 @@ class Robot {
             controller.StopMotor(leftIGWAN);
             controller.StopMotor(rightIGWAN);
 
-            //Turn left
+            //Drive straight to touch the kiosk
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
+            numOfTransitions = controller.ShaftEncoderTransition(20, radius);
+
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
+
+            //Backup 5 inches 
+            controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed);
+            numOfTransitions = controller.ShaftEncoderTransition(5, radius);
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
+            
+
+            //Turn 90 right
+            controller.SetMotor(leftIGWAN, forwardSpeed);
+            controller.SetMotor(rightIGWAN,backwardSpeed);
+            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90, radius);
+
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
 
         }
 
