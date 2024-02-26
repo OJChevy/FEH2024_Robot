@@ -179,11 +179,11 @@ class Robot {
             controller.StopMotor(leftIGWAN);
             controller.StopMotor(rightIGWAN);
 
-            //Go forward 16 inches to touch kiosk
+            //Go forward 12 inches to touch kiosk
             controller.SetMotor(leftIGWAN, forwardSpeed);
             controller.SetMotor(rightIGWAN, forwardSpeed);
 
-            numOfTransitions = controller.ShaftEncoderTransition(14, radius);
+            numOfTransitions = controller.ShaftEncoderTransition(12, radius);
 
             rightEncoder.ResetCounts();
 
@@ -192,7 +192,7 @@ class Robot {
             controller.StopMotor(leftIGWAN);
             controller.StopMotor(rightIGWAN);
             
-            //Turn right (square up with ticket kiosk)
+            //Turn right (square up with ticket kiosk) **ADJUST THE ANGLE BASED ON THE CASTER WHEELS**
             controller.SetMotor(leftIGWAN, forwardSpeed);
             controller.SetMotor(rightIGWAN, backwardSpeed);
 
@@ -205,9 +205,9 @@ class Robot {
             controller.StopMotor(leftIGWAN);
             controller.StopMotor(rightIGWAN);
 
-            //Drive straight to touch the kiosk
+            //Drive straight 10 inches to touch the kiosk
             controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
-            numOfTransitions = controller.ShaftEncoderTransition(20, radius);
+            numOfTransitions = controller.ShaftEncoderTransition(10, radius);
 
             rightEncoder.ResetCounts();
 
@@ -225,12 +225,11 @@ class Robot {
 
             controller.StopMotor(leftIGWAN);
             controller.StopMotor(rightIGWAN);
-            
 
-            //Turn 90 right
+            //Turn 135 right
             controller.SetMotor(leftIGWAN, forwardSpeed);
             controller.SetMotor(rightIGWAN,backwardSpeed);
-            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90, radius);
+            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90*1.5, radius);
 
             rightEncoder.ResetCounts();
 
@@ -239,6 +238,37 @@ class Robot {
             controller.StopMotor(leftIGWAN);
             controller.StopMotor(rightIGWAN);
 
+            //Drive forward 20 inches
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
+            numOfTransitions = controller.ShaftEncoderTransition(20, radius);
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
+
+            //Turn around 45 degrees right
+            controller.SetMotor(leftIGWAN, forwardSpeed);
+            controller.SetMotor(rightIGWAN,backwardSpeed);
+            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90*0.5, radius);
+
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
+            
+            //Drive forward 30 inches to the end
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
+            numOfTransitions = controller.ShaftEncoderTransition(30, radius);
+            rightEncoder.ResetCounts();
+
+            while (rightEncoder.Counts() < numOfTransitions);
+
+            controller.StopMotor(leftIGWAN);
+            controller.StopMotor(rightIGWAN);
         }
 
 };
