@@ -92,8 +92,10 @@ class Robot {
 
         void RunProgressCheck1(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder) {
 
-            float forwardSpeed = -25; //flipped to make robot go "backwards" (motors in front)
-            float backwardSpeed = 25; //flipped to make robot go "backwards" (motors in front)
+            float forwardSpeed = -40; //flipped to make robot go "backwards" (motors in front)
+            float backwardSpeed = 40; //flipped to make robot go "backwards" (motors in front)
+            float turnSpeedForward = -25;
+            float turnSpeedBackward = 25;
 
             int rightTurn = 0;
             int leftTurn = 1;
@@ -115,7 +117,7 @@ class Robot {
             while (rightEncoder.Counts() < numOfTransitions);
 
             //left 45
-            controller.TurnDirection(leftIGWAN,rightIGWAN,forwardSpeed,backwardSpeed,leftTurn);
+            controller.TurnDirection(leftIGWAN,rightIGWAN,turnSpeedForward,turnSpeedBackward,leftTurn);
 
             numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.5, radius);
 
@@ -139,9 +141,9 @@ class Robot {
             controller.StopMotor(rightIGWAN);
 
             //right 45
-            controller.TurnDirection(leftIGWAN,rightIGWAN,forwardSpeed,backwardSpeed,rightTurn);
+            controller.TurnDirection(leftIGWAN,rightIGWAN,turnSpeedForward,turnSpeedBackward,rightTurn);
 
-            numOfTransitions = controller.ShaftEncoderTransition((TURNDISTANCE90 * 0.5)*1.15, radius);
+            numOfTransitions = controller.ShaftEncoderTransition((TURNDISTANCE90 * 0.5)*1.45, radius);
 
             rightEncoder.ResetCounts();
 
@@ -153,7 +155,7 @@ class Robot {
             //forward 18
             controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
 
-            numOfTransitions = controller.ShaftEncoderTransition(18, radius);
+            numOfTransitions = controller.ShaftEncoderTransition(14, radius);
 
             rightEncoder.ResetCounts();
 
@@ -171,7 +173,7 @@ class Robot {
             controller.StopMotor(leftIGWAN);
             controller.StopMotor(rightIGWAN);
             //right 180
-            controller.TurnDirection(leftIGWAN,rightIGWAN,forwardSpeed,backwardSpeed,rightTurn);
+            controller.TurnDirection(leftIGWAN,rightIGWAN,turnSpeedForward,turnSpeedBackward,rightTurn);
 
             numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 1.3, radius);
 
@@ -185,7 +187,7 @@ class Robot {
             // //forward 15
             controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
 
-            numOfTransitions = controller.ShaftEncoderTransition(16, radius);
+            numOfTransitions = controller.ShaftEncoderTransition(17.5, radius);
 
             rightEncoder.ResetCounts();
 
@@ -195,9 +197,9 @@ class Robot {
             controller.StopMotor(rightIGWAN);
 
             //right 20
-            controller.TurnDirection(leftIGWAN,rightIGWAN,forwardSpeed,backwardSpeed,rightTurn);
+            controller.TurnDirection(leftIGWAN,rightIGWAN,turnSpeedForward,turnSpeedBackward,rightTurn);
 
-            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.25, radius);
+            numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.55, radius);
 
             rightEncoder.ResetCounts();
 
