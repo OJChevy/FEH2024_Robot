@@ -7,9 +7,11 @@ int main(void)
     const float SPEED = 50;
 
     char menuLabels[4][20] = { "System Chk", "Run", "Calibrate", "Quit" };
-
+    //bump switches
+    DigitalInputPin frontSwitch(FEHIO::P0_3);
+    //cds sensor
     AnalogInputPin cdsSensor(FEHIO::P1_0);
-
+    //IGWAN motor shaft encoders
     DigitalEncoder leftEncoder(FEHIO::P0_7);
     DigitalEncoder rightEncoder(FEHIO::P0_0);
 
@@ -39,16 +41,16 @@ int main(void)
             case 0:
 
                 //TODO: Call System check
-                robot.SystemCheck(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder);
-                //controller.DisplayCDSSensorValue(cdsSensor);
+                //robot.SystemCheck(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder);
+                controller.DisplayCDSSensorValue(cdsSensor);
                 break;
 
             case 1:
 
                 //TODO: Call run function for course
                 //robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
-                //Iteration 55
-                robot.RunProgressCheck1(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder);
+                //Iteration 62
+                robot.RunProgressCheck1(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
                 break;
 
             case 2:

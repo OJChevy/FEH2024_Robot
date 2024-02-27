@@ -52,10 +52,10 @@ public:
      */
     void DisplayCDSSensorValue(AnalogInputPin &cdsSensor)
     {
-
+        LCD.Clear();
         while (true) {
 
-            LCD.Clear();
+            
             LCD.WriteLine(cdsSensor.Value());
 
         }
