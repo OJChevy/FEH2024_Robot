@@ -174,5 +174,28 @@ public:
         }
     }
 
-    void Wobble() {}
+    void MoveStraightWithSlightTurn(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, float fastForwardSpeed, float slowForwardSpeed, int direction) {
+
+        if (direction == 0) {
+
+            //Turn left
+            leftIGWAN.SetPercent(slowForwardSpeed * (-1));
+            rightIGWAN.SetPercent(fastForwardSpeed);
+
+        } else {
+
+            //Turn right
+            leftIGWAN.SetPercent(fastForwardSpeed * (-1));
+            rightIGWAN.SetPercent(slowForwardSpeed);
+
+        }
+
+    }
+
+    void StopBothMotors(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN) {
+
+        leftIGWAN.Stop();
+        rightIGWAN.Stop();
+
+    }
 };

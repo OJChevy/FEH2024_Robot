@@ -10,12 +10,6 @@ class Robot
     Controller controller;
 
 public:
-    void MoveTowardRamp(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, float speed)
-    {
-
-        controller.SetMotor(leftIGWAN, speed);
-        controller.SetMotor(rightIGWAN, speed);
-    }
 
     void HelloWorld()
     {
@@ -468,4 +462,41 @@ public:
         //     controller.StopMotor(leftIGWAN);
         //     controller.StopMotor(rightIGWAN);
     }
+
+    /**
+     * PROGRESS CHECK 2 CODE
+    */
+
+    void ProgressCheck2MoveTowardRamp(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch) {
+
+        float fastForwardSpeed = -40;
+        float slowForwardSpeed = -35;
+        float backwardSpeed = 40;
+
+        float radius = 1.75;
+
+        int numOfTransitions = 0;
+        int rightTurn = 0;
+        int leftTurn = 1;
+
+        int firstDistance = 20;
+
+        // 1. Move forward with slight turn from start box
+        controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, fastForwardSpeed, slowForwardSpeed, leftTurn);
+        rightEncoder.ResetCounts();
+        numOfTransitions = controller.ShaftEncoderTransition(firstDistance, radius);
+        while (rightEncoder.Counts() < numOfTransitions);
+
+        controller.StopBothMotors(leftIGWAN, rightIGWAN);
+
+
+
+    }
+
+    void RunProgressCheck2(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch) {
+
+        ProgressCheck2MoveTowardRamp(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+
+    }
+
 };
