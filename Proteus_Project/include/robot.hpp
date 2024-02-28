@@ -163,7 +163,7 @@ public:
     void RunProgressCheck1(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
     {
 
-        while (.85 < cdsSensor.Value())
+        while (1.0 < cdsSensor.Value())
         {
         }
 
@@ -236,7 +236,7 @@ public:
         //Move straight to kiosk at slower speed to not hurt the wires or bumpswitch
         controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed * .75);
 
-        numOfTransitions = controller.ShaftEncoderTransition(16, radius);
+        numOfTransitions = controller.ShaftEncoderTransition(21, radius);
 
         //rightEncoder.ResetCounts();
 
@@ -248,7 +248,7 @@ public:
         // //back 7
         controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed);
 
-        numOfTransitions = controller.ShaftEncoderTransition(8, radius);
+        numOfTransitions = controller.ShaftEncoderTransition(13, radius);
 
         rightEncoder.ResetCounts();
 
@@ -273,7 +273,7 @@ public:
         // //forward 15
         controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
 
-        numOfTransitions = controller.ShaftEncoderTransition(17.5, radius);
+        numOfTransitions = controller.ShaftEncoderTransition(16.5, radius);
 
         rightEncoder.ResetCounts();
 
@@ -286,7 +286,7 @@ public:
         // right 20
         controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn);
 
-        numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.55, radius);
+        numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.575, radius);
 
         rightEncoder.ResetCounts();
 

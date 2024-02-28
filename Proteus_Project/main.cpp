@@ -41,15 +41,15 @@ int main(void)
             case 0:
 
                 //TODO: Call System check
-                robot.SystemCheck(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder);
-                //controller.DisplayCDSSensorValue(cdsSensor);
+                //robot.SystemCheck(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder);
+                controller.DisplayCDSSensorValue(cdsSensor);
                 break;
 
             case 1:
 
                 //TODO: Call run function for course
                 //robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
-                //Iteration 67
+                //Iteration 75
                 robot.RunProgressCheck1(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
                 break;
 
