@@ -30,57 +30,126 @@ public:
     void SystemCheck(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder)
     {
 
-        float forwardSpeed = 25;
-        float backwardSpeed = -25;
+        float forwardSpeed = -25;
+        float backwardSpeed = 25;
+        float turnSpeedForward = -25; // Lower turn speed to match the predetermined turn lengths
+        float turnSpeedBackward = 25;
 
-        LCD.Clear();
-        LCD.SetFontColor(WHITE);
+        int rightTurn = 0;
+        int leftTurn = 1;
 
-        // TODO: GO FORWARD 1 REVOLUTION
-        LCD.Write("Go Forward...   ");
+        float radius = 1.75;
+        float firstDistance = 1;
+        float secondDistance = 38;
+
+        int numOfTransitions = 0;
+
+        // LCD.Clear();
+        // LCD.SetFontColor(WHITE);
+
+        // // TODO: GO FORWARD 1 REVOLUTION
+        // LCD.Write("Go Forward...   ");
+        // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
+
+        // rightEncoder.ResetCounts();
+
+        // while (rightEncoder.Counts() < 318)
+        //     ;
+
+        // controller.StopMotor(leftIGWAN);
+        // controller.StopMotor(rightIGWAN);
+
+        // LCD.SetFontColor(GREEN);
+        // LCD.Write("_/");
+
+        // Sleep(1.0);
+
+        // LCD.WriteLine("");
+
+        // // TODO: GO BACKWARD 1 REVOLUTION
+        // LCD.SetFontColor(WHITE);
+        // LCD.Write("Go Backward...   ");
+
+        // controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed);
+
+        // rightEncoder.ResetCounts();
+
+        // while (rightEncoder.Counts() < 318)
+        //     ;
+
+        // controller.StopMotor(leftIGWAN);
+        // controller.StopMotor(rightIGWAN);
+
+        // LCD.SetFontColor(GREEN);
+        // LCD.Write("_/");
+
+        // Sleep(1.0);
+
+        // // TODO: TURN RIGHT 90 DEGREES
+
+        // // TODO: GO BACK TO CENTER
+
+        // // TODO: TURN LEFT 90 DEGREES
+
+        // Sleep(2.0);
+
         controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
 
+        numOfTransitions = controller.ShaftEncoderTransition(10, radius);
+
         rightEncoder.ResetCounts();
 
-        while (rightEncoder.Counts() < 318)
+        while (rightEncoder.Counts() < numOfTransitions);
+
+        // left 45
+
+        controller.TurnDirection(leftIGWAN, rightIGWAN, forwardSpeed, backwardSpeed, leftTurn);
+
+        numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.5, radius);
+
+        rightEncoder.ResetCounts();
+
+        while (rightEncoder.Counts() < numOfTransitions)
             ;
 
         controller.StopMotor(leftIGWAN);
         controller.StopMotor(rightIGWAN);
 
-        LCD.SetFontColor(GREEN);
-        LCD.Write("_/");
+        // move forward
+        controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
 
-        Sleep(1.0);
-
-        LCD.WriteLine("");
-
-        // TODO: GO BACKWARD 1 REVOLUTION
-        LCD.SetFontColor(WHITE);
-        LCD.Write("Go Backward...   ");
-
-        controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed);
+        numOfTransitions = controller.ShaftEncoderTransition(10, radius);
 
         rightEncoder.ResetCounts();
 
-        while (rightEncoder.Counts() < 318)
+        while (rightEncoder.Counts() < numOfTransitions);
+
+        // right 45
+
+        controller.TurnDirection(leftIGWAN, rightIGWAN, forwardSpeed, backwardSpeed, rightTurn);
+
+        numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.5, radius);
+
+        rightEncoder.ResetCounts();
+
+        while (rightEncoder.Counts() < numOfTransitions)
             ;
 
         controller.StopMotor(leftIGWAN);
         controller.StopMotor(rightIGWAN);
 
-        LCD.SetFontColor(GREEN);
-        LCD.Write("_/");
+        // move forward
+        controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
 
-        Sleep(1.0);
+        numOfTransitions = controller.ShaftEncoderTransition(10, radius);
 
-        // TODO: TURN RIGHT 90 DEGREES
+        rightEncoder.ResetCounts();
 
-        // TODO: GO BACK TO CENTER
+        while (rightEncoder.Counts() < numOfTransitions);
 
-        // TODO: TURN LEFT 90 DEGREES
+        controller.StopMotor(leftIGWAN);
+        controller.StopMotor(rightIGWAN);
 
-        Sleep(2.0);
     }
 
     void Calibrate()

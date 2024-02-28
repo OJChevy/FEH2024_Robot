@@ -173,4 +173,6 @@ public:
             rightIGWAN.SetPercent(backwardSpeed);
         }
     }
+
+    void Wobble() {}
 };
