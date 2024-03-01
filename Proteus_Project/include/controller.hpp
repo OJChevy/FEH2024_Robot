@@ -150,14 +150,15 @@ public:
         return selection;
     }
 
-    void MoveStraight(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, float speed)
+    void MoveStraight(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, float speed,DigitalEncoder &rightEncoder, float distance, float radius)
     {
 
         leftIGWAN.SetPercent(speed * (-1));
         rightIGWAN.SetPercent(speed);
+        moveRobot(distance,radius,rightEncoder,rightIGWAN,leftIGWAN);
     }
 
-    void TurnDirection(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, float forwardSpeed, float backwardSpeed, bool direction)
+    void TurnDirection(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, float forwardSpeed, float backwardSpeed, bool direction, DigitalEncoder &rightEncoder, float distance, float radius)
     {
         // direction 0 is right else turn left
         if (direction == 0)
@@ -172,9 +173,11 @@ public:
             leftIGWAN.SetPercent(backwardSpeed); //Testing backward speed instead of forward speed
             rightIGWAN.SetPercent(backwardSpeed);
         }
+        moveRobot(distance,radius,rightEncoder,rightIGWAN,leftIGWAN);
+
     }
 
-    void MoveStraightWithSlightTurn(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, float fastForwardSpeed, float slowForwardSpeed, int direction) {
+    void MoveStraightWithSlightTurn(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, float fastForwardSpeed, float slowForwardSpeed, int direction, DigitalEncoder &rightEncoder, float distance, float radius) {
 
         if (direction == 0) {
 
@@ -189,7 +192,7 @@ public:
             rightIGWAN.SetPercent(slowForwardSpeed);
 
         }
-
+        moveRobot(distance,radius,rightEncoder,rightIGWAN,leftIGWAN);
     }
 
     void StopBothMotors(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN) {
@@ -197,5 +200,17 @@ public:
         leftIGWAN.Stop();
         rightIGWAN.Stop();
 
+    }
+
+    float turnDistance(float degree) {
+        float turnDistance = (degree/90.0)*6.0;
+        return turnDistance;
+    }
+
+    void moveRobot(float distance, float radius, DigitalEncoder &rightEncoder, FEHMotor &rightIGWAN, FEHMotor &leftIGWAN) {
+        int numOfTransitions  = ShaftEncoderTransition(distance, radius);
+        rightEncoder.ResetCounts();
+        while (rightEncoder.Counts() < numOfTransitions);
+        StopBothMotors(leftIGWAN, rightIGWAN);
     }
 };
