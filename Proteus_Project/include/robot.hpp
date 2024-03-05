@@ -10,7 +10,6 @@ class Robot
     Controller controller;
 
 public:
-
     void HelloWorld()
     {
 
@@ -87,27 +86,27 @@ public:
 
         // Sleep(2.0);
 
-        //Practice turning robot correct degrees
-        //Turn right 90 degrees
-        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, controller.turnDistance(90.0), radius);
-        //Wait 3 seconds
+        // Practice turning robot correct degrees
+        // Turn right 90 degrees
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 90, radius);
+        // Wait 3 seconds
         Sleep(2.0);
-        //Move forward 8 inches
+        // Move forward 8 inches
         controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 8, radius);
-        //Move backward 8 inches
-        controller.MoveStraight(leftIGWAN,rightIGWAN,backwardSpeed, rightEncoder, 8, radius);
-        //wait 3 secconds
+        // Move backward 8 inches
+        controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 8, radius);
+        // wait 3 secconds
         Sleep(3.0);
-        //Turn left 180 degrees
-        controller.TurnDirection(leftIGWAN,rightIGWAN,turnSpeedForward,turnSpeedBackward,leftTurn, rightEncoder, controller.turnDistance(180.0), radius);
-        //Wait 3 seconds
+        // Turn left 180 degrees
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 180, radius);
+        // Wait 3 seconds
         Sleep(3.0);
-        //Turn right 135 degrees
-        controller.TurnDirection(leftIGWAN,rightIGWAN,turnSpeedForward,turnSpeedBackward,rightTurn, rightEncoder, controller.turnDistance(135.0), radius);
-        //Wait 2 seconds
+        // Turn right 135 degrees
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 135, radius);
+        // Wait 2 seconds
         Sleep(2.0);
-        //Turn left 45 degrees
-        controller.TurnDirection(leftIGWAN,rightIGWAN,turnSpeedForward,turnSpeedBackward,leftTurn, rightEncoder, controller.turnDistance(45.0), radius);
+        // Turn left 45 degrees
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 45, radius);
     }
 
     void Calibrate()
@@ -429,9 +428,10 @@ public:
 
     /**
      * PROGRESS CHECK 2 CODE
-    */
+     */
 
-    void ProgressCheck2MoveTowardRamp(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch) {
+    void ProgressCheck2MoveTowardRamp(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    {
 
         float fastForwardSpeed = -40;
         float slowForwardSpeed = -35;
@@ -447,15 +447,190 @@ public:
 
         // 1. Move forward with slight turn from start box
         controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, fastForwardSpeed, slowForwardSpeed, leftTurn, rightEncoder, firstDistance, radius);
-
-
-
     }
 
-    void RunProgressCheck2(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch) {
+    void ProgressCheck2TurnTowardRamp(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    {
+
+        float forwardSpeed = -40;
+        float backwardSpeed = 40;
+        float turnSpeedForward = -35; // Lower turn speed to match the predetermined turn lengths
+        float turnSpeedBackward = 35;
+
+        float radius = 1.75;
+
+        int numOfTransitions = 0;
+        int rightTurn = 0;
+        int leftTurn = 1;
+
+        float degreeTurn = 80;
+
+        // 2. Turn right toward ramp
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, degreeTurn, radius);
+    }
+
+    void ProgressCheck2MoveUpRamp(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    {
+
+        float forwardSpeed = -55;
+        float backwardSpeed = 40;
+
+        float radius = 1.75;
+
+        int numOfTransitions = 0;
+        int rightTurn = 0;
+        int leftTurn = 1;
+
+        int moveUpRampDistance = 24;
+
+        // 3. Move forward up ramp
+        controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, moveUpRampDistance, radius);
+    }
+
+    void ProgressCheck2MoveTowardLight(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    {
+
+        float fastForwardSpeed = -40;
+        float slowForwardSpeed = -32;
+        float backwardSpeed = 40;
+
+        float radius = 1.75;
+
+        int numOfTransitions = 0;
+        int rightTurn = 0;
+        int leftTurn = 1;
+
+        int firstDistance = 24;
+
+        // 4. Move forward with slight turn from to detect light
+        controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, fastForwardSpeed, slowForwardSpeed, rightTurn, rightEncoder, firstDistance, radius);
+    }
+
+    void ProgressCheck2TurnTowardLuggage(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    {
+
+        float forwardSpeed = -40;
+        float backwardSpeed = 40;
+        float turnSpeedForward = -35; // Lower turn speed to match the predetermined turn lengths
+        float turnSpeedBackward = 35;
+
+        float radius = 1.75;
+
+        int numOfTransitions = 0;
+        int rightTurn = 0;
+        int leftTurn = 1;
+
+        float degreeTurn = 35;
+
+        // 5. Turn toward luggage
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, degreeTurn, radius);
+    }
+
+    void ProgressCheck2MoveTowardLuggage(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    {
+
+        float forwardSpeed = -40;
+        float backwardSpeed = 40;
+
+        float radius = 1.75;
+
+        int numOfTransitions = 0;
+        int rightTurn = 0;
+        int leftTurn = 1;
+
+        int moveUpRampDistance = 20;
+
+        // 6. Move toward luggage
+        controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, moveUpRampDistance, radius);
+    }
+
+        void ProgressCheck2SquareUpLuggage(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    {
+
+        float forwardSpeed = -40;
+        float backwardSpeed = 40;
+        float turnSpeedForward = -35; // Lower turn speed to match the predetermined turn lengths
+        float turnSpeedBackward = 35;
+
+        float radius = 1.75;
+
+        int numOfTransitions = 0;
+        int rightTurn = 0;
+        int leftTurn = 1;
+
+        float degreeTurn = 22.5;
+
+        // 7. Square up with luggage
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, degreeTurn, radius);
+    }
+
+        void ProgressCheck2MoveTowardKiosk(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    {
+
+        float fastForwardSpeed = -40;
+        float slowForwardSpeed = -35;
+        float backwardSpeed = 40;
+
+        float radius = 1.75;
+
+        int numOfTransitions = 0;
+        int rightTurn = 0;
+        int leftTurn = 1;
+
+        int moveUpRampDistance = 10;
+
+        // 6. Move toward luggage
+        controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, fastForwardSpeed, slowForwardSpeed, rightTurn, rightEncoder, moveUpRampDistance, radius);
+    }
+        void ProgressCheck2FlipToKiosk(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    {
+
+        float forwardSpeed = -40;
+        float backwardSpeed = 40;
+        float turnSpeedForward = -35; // Lower turn speed to match the predetermined turn lengths
+        float turnSpeedBackward = 35;
+
+        float radius = 1.75;
+
+        int numOfTransitions = 0;
+        int rightTurn = 0;
+        int leftTurn = 1;
+
+        float degreeTurn = 160;
+
+        // 7. Square up with kiosk
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, degreeTurn, radius);
+    }
+
+
+
+
+
+    void RunProgressCheck2(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    {
 
         ProgressCheck2MoveTowardRamp(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // turn right 85 degrees
+        ProgressCheck2TurnTowardRamp(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // move forward **24** inches straight
+        ProgressCheck2MoveUpRamp(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // slight turn right to the light
+        ProgressCheck2MoveTowardLight(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        //Sleep to check location
+        Sleep(5.0);
+        // left turn 35 degrees
+        ProgressCheck2TurnTowardLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // move backward 20 inches toward luggage
+        ProgressCheck2MoveTowardLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // square up with luggage?
+        ProgressCheck2SquareUpLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // drive forward toward kiosk
+        ProgressCheck2MoveTowardKiosk(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        ProgressCheck2FlipToKiosk(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // backup from kiosk
 
+        // turn right 135 degrees
+
+        // drive down ramp
     }
-
 };

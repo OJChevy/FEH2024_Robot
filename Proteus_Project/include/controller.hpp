@@ -173,7 +173,7 @@ public:
             leftIGWAN.SetPercent(backwardSpeed); //Testing backward speed instead of forward speed
             rightIGWAN.SetPercent(backwardSpeed);
         }
-        moveRobot(distance,radius,rightEncoder,rightIGWAN,leftIGWAN);
+        moveRobot(turnDistance(distance),radius,rightEncoder,rightIGWAN,leftIGWAN);
 
     }
 

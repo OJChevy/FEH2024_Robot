@@ -50,7 +50,7 @@ int main(void)
                 //TODO: Call run function for course
                 //robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
                 //Iterations for First Progress Check: 75
-                //Iterations for Second Progress Check: 15
+                //Iterations for Second Progress Check: 29
                 robot.RunProgressCheck2(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
                 break;
 
