@@ -582,7 +582,7 @@ public:
         // 6. Move toward luggage
         controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, fastForwardSpeed, slowForwardSpeed, rightTurn, rightEncoder, moveUpRampDistance, radius);
     }
-        void ProgressCheck2FlipToKiosk(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+        void ProgressCheck2FlipToKiosk(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch, int color)
     {
 
         float forwardSpeed = -40;
@@ -595,8 +595,10 @@ public:
         int numOfTransitions = 0;
         int rightTurn = 0;
         int leftTurn = 1;
-
         float degreeTurn = 160;
+        if (color == 1) {
+            degreeTurn = 145;
+        }
 
         // 7. Square up with kiosk
         controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, degreeTurn, radius);
@@ -618,6 +620,15 @@ public:
         ProgressCheck2MoveTowardLight(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
         //Sleep to check location
         Sleep(5.0);
+        //collect light value
+        int color = 0;
+        if (1.0 < cdsSensor.Value()) {
+            //red
+            color = 0;
+        } else {
+            //blue
+            color = 1;
+        }
         // left turn 35 degrees
         ProgressCheck2TurnTowardLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
         // move backward 20 inches toward luggage
@@ -626,7 +637,7 @@ public:
         ProgressCheck2SquareUpLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
         // drive forward toward kiosk
         ProgressCheck2MoveTowardKiosk(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
-        ProgressCheck2FlipToKiosk(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        ProgressCheck2FlipToKiosk(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch, color);
         // backup from kiosk
 
         // turn right 135 degrees
