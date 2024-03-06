@@ -481,10 +481,10 @@ public:
         int rightTurn = 0;
         int leftTurn = 1;
 
-        int moveUpRampDistance = 24;
+        int distance = 24;
 
         // 3. Move forward up ramp
-        controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, moveUpRampDistance, radius);
+        controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, distance, radius);
     }
 
     void ProgressCheck2MoveTowardLight(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
@@ -538,13 +538,13 @@ public:
         int rightTurn = 0;
         int leftTurn = 1;
 
-        int moveUpRampDistance = 20;
+        int distance = 20;
 
         // 6. Move toward luggage
-        controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, moveUpRampDistance, radius);
+        controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, distance, radius);
     }
 
-        void ProgressCheck2SquareUpLuggage(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    void ProgressCheck2SquareUpLuggage(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
     {
 
         float forwardSpeed = -40;
@@ -564,7 +564,7 @@ public:
         controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, degreeTurn, radius);
     }
 
-        void ProgressCheck2MoveTowardKiosk(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    void ProgressCheck2MoveTowardKiosk(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
     {
 
         float fastForwardSpeed = -40;
@@ -577,12 +577,12 @@ public:
         int rightTurn = 0;
         int leftTurn = 1;
 
-        int moveUpRampDistance = 10;
+        int distance = 10;
 
         // 6. Move toward luggage
-        controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, fastForwardSpeed, slowForwardSpeed, rightTurn, rightEncoder, moveUpRampDistance, radius);
+        controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, fastForwardSpeed, slowForwardSpeed, rightTurn, rightEncoder, distance, radius);
     }
-        void ProgressCheck2FlipToKiosk(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch, int color)
+    void ProgressCheck2FlipToKiosk(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch, int color)
     {
 
         float forwardSpeed = -40;
@@ -595,18 +595,34 @@ public:
         int numOfTransitions = 0;
         int rightTurn = 0;
         int leftTurn = 1;
+        // Turn degree for red
         float degreeTurn = 160;
-        if (color == 1) {
+        if (color == 1)
+        {
+            // Turn degree for blue
             degreeTurn = 145;
         }
 
         // 7. Square up with kiosk
         controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, degreeTurn, radius);
     }
+    void ProgressCheck2MoveTowardTicketButton(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
+    {
 
+        float forwardSpeed = 25;
+        float backwardSpeed = 40;
 
+        float radius = 1.75;
 
+        int numOfTransitions = 0;
+        int rightTurn = 0;
+        int leftTurn = 1;
 
+        int distance = 6;
+
+        // 6. Move toward luggage
+        controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, distance, radius);
+    }
 
     void RunProgressCheck2(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
     {
@@ -618,26 +634,48 @@ public:
         ProgressCheck2MoveUpRamp(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
         // slight turn right to the light
         ProgressCheck2MoveTowardLight(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
-        //Sleep to check location
-        Sleep(5.0);
-        //collect light value
+        // collect light value
         int color = 0;
-        if (1.0 < cdsSensor.Value()) {
-            //red
+        // check for Red else, assume blue
+        //
+        if (0.0 < cdsSensor.Value() < 0.35)
+        {
+            // red
             color = 0;
-        } else {
-            //blue
+        }
+        else
+        {
+            // blue
             color = 1;
         }
+        // Clear LCD
+        LCD.Clear();
+        // Display color detected on screen
+        if (color == 0)
+        {
+            LCD.SetFontColor(RED);
+        }
+        else
+        {
+            LCD.SetFontColor(BLUE);
+        }
+        LCD.DrawRectangle(140, 100, 40, 40);
+        LCD.FillRectangle(140, 100, 40, 40);
+        // Sleep to check location and see color displayed
+        Sleep(5.0);
         // left turn 35 degrees
         ProgressCheck2TurnTowardLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
         // move backward 20 inches toward luggage
         ProgressCheck2MoveTowardLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
         // square up with luggage?
         ProgressCheck2SquareUpLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
-        // drive forward toward kiosk
+        // drive forward toward kiosk and turn toward the detected color
         ProgressCheck2MoveTowardKiosk(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
         ProgressCheck2FlipToKiosk(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch, color);
+        // drive forward to press ticket button
+        ProgressCheck2MoveTowardTicketButton(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // Press white boarding pass button
+         
         // backup from kiosk
 
         // turn right 135 degrees
