@@ -41,8 +41,10 @@ int main(void)
             case 0:
 
                 //TODO: Call System check
-                //robot.SystemCheck(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder);
-                controller.DisplayCDSSensorValue(cdsSensor);
+                //Iteration for System Check: 10
+                robot.SystemCheck(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder);
+                //controller.MoveStraight(leftIGWAN, rightIGWAN, -40, rightEncoder, 20, 1.75);
+                //controller.DisplayCDSSensorValue(cdsSensor);
                 break;
 
             case 1:
@@ -50,8 +52,8 @@ int main(void)
                 //TODO: Call run function for course
                 //robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
                 //Iterations for First Progress Check: 75
-                //Iterations for Second Progress Check: 30
-                robot.RunProgressCheck2(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+                //Iterations for Second Progress Check: 62
+                robot.ProgressCheck2(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
                 break;
 
             case 2:

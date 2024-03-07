@@ -31,7 +31,7 @@ public:
         int rightTurn = 0;
         int leftTurn = 1;
 
-        float radius = 1.75;
+        float radius = 1.50;
         float firstDistance = 1;
         float secondDistance = 38;
 
@@ -86,27 +86,32 @@ public:
 
         // Sleep(2.0);
 
+        //controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 360.0, radius);    
+
+        //Sleep(2.0);
+
         // Practice turning robot correct degrees
         // Turn right 90 degrees
-        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 90, radius);
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 90.0, radius);
         // Wait 3 seconds
         Sleep(2.0);
         // Move forward 8 inches
-        controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 8, radius);
+        //controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 4, radius);
         // Move backward 8 inches
-        controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 8, radius);
+        //controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 4, radius);
         // wait 3 secconds
-        Sleep(3.0);
+        // Sleep(3.0);
         // Turn left 180 degrees
-        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 180, radius);
+
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 180.0, radius);
         // Wait 3 seconds
         Sleep(3.0);
         // Turn right 135 degrees
-        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 135, radius);
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 135.0, radius);
         // Wait 2 seconds
         Sleep(2.0);
         // Turn left 45 degrees
-        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 45, radius);
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 45.0, radius);
     }
 
     void Calibrate()
@@ -120,102 +125,78 @@ public:
     void RunProgressCheck1(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
     {
 
-        while (1.0 < cdsSensor.Value())
-        {
-        }
+        // while (1.0 < cdsSensor.Value())
+        // {
+        // }
 
-        float forwardSpeed = -40;     // flipped to make robot go "backwards" (motors in front)
-        float backwardSpeed = 40;     // flipped to make robot go "backwards" (motors in front)
-        float turnSpeedForward = -25; // Lower turn speed to match the predetermined turn lengths
-        float turnSpeedBackward = 25;
+        // float forwardSpeed = -40;     // flipped to make robot go "backwards" (motors in front)
+        // float backwardSpeed = 40;     // flipped to make robot go "backwards" (motors in front)
+        // float turnSpeedForward = -25; // Lower turn speed to match the predetermined turn lengths
+        // float turnSpeedBackward = 25;
 
-        int rightTurn = 0;
-        int leftTurn = 1;
+        // int rightTurn = 0;
+        // int leftTurn = 1;
 
-        float radius = 1.75;
-        float firstDistance = 1;
-        float secondDistance = 38;
+        // float radius = 1.75;
+        // float firstDistance = 30;
+        // float secondDistance = 38;
 
-        int numOfTransitions = 0;
+        // int numOfTransitions = 0;
 
-        // 30 forward straight
-        // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
+        // // 30 forward straight
+        //  controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, firstDistance, radius);
 
-        // numOfTransitions = controller.ShaftEncoderTransition(30, radius);
+        // // numOfTransitions = controller.ShaftEncoderTransition(30, radius);
 
-        // rightEncoder.ResetCounts();
+        // // // left 45
 
-        // while (rightEncoder.Counts() < numOfTransitions)
-        //     ;
+        //  controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 45, radius);
 
-        // // left 45
-        // controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn);
+        // // // forward 10
+        //  controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 25, radius);
 
-        // numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 0.5, radius);
+        // // // right 45
+        //  controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn);
 
-        // rightEncoder.ResetCounts();
+        //  numOfTransitions = controller.ShaftEncoderTransition((TURNDISTANCE90 * 0.5) * 1.45, radius);
 
-        // while (rightEncoder.Counts() < numOfTransitions)
-        //     ;
+        //  rightEncoder.ResetCounts();
 
-        // controller.StopMotor(leftIGWAN);
-        // controller.StopMotor(rightIGWAN);
+        //  while (rightEncoder.Counts() < numOfTransitions)
+        // //     ;
 
-        // // forward 10
-        // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
+        //  controller.StopMotor(leftIGWAN);
+        // // controller.StopMotor(rightIGWAN);
 
-        // numOfTransitions = controller.ShaftEncoderTransition(10, radius);
+        //  // forward (up to the kiosk) until the switch is bumped (trying a do while loop)
+        // // // do
+        // // // {
+        // // //Move straight to kiosk at slower speed to not hurt the wires or bumpswitch
+        // // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed * .75);
 
-        // rightEncoder.ResetCounts();
-
-        // while (rightEncoder.Counts() < numOfTransitions)
-        //     ;
-
-        // controller.StopMotor(leftIGWAN);
-        // controller.StopMotor(rightIGWAN);
-
-        // // right 45
-        // controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn);
-
-        // numOfTransitions = controller.ShaftEncoderTransition((TURNDISTANCE90 * 0.5) * 1.45, radius);
+        // // numOfTransitions = controller.ShaftEncoderTransition(21, radius);
 
         // rightEncoder.ResetCounts();
-
-        // while (rightEncoder.Counts() < numOfTransitions)
-        //     ;
-
-        // controller.StopMotor(leftIGWAN);
-        // controller.StopMotor(rightIGWAN);
-
-        // // forward (up to the kiosk) until the switch is bumped (trying a do while loop)
-        // // do
-        // // {
-        // //Move straight to kiosk at slower speed to not hurt the wires or bumpswitch
-        // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed * .75);
-
-        // numOfTransitions = controller.ShaftEncoderTransition(21, radius);
-
-        // //rightEncoder.ResetCounts();
 
         // while (rightEncoder.Counts() < numOfTransitions);
-        // // } while (frontSwitch.Value());
+        // // // } while (frontSwitch.Value());
 
         // controller.StopMotor(leftIGWAN);
-        // controller.StopMotor(rightIGWAN);
-        // // //back 7
-        // controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed);
+        // // controller.StopMotor(rightIGWAN);
+        // // // //back 7
+        // // controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed);
 
         // numOfTransitions = controller.ShaftEncoderTransition(13, radius);
 
         // rightEncoder.ResetCounts();
 
         // while (rightEncoder.Counts() < numOfTransitions)
-        //     ;
+        // //     ;
 
         // controller.StopMotor(leftIGWAN);
-        // controller.StopMotor(rightIGWAN);
-        // // right 180
-        // controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn);
+        // // controller.StopMotor(rightIGWAN);
+        // // // right 180
+        // // controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn);
 
         // numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90 * 1.3, radius);
 
@@ -373,56 +354,56 @@ public:
         //     controller.StopMotor(leftIGWAN);
         //     controller.StopMotor(rightIGWAN);
 
-        //     //Backup 5 inches
-        //     controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed);
-        //     numOfTransitions = controller.ShaftEncoderTransition(5, radius);
-        //     rightEncoder.ResetCounts();
+            // //Backup 5 inches
+            // controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed);
+            // numOfTransitions = controller.ShaftEncoderTransition(5, radius);
+            // rightEncoder.ResetCounts();
 
-        //     while (rightEncoder.Counts() < numOfTransitions);
+            // while (rightEncoder.Counts() < numOfTransitions);
 
-        //     controller.StopMotor(leftIGWAN);
-        //     controller.StopMotor(rightIGWAN);
+            // controller.StopMotor(leftIGWAN);
+            // controller.StopMotor(rightIGWAN);
 
-        //     //Turn 135 right
-        //     controller.TurnDirection(leftIGWAN, rightIGWAN, forwardSpeed, backwardSpeed, rightTurn);
-        //     numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90*1.5, radius);
+            // //Turn 135 right
+            // controller.TurnDirection(leftIGWAN, rightIGWAN, forwardSpeed, backwardSpeed, rightTurn);
+            // numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90*1.5, radius);
 
-        //     rightEncoder.ResetCounts();
+            // rightEncoder.ResetCounts();
 
-        //     while (rightEncoder.Counts() < numOfTransitions);
+            // while (rightEncoder.Counts() < numOfTransitions);
 
-        //     controller.StopMotor(leftIGWAN);
-        //     controller.StopMotor(rightIGWAN);
+            // controller.StopMotor(leftIGWAN);
+            // controller.StopMotor(rightIGWAN);
 
-        //     //Drive forward 20 inches
-        //     controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
-        //     numOfTransitions = controller.ShaftEncoderTransition(20, radius);
-        //     rightEncoder.ResetCounts();
+            // //Drive forward 20 inches
+            // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
+            // numOfTransitions = controller.ShaftEncoderTransition(20, radius);
+            // rightEncoder.ResetCounts();
 
-        //     while (rightEncoder.Counts() < numOfTransitions);
+            // while (rightEncoder.Counts() < numOfTransitions);
 
-        //     controller.StopMotor(leftIGWAN);
-        //     controller.StopMotor(rightIGWAN);
+            // controller.StopMotor(leftIGWAN);
+            // controller.StopMotor(rightIGWAN);
 
-        //     //Turn around 45 degrees right
-        //     controller.TurnDirection(leftIGWAN,rightIGWAN,forwardSpeed,backwardSpeed,rightTurn);
-        //     numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90*0.5, radius);
+            // //Turn around 45 degrees right
+            // controller.TurnDirection(leftIGWAN,rightIGWAN,forwardSpeed,backwardSpeed,rightTurn);
+            // numOfTransitions = controller.ShaftEncoderTransition(TURNDISTANCE90*0.5, radius);
 
-        //     rightEncoder.ResetCounts();
+            // rightEncoder.ResetCounts();
 
-        //     while (rightEncoder.Counts() < numOfTransitions);
+            // while (rightEncoder.Counts() < numOfTransitions);
 
-        //     controller.StopMotor(leftIGWAN);
-        //     controller.StopMotor(rightIGWAN);
+            // controller.StopMotor(leftIGWAN);
+            // controller.StopMotor(rightIGWAN);
 
-        //     //Drive forward 30 inches to the end
-        //     controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
-        //     numOfTransitions = controller.ShaftEncoderTransition(30, radius);
-        //     rightEncoder.ResetCounts();
+            // //Drive forward 30 inches to the end
+            // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed);
+            // numOfTransitions = controller.ShaftEncoderTransition(30, radius);
+            // rightEncoder.ResetCounts();
 
-        //     while (rightEncoder.Counts() < numOfTransitions);
+            // while (rightEncoder.Counts() < numOfTransitions);
 
-        //     controller.StopMotor(leftIGWAN);
+            // controller.StopMotor(leftIGWAN);
         //     controller.StopMotor(rightIGWAN);
     }
 
@@ -463,7 +444,7 @@ public:
         int rightTurn = 0;
         int leftTurn = 1;
 
-        float degreeTurn = 80;
+        float degreeTurn = 70;
 
         // 2. Turn right toward ramp
         controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, degreeTurn, radius);
@@ -472,7 +453,7 @@ public:
     void ProgressCheck2MoveUpRamp(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
     {
 
-        float forwardSpeed = -55;
+        float forwardSpeed = -50;
         float backwardSpeed = 40;
 
         float radius = 1.75;
@@ -481,7 +462,7 @@ public:
         int rightTurn = 0;
         int leftTurn = 1;
 
-        int distance = 24;
+        int distance = 28;
 
         // 3. Move forward up ramp
         controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, distance, radius);
@@ -491,7 +472,7 @@ public:
     {
 
         float fastForwardSpeed = -40;
-        float slowForwardSpeed = -32;
+        float slowForwardSpeed = -35;
         float backwardSpeed = 40;
 
         float radius = 1.75;
@@ -500,7 +481,7 @@ public:
         int rightTurn = 0;
         int leftTurn = 1;
 
-        int firstDistance = 24;
+        int firstDistance = 22;
 
         // 4. Move forward with slight turn from to detect light
         controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, fastForwardSpeed, slowForwardSpeed, rightTurn, rightEncoder, firstDistance, radius);
@@ -579,7 +560,7 @@ public:
 
         int distance = 10;
 
-        // 6. Move toward luggage
+        // 8. Move toward kiosk
         controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, fastForwardSpeed, slowForwardSpeed, rightTurn, rightEncoder, distance, radius);
     }
     void ProgressCheck2FlipToKiosk(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch, int color)
@@ -603,7 +584,7 @@ public:
             degreeTurn = 145;
         }
 
-        // 7. Square up with kiosk
+        // 9. Turn toward kiosk light given detected color
         controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, degreeTurn, radius);
     }
     void ProgressCheck2MoveTowardTicketButton(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
@@ -620,32 +601,50 @@ public:
 
         int distance = 6;
 
-        // 6. Move toward luggage
+        // 10. Move toward ticket kiosk button and press into it
         controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, distance, radius);
+    }
+
+    void ProgressCheck2MoveTowardWhiteButton(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch) {
+
+        float forwardSpeed = 25;
+        float backwardSpeed = 40;
+
+        float radius = 1.75;
+
+        int numOfTransitions = 0;
+
+        int rightTurn = 0;
+        int leftTurn = 1;
+
+        //TODO: Do some stuff
+
     }
 
     void RunProgressCheck2(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
     {
+        // Start when Red light turns on
+        while (1.0 < cdsSensor.Value());
 
+        //Slight turn to the left toward the steep ramp
         ProgressCheck2MoveTowardRamp(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
-        // turn right 85 degrees
+        //Turn right 85 degrees toward the steep ramp
         ProgressCheck2TurnTowardRamp(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
-        // move forward **24** inches straight
+        //Move forward **24** inches straight up the steep ramp and a little past
         ProgressCheck2MoveUpRamp(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
-        // slight turn right to the light
+        //Slight turn right to the light 
         ProgressCheck2MoveTowardLight(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
-        // collect light value
+        // Collect light value
         int color = 0;
-        // check for Red else, assume blue
-        //
-        if (0.0 < cdsSensor.Value() < 0.35)
+        // Check for Red else, assume blue
+        if (0.0 < cdsSensor.Value() < 1.0)
         {
-            // red
+            // Red
             color = 0;
         }
         else
         {
-            // blue
+            // Blue
             color = 1;
         }
         // Clear LCD
@@ -661,25 +660,158 @@ public:
         }
         LCD.DrawRectangle(140, 100, 40, 40);
         LCD.FillRectangle(140, 100, 40, 40);
-        // Sleep to check location and see color displayed
+        // // Sleep to check location and see color displayed
         Sleep(5.0);
-        // left turn 35 degrees
-        ProgressCheck2TurnTowardLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
-        // move backward 20 inches toward luggage
-        ProgressCheck2MoveTowardLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
-        // square up with luggage?
-        ProgressCheck2SquareUpLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
-        // drive forward toward kiosk and turn toward the detected color
-        ProgressCheck2MoveTowardKiosk(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
-        ProgressCheck2FlipToKiosk(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch, color);
-        // drive forward to press ticket button
-        ProgressCheck2MoveTowardTicketButton(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // // Left turn ***35*** degrees toward luggage
+        // ProgressCheck2TurnTowardLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // // Move backward ***20*** inches toward luggage
+        // ProgressCheck2MoveTowardLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // // Square up with luggage by turning
+        // ProgressCheck2SquareUpLuggage(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // // Drive forward toward kiosk and turn toward the detected color
+        // ProgressCheck2MoveTowardKiosk(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+        // ProgressCheck2FlipToKiosk(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch, color);
+        // // Drive forward to press ticket kiosk button
+        // ProgressCheck2MoveTowardTicketButton(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
         // Press white boarding pass button
-         
-        // backup from kiosk
+        
+        // Backup from kiosk
 
-        // turn right 135 degrees
+        // Turn right 135 degrees
 
-        // drive down ramp
+        // Drive down ramp
+    }
+
+    void ProgressCheck2(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch) {
+
+        while (2.0 < cdsSensor.Value());
+
+        float slowForwardSpeed = 40;
+        float forwardSpeed = 45;     // flipped to make robot go "backwards" (motors in front)
+        float backwardSpeed = -45;     // flipped to make robot go "backwards" (motors in front)
+        float turnSpeedForward = 25; // Lower turn speed to match the predetermined turn lengths
+        float turnSpeedBackward = -25;
+
+        int rightTurn = 1;
+        int leftTurn = 0;
+
+        float radius = 1.50;
+        float firstDistance = 32;
+        float secondDistance = 38;
+
+        int numOfTransitions = 0;
+
+        // 30 forward straight
+         controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed + 1, rightTurn, rightEncoder, 31, radius);
+
+        // numOfTransitions = controller.ShaftEncoderTransition(30, radius);
+
+        // // left 35
+
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 50, radius);
+
+        // // forward 27
+        controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 28, radius);
+        
+        //Initailize color variable
+        int color = 0;
+        // Check for Red else, assume blue
+
+        // Sleep on the light to check location and see color displayed
+        Sleep(2.0);
+        
+        // Clear LCD
+        LCD.Clear();
+        
+        // Display color detected on screen
+        if (cdsSensor.Value() < 1.1)
+        {
+            // Red
+            color = 0;
+            LCD.SetFontColor(RED);
+            LCD.DrawRectangle(140, 100, 40, 40);
+            LCD.FillRectangle(140, 100, 40, 40);
+        }
+        else
+        {
+            // Blue
+            color = 1;
+            LCD.SetFontColor(BLUE);
+            LCD.DrawRectangle(140, 100, 40, 40);
+            LCD.FillRectangle(140, 100, 40, 40);
+        }
+        
+        // Sleep on the light to check location and see color displayed
+        Sleep(2.0);
+        
+        //If color is blue
+        if (color == 1) {
+            //Move backwards 8 inches for blue light
+            controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 7, radius);
+
+            ////Turn right 35 degrees to square up to kiosk (same degree turn right as the left turn) (HIT WITH FRONT)
+            //controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 35, radius);
+            //Turn right 145 degrees to square up to kiosk (same degree turn right as the left turn) (HIT WITH BACK)
+            controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 50, radius);
+            //Move backward 10 inches to press(IF HIT WITH BACK)
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 7, radius);
+            
+            // //CODE FOR PRESSING THE WHITE BUTTON (BOARDING PASS BUTTON)
+            // //Line up with white button
+            // controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed, leftTurn, rightEncoder, 10, radius);
+
+            // //Turn in direction of white button
+            // controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 15, radius);
+
+            // //Go straight toward kiosk
+            // controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 12, radius);
+
+            
+        //If color is red
+        } else {
+            //Move backwards 12 inches for red light
+            controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 12, radius);
+            
+            ////Turn right 35 degrees to square up to kiosk (same degree turn right as the left turn) (HIT WITH FRONT)
+            //controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 35, radius);
+            //Turn right 145 degrees to square up to kiosk (same degree turn right as the left turn) (HIT WITH BACK)
+            controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 45, radius);
+            //Move backward 10 inches to press(IF HIT WITH BACK)
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 9, radius);
+
+            // //CODE FOR PRESSING THE WHITE BUTTON (BOARDING PASS BUTTON)
+            // //Line up with white button
+            // controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed, rightTurn, rightEncoder, 10, radius);
+
+            // //Turn in direction of white button
+            // controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 15, radius);
+
+            // //Go straight toward kiosk
+            // controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 12, radius);            
+
+        }
+
+        // BREAK FOR DOWN
+
+
+            //Backup 5 inches
+            controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 5, radius);
+   
+
+            //Turn 135 right
+            controller.TurnDirection(leftIGWAN, rightIGWAN, forwardSpeed, backwardSpeed, rightTurn, rightEncoder, 135, radius);
+     
+
+            //Drive forward 20 inches
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 16, radius);
+
+            //Turn around 45 degrees right
+            controller.TurnDirection(leftIGWAN,rightIGWAN,forwardSpeed,backwardSpeed,rightTurn, rightEncoder, 35, radius);
+ 
+
+            //Drive forward 30 inches to the end
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 30, radius);
+
+
     }
 };
