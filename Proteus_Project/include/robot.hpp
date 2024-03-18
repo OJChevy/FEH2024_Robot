@@ -114,12 +114,13 @@ public:
         controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 45.0, radius);
     }
 
-    void Calibrate()
+    void Calibrate(FEHServo &armServo)
     {
 
         LCD.Clear();
 
-        Sleep(2.0);
+        controller.CalibrateServoArm(armServo);
+
     }
 
     void RunProgressCheck1(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, DigitalInputPin &frontSwitch)
@@ -833,4 +834,22 @@ public:
 
 
     }
+
+    void RunProgressCheck3(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, FEHServo &armServo) {
+
+        float forwardSpeed = -40;
+
+        float radius = 1.5;
+
+        // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 16, radius);
+        armServo.SetDegree(0);
+
+        Sleep(3.0);
+
+        armServo.SetDegree(180);
+
+
+
+    }
+
 };

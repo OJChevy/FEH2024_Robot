@@ -22,7 +22,10 @@ int main(void)
 
     // //Servo Motors
     // FEHServo plateServo(FEHServo::Servo0);
-    // FEHServo armServo(FEHServo::Servo1);
+     FEHServo armServo(FEHServo::Servo0);
+
+     armServo.SetMin(1290);
+     armServo.SetMax(2085);
 
     float xPos;
     float yPos;
@@ -53,13 +56,15 @@ int main(void)
                 //robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
                 //Iterations for First Progress Check: 75
                 //Iterations for Second Progress Check: 78
-                robot.ProgressCheck2(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, frontSwitch);
+                //Iterations for Third Progress Check: 2
+                robot.RunProgressCheck3(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, armServo);
                 break;
 
             case 2:
 
                 //TODO: Calibrate various motors
-                robot.Calibrate();
+                //Iteration: 3
+                robot.Calibrate(armServo);
                 break;
 
             default:
