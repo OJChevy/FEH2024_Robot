@@ -702,16 +702,16 @@ public:
         int numOfTransitions = 0;
 
         // 30 forward straight
-         controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed + 1, rightTurn, rightEncoder, 31, radius);
+         controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed + 3, rightTurn, rightEncoder, 32.5, radius);
 
         // numOfTransitions = controller.ShaftEncoderTransition(30, radius);
 
         // // left 35
 
-        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 50, radius);
+        controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 57.8, radius);
 
         // // forward 27
-        controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 28, radius);
+        controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 24.5, radius);
         
         //Initailize color variable
         int color = 0;
@@ -724,7 +724,7 @@ public:
         LCD.Clear();
         
         // Display color detected on screen
-        if (cdsSensor.Value() < 1.1)
+        if (cdsSensor.Value() < 1.0)
         {
             // Red
             color = 0;
@@ -747,14 +747,14 @@ public:
         //If color is blue
         if (color == 1) {
             //Move backwards 8 inches for blue light
-            controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 7, radius);
+            controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 6, radius);
 
             ////Turn right 35 degrees to square up to kiosk (same degree turn right as the left turn) (HIT WITH FRONT)
             //controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 35, radius);
             //Turn right 145 degrees to square up to kiosk (same degree turn right as the left turn) (HIT WITH BACK)
             controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 50, radius);
             //Move backward 10 inches to press(IF HIT WITH BACK)
-            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 7, radius);
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 6, radius);
             
             // //CODE FOR PRESSING THE WHITE BUTTON (BOARDING PASS BUTTON)
             // //Line up with white button
@@ -766,33 +766,6 @@ public:
             // //Go straight toward kiosk
             // controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 12, radius);
 
-            
-        //If color is red
-        } else {
-            //Move backwards 12 inches for red light
-            controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 12, radius);
-            
-            ////Turn right 35 degrees to square up to kiosk (same degree turn right as the left turn) (HIT WITH FRONT)
-            //controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 35, radius);
-            //Turn right 145 degrees to square up to kiosk (same degree turn right as the left turn) (HIT WITH BACK)
-            controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 45, radius);
-            //Move backward 10 inches to press(IF HIT WITH BACK)
-            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 9, radius);
-
-            // //CODE FOR PRESSING THE WHITE BUTTON (BOARDING PASS BUTTON)
-            // //Line up with white button
-            // controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed, rightTurn, rightEncoder, 10, radius);
-
-            // //Turn in direction of white button
-            // controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 15, radius);
-
-            // //Go straight toward kiosk
-            // controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 12, radius);            
-
-        }
-
-        // BREAK FOR DOWN
-
 
             //Backup 5 inches
             controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 5, radius);
@@ -803,14 +776,60 @@ public:
      
 
             //Drive forward 20 inches
-            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 16, radius);
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 17, radius);
 
             //Turn around 45 degrees right
-            controller.TurnDirection(leftIGWAN,rightIGWAN,forwardSpeed,backwardSpeed,rightTurn, rightEncoder, 35, radius);
+            controller.TurnDirection(leftIGWAN,rightIGWAN,forwardSpeed,backwardSpeed,rightTurn, rightEncoder, 35 - 7.5, radius);
  
 
             //Drive forward 30 inches to the end
-            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 30, radius);
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 25, radius);
+
+            
+        //If color is red
+        } else {
+            //Move backwards 12 inches for red light
+            controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 13.5, radius);
+            
+            ////Turn right 35 degrees to square up to kiosk (same degree turn right as the left turn) (HIT WITH FRONT)
+            //controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 35, radius);
+            //Turn right 145 degrees to square up to kiosk (same degree turn right as the left turn) (HIT WITH BACK)
+            controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, rightTurn, rightEncoder, 43.5, radius);
+            //Move backward 10 inches to press(IF HIT WITH BACK)
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 10, radius);
+
+            // //CODE FOR PRESSING THE WHITE BUTTON (BOARDING PASS BUTTON)
+            // //Line up with white button
+            // controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed, rightTurn, rightEncoder, 10, radius);
+
+            // //Turn in direction of white button
+            // controller.TurnDirection(leftIGWAN, rightIGWAN, turnSpeedForward, turnSpeedBackward, leftTurn, rightEncoder, 15, radius);
+
+            // //Go straight toward kiosk
+            // controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 12, radius);
+
+
+            //Backup 5 inches
+            controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 8, radius);
+   
+
+            //Turn 135 right
+            controller.TurnDirection(leftIGWAN, rightIGWAN, forwardSpeed, backwardSpeed, rightTurn, rightEncoder, 135, radius);
+     
+
+            //Drive forward 20 inches
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 8, radius);
+
+            //Turn around 45 degrees right
+            controller.TurnDirection(leftIGWAN,rightIGWAN,forwardSpeed,backwardSpeed,rightTurn, rightEncoder, 35 - 3, radius);
+ 
+
+            //Drive forward 30 inches to the end
+            controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 25, radius);            
+
+        }
+
+        // BREAK FOR DOWN
 
 
     }
