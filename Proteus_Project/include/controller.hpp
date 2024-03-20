@@ -5,6 +5,7 @@
 #include <FEHIO.h>
 #include <FEHLCD.h>
 #include <FEHServo.h>
+#include <FEHRCS.h>
 
 #define PI 3.14159265358979323846264338327
 

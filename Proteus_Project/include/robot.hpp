@@ -835,18 +835,57 @@ public:
 
     }
 
-    void RunProgressCheck3(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, FEHServo &armServo) {
+    void RunProgressCheck3(FEHMotor &leftIGWAN, FEHMotor &rightIGWAN, DigitalEncoder &leftEncoder, DigitalEncoder &rightEncoder, AnalogInputPin &cdsSensor, FEHServo &armServo) {
 
-        float forwardSpeed = -40;
+        float forwardSpeed = 40;
+        float slowForwardSpeed = 30;
+
+        int rightTurn = 1;
+        int leftTurn = 0;
 
         float radius = 1.5;
 
         // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 16, radius);
-        armServo.SetDegree(0);
+        //RCS.InitializeTouchMenu("B7p93noDy");
 
-        Sleep(3.0);
+        int leverNumber = 0;
+        //int leverNumber = RCS.GetCorrectLever();
 
-        armServo.SetDegree(180);
+        // Start when Red light turns on
+        while (1.0 < cdsSensor.Value());
+
+        armServo.SetDegree(115);
+
+        switch(leverNumber) {
+
+            case 0:
+
+                controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 1, radius);
+                controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed, leftTurn, rightEncoder, 11, radius);
+
+                break;
+            
+            case 1:
+
+                controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed, rightTurn, rightEncoder, 16, radius);
+
+                break;
+
+            case 2:
+
+                break;
+
+            default:
+
+                break;
+
+        }
+
+        armServo.SetDegree(145);
+
+        Sleep(7.0);
+
+        armServo.SetDegree(40);
 
 
 
