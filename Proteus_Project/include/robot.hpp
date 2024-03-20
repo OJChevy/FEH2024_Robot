@@ -861,7 +861,7 @@ public:
             case 0:
 
                 controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 1, radius);
-                controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed, leftTurn, rightEncoder, 11, radius);
+                controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed, leftTurn, rightEncoder, 8, radius);
 
                 break;
             

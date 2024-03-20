@@ -56,7 +56,7 @@ int main(void)
                 //robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
                 //Iterations for First Progress Check: 75
                 //Iterations for Second Progress Check: 78
-                //Iterations for Third Progress Check: 18
+                //Iterations for Third Progress Check: 23
                 robot.RunProgressCheck3(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, armServo);
                 break;
 
