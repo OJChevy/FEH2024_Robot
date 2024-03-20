@@ -205,52 +205,63 @@ public:
         return selection;
     }
 
-    void MoveStraight(std::shared_ptr<FEHMotor> leftIGWAN, std::shared_ptr<FEHMotor> rightIGWAN, float speed, std::shared_ptr<DigitalEncoder> rightEncoder, float distance, float radius)
+    void MoveStraight(int direction, float distance)
     {
 
-        leftIGWAN->SetPercent(speed * (-1));
-        rightIGWAN->SetPercent(speed);
-        moveRobot(distance,radius,rightEncoder,rightIGWAN,leftIGWAN);
+        if (direction == 0) {
+
+            leftIGWAN->SetPercent(forwardSpeed * (-1));
+            rightIGWAN->SetPercent(forwardSpeed);
+
+        } else if (direction == 1) {
+
+            leftIGWAN->SetPercent(backwardSpeed * (-1));
+            rightIGWAN->SetPercent(backwardSpeed);
+
+        }
+
+
+        moveRobot(distance);
     }
 
-    void TurnDirection(std::shared_ptr<FEHMotor> leftMotor, std::shared_ptr<FEHMotor> rightMotor, float forwardSpeed, float backwardSpeed, bool direction, std::shared_ptr<DigitalEncoder> rightEncoder, float distance, float radius)
+    void TurnDirection(bool direction, float distance)
     {
         // direction 0 is right else turn left
         if (direction == 0)
         {
             //turn left
-            leftMotor->SetPercent(forwardSpeed); //Testing forward speed instead of backward speed
-            rightMotor->SetPercent(forwardSpeed);
+            leftIGWAN->SetPercent(forwardSpeed); //Testing forward speed instead of backward speed
+            rightIGWAN->SetPercent(forwardSpeed);
 
         } else {
 
             //turn right
-            leftMotor->SetPercent(backwardSpeed); //Testing backward speed instead of forward speed
-            rightMotor->SetPercent(backwardSpeed);
+            leftIGWAN->SetPercent(backwardSpeed); //Testing backward speed instead of forward speed
+            rightIGWAN->SetPercent(backwardSpeed);
         }
-        moveRobot(turnDistance(distance), radius, rightEncoder, rightMotor, leftMotor);
+        moveRobot(turnDistance(distance));
 
     }
 
-    void MoveStraightWithSlightTurn(std::shared_ptr<FEHMotor> leftIGWAN, std::shared_ptr<FEHMotor> rightIGWAN, float fastForwardSpeed, float slowForwardSpeed, int direction, std::shared_ptr<DigitalEncoder> rightEncoder, float distance, float radius) {
+    void MoveStraightWithSlightTurn(int direction, float distance) {
 
         if (direction == 0) {
 
             //Turn left
             leftIGWAN->SetPercent(slowForwardSpeed * (-1));
-            rightIGWAN->SetPercent(fastForwardSpeed);
+            rightIGWAN->SetPercent(forwardSpeed);
 
         } else {
 
             //Turn right
-            leftIGWAN->SetPercent(fastForwardSpeed * (-1));
+            leftIGWAN->SetPercent(forwardSpeed * (-1));
             rightIGWAN->SetPercent(slowForwardSpeed);
 
         }
-        moveRobot(distance,radius,rightEncoder,rightIGWAN,leftIGWAN);
+        moveRobot(distance);
     }
 
-    void StopBothMotors(std::shared_ptr<FEHMotor> leftIGWAN, std::shared_ptr<FEHMotor> rightIGWAN) {
+    void StopBothMotors() {
 
         leftIGWAN->Stop();
         rightIGWAN->Stop();
@@ -262,10 +273,13 @@ public:
         return turnDistance;
     }
 
-    void moveRobot(float distance, float radius, std::shared_ptr<DigitalEncoder> rightEncoder, std::shared_ptr<FEHMotor> rightIGWAN, std::shared_ptr<FEHMotor> leftIGWAN) {
+    void moveRobot(float distance) {
         int numOfTransitions  = ShaftEncoderTransition(distance, radius);
+        
         rightEncoder->ResetCounts();
+        
         while (rightEncoder->Counts() < numOfTransitions);
-        StopBothMotors(leftIGWAN, rightIGWAN);
+
+        StopBothMotors();
     }
 };

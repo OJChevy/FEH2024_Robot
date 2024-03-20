@@ -38,7 +38,7 @@ int main(void)
             case 0:
 
                 //TODO: Call System check
-                //Iteration for System Check: 10
+                //Iteration for System Check: 11
                 robot.SystemCheck();
                 //controller.MoveStraight(leftIGWAN, rightIGWAN, -40, rightEncoder, 20, 1.75);
                 //controller.DisplayCDSSensorValue(cdsSensor);
@@ -47,9 +47,6 @@ int main(void)
             case 1:
 
                 //TODO: Call run function for course
-                //robot.MoveTowardRamp(leftIGWAN, rightIGWAN, SPEED);
-                //Iterations for First Progress Check: 75
-                //Iterations for Second Progress Check: 78
                 //Iterations for Third Progress Check: 18
                 robot.RunProgressCheck3();
                 //2

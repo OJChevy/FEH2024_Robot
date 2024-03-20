@@ -7,6 +7,9 @@
 class Robot
 {
 
+    int forward = 0;
+    int backward = 1;
+
     float forwardSpeed = 40;
     float slowForwardSpeed = 35;
     
@@ -118,7 +121,7 @@ public:
 
         // Practice turning robot correct degrees
         // Turn right 90 degrees
-        controller.TurnDirection(leftIGWAN, rightIGWAN, slowForwardSpeed, slowBackwardSpeed, rightTurn, rightEncoder, 90.0, radius);
+        controller.TurnDirection(rightTurn, 90.0);
         // Wait 3 seconds
         Sleep(2.0);
         // Move forward 8 inches
@@ -129,15 +132,15 @@ public:
         // Sleep(3.0);
         // Turn left 180 degrees
 
-        controller.TurnDirection(leftIGWAN, rightIGWAN, slowForwardSpeed, slowBackwardSpeed, leftTurn, rightEncoder, 180.0, radius);
+        controller.TurnDirection(leftTurn, 180.0);
         // Wait 3 seconds
         Sleep(3.0);
         // Turn right 135 degrees
-        controller.TurnDirection(leftIGWAN, rightIGWAN, slowForwardSpeed, slowBackwardSpeed, rightTurn, rightEncoder, 135.0, radius);
+        controller.TurnDirection(rightTurn, 135.0);
         // Wait 2 seconds
         Sleep(2.0);
         // Turn left 45 degrees
-        controller.TurnDirection(leftIGWAN, rightIGWAN, slowForwardSpeed, slowBackwardSpeed, leftTurn, rightEncoder, 45.0, radius);
+        controller.TurnDirection(leftTurn, 45.0);
     }
 
     void Calibrate(std::shared_ptr<FEHServo> armServo)
@@ -166,14 +169,14 @@ public:
 
             case 0:
 
-                controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 1, radius);
-                controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed, leftTurn, rightEncoder, 11, radius);
+                controller.MoveStraight(forward, 1);
+                controller.MoveStraightWithSlightTurn(forward, 11);
 
                 break;
             
             case 1:
 
-                controller.MoveStraightWithSlightTurn(leftIGWAN, rightIGWAN, forwardSpeed, slowForwardSpeed, rightTurn, rightEncoder, 16, radius);
+                controller.MoveStraightWithSlightTurn(forward, 16);
 
                 break;
 
