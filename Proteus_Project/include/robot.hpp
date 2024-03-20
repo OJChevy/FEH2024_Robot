@@ -1,6 +1,7 @@
 #pragma once
 
 #include "controller.hpp"
+#include <memory>
 
 #define TURNDISTANCE90 6.385
 
@@ -9,7 +10,29 @@ class Robot
 
     Controller controller;
 
+    std::shared_ptr<FEHMotor> leftIGWAN;
+    std::shared_ptr<FEHMotor> rightIGWAN;
+
 public:
+
+    Robot(std::shared_ptr<FEHMotor> leftMotor, std::shared_ptr<FEHMotor> rightMotor) {
+
+        leftIGWAN = leftMotor;
+        rightIGWAN = rightMotor;
+
+    }
+
+    void MoveTest() {
+
+        controller.moveTest(leftIGWAN, rightIGWAN);
+
+        Sleep(3.0);
+
+        leftIGWAN->Stop();
+        rightIGWAN->Stop();
+
+    }
+
     void HelloWorld()
     {
 

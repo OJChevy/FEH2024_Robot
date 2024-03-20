@@ -17,8 +17,8 @@ int main(void)
 
 
     //IGWAN Motors
-    FEHMotor leftIGWAN(FEHMotor::Motor0, 9.0);
-    FEHMotor rightIGWAN(FEHMotor::Motor1, 9.0);
+    auto leftIGWAN = std::make_shared<FEHMotor>(FEHMotor::Motor0, 9.0);
+    auto rightIGWAN = std::make_shared<FEHMotor>(FEHMotor::Motor1, 9.0);
 
     // //Servo Motors
     // FEHServo plateServo(FEHServo::Servo0);
@@ -31,7 +31,7 @@ int main(void)
     float yPos;
 
     Controller controller;
-    Robot robot;
+    Robot robot = Robot(leftIGWAN, rightIGWAN);
 
     int selection = -2;
 
@@ -57,7 +57,8 @@ int main(void)
                 //Iterations for First Progress Check: 75
                 //Iterations for Second Progress Check: 78
                 //Iterations for Third Progress Check: 18
-                robot.RunProgressCheck3(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, armServo);
+                //robot.RunProgressCheck3(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, armServo);
+                robot.MoveTest();
                 break;
 
             case 2:

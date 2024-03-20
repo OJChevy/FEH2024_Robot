@@ -214,4 +214,11 @@ public:
         while (rightEncoder.Counts() < numOfTransitions);
         StopBothMotors(leftIGWAN, rightIGWAN);
     }
+
+    void moveTest(std::shared_ptr<FEHMotor> leftMotor, std::shared_ptr<FEHMotor> rightMotor) {
+
+        leftMotor->SetPercent(40);
+        rightMotor->SetPercent(40);
+
+    }
 };
