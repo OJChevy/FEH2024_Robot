@@ -7,37 +7,31 @@ int main(void)
     const float SPEED = 50;
 
     char menuLabels[4][20] = { "System Chk", "Run", "Calibrate", "Quit" };
-    //bump switches
-    DigitalInputPin frontSwitch(FEHIO::P0_3);
-    //cds sensor
-    AnalogInputPin cdsSensor(FEHIO::P1_0);
-    //IGWAN motor shaft encoders
-    DigitalEncoder leftEncoder(FEHIO::P0_7);
-    DigitalEncoder rightEncoder(FEHIO::P0_0);
-
 
     //IGWAN Motors
     auto leftIGWAN = std::make_shared<FEHMotor>(FEHMotor::Motor0, 9.0);
     auto rightIGWAN = std::make_shared<FEHMotor>(FEHMotor::Motor1, 9.0);
 
-    // //Servo Motors
-    // FEHServo plateServo(FEHServo::Servo0);
-     FEHServo armServo(FEHServo::Servo0);
+    auto cdsSensor = std::make_shared<AnalogInputPin>(FEHIO::P1_0);
 
-     armServo.SetMin(1290);
-     armServo.SetMax(2085);
+    auto leftEncoder = std::make_shared<DigitalEncoder>(FEHIO::P0_7);
+    auto rightEncoder = std::make_shared<DigitalEncoder>(FEHIO::P0_0);
+
+    auto armServo = std::make_shared<FEHServo>(FEHServo::Servo0);
+
+     armServo->SetMin(1290);
+     armServo->SetMax(2085);
 
     float xPos;
     float yPos;
 
-    Controller controller;
-    Robot robot = Robot(leftIGWAN, rightIGWAN);
+    Robot robot = Robot(leftIGWAN, rightIGWAN, cdsSensor, leftEncoder, rightEncoder, armServo);
 
     int selection = -2;
 
     while (selection != -1) {
 
-        selection = controller.GUIControl(menuLabels);
+        selection = robot.displayGUIControl(menuLabels);
 
         switch (selection) {
 
@@ -45,9 +39,9 @@ int main(void)
 
                 //TODO: Call System check
                 //Iteration for System Check: 10
-                //robot.SystemCheck(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder);
+                robot.SystemCheck();
                 //controller.MoveStraight(leftIGWAN, rightIGWAN, -40, rightEncoder, 20, 1.75);
-                controller.DisplayCDSSensorValue(cdsSensor);
+                //controller.DisplayCDSSensorValue(cdsSensor);
                 break;
 
             case 1:
@@ -57,8 +51,9 @@ int main(void)
                 //Iterations for First Progress Check: 75
                 //Iterations for Second Progress Check: 78
                 //Iterations for Third Progress Check: 18
-                //robot.RunProgressCheck3(leftIGWAN, rightIGWAN, leftEncoder, rightEncoder, cdsSensor, armServo);
-                robot.MoveTest();
+                robot.RunProgressCheck3();
+                //2
+                //robot.MoveTest();
                 break;
 
             case 2:
