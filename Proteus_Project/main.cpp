@@ -19,8 +19,8 @@ int main(void)
 
     auto armServo = std::make_shared<FEHServo>(FEHServo::Servo0);
 
-     armServo->SetMin(1290);
-     armServo->SetMax(2085);
+    armServo->SetMin(1290);
+    armServo->SetMax(2085);
 
     float xPos;
     float yPos;
@@ -31,14 +31,14 @@ int main(void)
 
     while (selection != -1) {
 
-        selection = robot.displayGUIControl(menuLabels);
+        selection = robot.GUIControl(menuLabels);
 
         switch (selection) {
 
             case 0:
 
                 //TODO: Call System check
-                //Iteration for System Check: 11
+                //Iteration for System Check: 27
                 robot.SystemCheck();
                 //controller.MoveStraight(leftIGWAN, rightIGWAN, -40, rightEncoder, 20, 1.75);
                 //controller.DisplayCDSSensorValue(cdsSensor);
@@ -47,8 +47,8 @@ int main(void)
             case 1:
 
                 //TODO: Call run function for course
-                //Iterations for Third Progress Check: 18
-                robot.RunProgressCheck3();
+                //Iterations for Third Progress Check: 24
+                //robot.RunProgressCheck3();
                 //2
                 //robot.MoveTest();
                 break;
@@ -57,7 +57,7 @@ int main(void)
 
                 //TODO: Calibrate various motors
                 //Iteration: 3
-                robot.Calibrate(armServo);
+                //robot.Calibrate(armServo);
                 break;
 
             default:

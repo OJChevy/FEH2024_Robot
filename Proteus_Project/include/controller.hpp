@@ -36,6 +36,9 @@ class Controller
 
 public:
 
+    // Controller(std::shared_ptr<FEHMotor> leftMotor, std::shared_ptr<FEHMotor> rightMotor) 
+    // : leftIGWAN(leftMotor), rightIGWAN(rightMotor) {}
+
     //Constructor for Controller class
     Controller(std::shared_ptr<FEHMotor> leftMotor, 
     std::shared_ptr<FEHMotor> rightMotor,
@@ -44,7 +47,7 @@ public:
     std::shared_ptr<DigitalEncoder> rightEncode,
     std::shared_ptr<FEHServo> clawArm,
     float fSpeed, float sFSpeed, float bSpeed,
-    float sBSpeed, float radi, int rTurn, int lTurn) {
+    float sBSpeed, float radi, int rTurn, int lTurn){
 
         leftIGWAN = leftMotor;
         rightIGWAN = rightMotor;
@@ -64,6 +67,85 @@ public:
 
         rightTurn = rTurn;
         leftTurn = lTurn;
+
+    }
+
+    // //Constructor for Controller class
+    // Controller(std::shared_ptr<FEHMotor> leftMotor, 
+    // std::shared_ptr<FEHMotor> rightMotor,
+    // std::shared_ptr<AnalogInputPin> cds,
+    // std::shared_ptr<DigitalEncoder> leftEncode,
+    // std::shared_ptr<DigitalEncoder> rightEncode,
+    // std::shared_ptr<FEHServo> clawArm,
+    // float fSpeed, float sFSpeed, float bSpeed,
+    // float sBSpeed, float radi, int rTurn, int lTurn) {
+
+    //     leftIGWAN = std::move(leftIGWAN);
+    //     rightIGWAN = std::move(rightIGWAN);
+
+    //     cdsSensor = cds;
+
+    //     leftEncoder = std::move(leftEncode);
+    //     rightEncoder = std::move(rightEncode);
+
+    //     armServo = clawArm;
+
+        // forwardSpeed = fSpeed;
+        // slowForwardSpeed = sFSpeed;
+        // backwardSpeed = bSpeed;
+        // slowBackwardSpeed = sBSpeed;
+        // radius = radi;
+
+        // rightTurn = rTurn;
+        // leftTurn = lTurn;
+
+    // }
+
+    // //Constructor for Controller class
+    // Controller(std::shared_ptr<FEHMotor> &leftMotor, 
+    // std::shared_ptr<FEHMotor> &rightMotor,
+    // std::shared_ptr<AnalogInputPin> &cds,
+    // std::shared_ptr<DigitalEncoder> &leftEncode,
+    // std::shared_ptr<DigitalEncoder> &rightEncode,
+    // std::shared_ptr<FEHServo> &clawArm,
+    // float fSpeed, float sFSpeed, float bSpeed,
+    // float sBSpeed, float radi, int rTurn, int lTurn) {
+
+    //     leftIGWAN = leftMotor;
+    //     rightIGWAN = rightMotor;
+
+    //     cdsSensor = cds;
+
+    //     leftEncoder = leftEncode;
+    //     rightEncoder = rightEncode;
+
+    //     armServo = clawArm;
+
+    //     forwardSpeed = fSpeed;
+    //     slowForwardSpeed = sFSpeed;
+    //     backwardSpeed = bSpeed;
+    //     slowBackwardSpeed = sBSpeed;
+    //     radius = radi;
+
+    //     rightTurn = rTurn;
+    //     leftTurn = lTurn;
+
+    // }
+
+    void moveTest() {
+
+        LCD.Clear();
+
+        LCD.WriteLine("Calling function");
+
+        rightIGWAN->SetPercent(25);
+        leftIGWAN->SetPercent(25);
+
+        Sleep(2.0);
+
+        StopBothMotors();
+
+        LCD.WriteLine("Ending function");
 
     }
 
@@ -140,69 +222,6 @@ public:
         numOfTransitions = (distance * numTransitionPerRot) / (2.0 * PI * radius);
 
         return numOfTransitions;
-    }
-
-    /**
-     * @author Owen Chevalier
-     *
-     * Displays and controls the custom GUI on the Proteus display
-     *
-     * @param menuLabels
-     *      array to store labels for each menu icon
-     *
-     * @returns an integer value from -1 to 2 that will control different functions of the robot
-     *          based on a switch statement in main
-     */
-    int GUIControl(char menuLabels[4][20])
-    {
-
-        int selection = -1;
-
-        float x = 0;
-        float y = 0;
-
-        bool actionSelected = false;
-
-        LCD.Clear();
-
-        FEHIcon::Icon menu[4];
-
-        FEHIcon::DrawIconArray(menu, 2, 2, 10, 10, 5, 5, menuLabels, RED, WHITE);
-
-        while (actionSelected == false)
-        {
-
-            if (LCD.Touch(&x, &y))
-            {
-
-                if (menu[0].Pressed(x, y, 0))
-                {
-
-                    selection = 0;
-                    actionSelected = true;
-                }
-                else if (menu[1].Pressed(x, y, 0))
-                {
-
-                    selection = 1;
-                    actionSelected = true;
-                }
-                else if (menu[2].Pressed(x, y, 0))
-                {
-
-                    selection = 2;
-                    actionSelected = true;
-                }
-                else if (menu[3].Pressed(x, y, 0))
-                {
-
-                    selection = -1;
-                    actionSelected = true;
-                }
-            }
-        }
-
-        return selection;
     }
 
     void MoveStraight(int direction, float distance)

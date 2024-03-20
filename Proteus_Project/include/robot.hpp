@@ -31,10 +31,6 @@ class Robot
 
     std::shared_ptr<FEHServo> armServo;
 
-    Controller controller = Controller(leftIGWAN, rightIGWAN, cdsSensor, leftEncoder, 
-                                        rightEncoder, armServo, forwardSpeed, slowForwardSpeed, 
-                                        backwardSpeed, slowBackwardSpeed, radius, rightTurn, leftTurn);
-
 public:
 
     //Constructor for Robot class
@@ -57,10 +53,91 @@ public:
 
     }
 
-    int displayGUIControl(char menuLabels[4][20]) {
+    Controller controller() {
 
-        controller.GUIControl(menuLabels);
+        Controller controller = Controller(leftIGWAN, rightIGWAN, cdsSensor, leftEncoder, 
+                                    rightEncoder, armServo, forwardSpeed, slowForwardSpeed, 
+                                    backwardSpeed, slowBackwardSpeed, radius, rightTurn, leftTurn);
 
+        return controller;
+
+    }
+
+    void MoveTest() {
+
+        // leftIGWAN->SetPercent(25);
+        // rightIGWAN->SetPercent(25);
+
+        // Sleep(2.0);
+
+        // leftIGWAN->Stop();
+        // rightIGWAN->Stop();
+
+        controller().moveTest();
+
+    }
+
+    /**
+     * @author Owen Chevalier
+     *
+     * Displays and controls the custom GUI on the Proteus display.
+     *
+     * @param menuLabels
+     *      array to store labels for each menu icon
+     *
+     * @returns an integer value from -1 to 2 that will control different functions of the robot
+     *          based on a switch statement in main
+     */
+    int GUIControl(char menuLabels[4][20])
+    {
+
+        int selection = -1;
+
+        float x = 0;
+        float y = 0;
+
+        bool actionSelected = false;
+
+        LCD.Clear();
+
+        FEHIcon::Icon menu[4];
+
+        FEHIcon::DrawIconArray(menu, 2, 2, 10, 10, 5, 5, menuLabels, RED, WHITE);
+
+        while (actionSelected == false)
+        {
+
+            if (LCD.Touch(&x, &y))
+            {
+
+                if (menu[0].Pressed(x, y, 0))
+                {
+
+                    selection = 0;
+                    actionSelected = true;
+                }
+                else if (menu[1].Pressed(x, y, 0))
+                {
+
+                    selection = 1;
+                    actionSelected = true;
+                }
+                else if (menu[2].Pressed(x, y, 0))
+                {
+
+                    selection = 2;
+                    actionSelected = true;
+                }
+                else if (menu[3].Pressed(x, y, 0))
+                {
+
+                    selection = -1;
+                    actionSelected = true;
+                }
+            }
+        }
+
+        return selection;
     }
 
     void SystemCheck()
@@ -121,26 +198,26 @@ public:
 
         // Practice turning robot correct degrees
         // Turn right 90 degrees
-        controller.TurnDirection(rightTurn, 90.0);
-        // Wait 3 seconds
-        Sleep(2.0);
-        // Move forward 8 inches
-        //controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 4, radius);
-        // Move backward 8 inches
-        //controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 4, radius);
-        // wait 3 secconds
-        // Sleep(3.0);
-        // Turn left 180 degrees
+        // controller.TurnDirection(rightTurn, 90.0);
+        // // Wait 3 seconds
+        // Sleep(2.0);
+        // // Move forward 8 inches
+        // //controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 4, radius);
+        // // Move backward 8 inches
+        // //controller.MoveStraight(leftIGWAN, rightIGWAN, backwardSpeed, rightEncoder, 4, radius);
+        // // wait 3 secconds
+        // // Sleep(3.0);
+        // // Turn left 180 degrees
 
-        controller.TurnDirection(leftTurn, 180.0);
+        controller().TurnDirection(leftTurn, 180.0);
         // Wait 3 seconds
         Sleep(3.0);
         // Turn right 135 degrees
-        controller.TurnDirection(rightTurn, 135.0);
+        controller().TurnDirection(rightTurn, 135.0);
         // Wait 2 seconds
         Sleep(2.0);
         // Turn left 45 degrees
-        controller.TurnDirection(leftTurn, 45.0);
+        controller().TurnDirection(leftTurn, 45.0);
     }
 
     void Calibrate(std::shared_ptr<FEHServo> armServo)
@@ -148,56 +225,56 @@ public:
 
         LCD.Clear();
 
-        controller.CalibrateServoArm(armServo);
+        //controller.CalibrateServoArm(armServo);
 
     }
 
-    void RunProgressCheck3() {
+    // void RunProgressCheck3() {
 
-        // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 16, radius);
-        //RCS.InitializeTouchMenu("B7p93noDy");
+    //     // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 16, radius);
+    //     //RCS.InitializeTouchMenu("B7p93noDy");
 
-        int leverNumber = 0;
-        //int leverNumber = RCS.GetCorrectLever();
+    //     int leverNumber = 0;
+    //     //int leverNumber = RCS.GetCorrectLever();
 
-        // Start when Red light turns on
-        while (1.0 < cdsSensor->Value());
+    //     // Start when Red light turns on
+    //     //while (1.0 < cdsSensor->Value());
 
-        armServo->SetDegree(115);
+    //     armServo->SetDegree(115);
 
-        switch(leverNumber) {
+    //     switch(leverNumber) {
 
-            case 0:
+    //         case 0:
 
-                controller.MoveStraight(forward, 1);
-                controller.MoveStraightWithSlightTurn(forward, 11);
+    //             controller.MoveStraight(forward, 1);
+    //             controller.MoveStraightWithSlightTurn(forward, 4);
 
-                break;
+    //             break;
             
-            case 1:
+    //         case 1:
 
-                controller.MoveStraightWithSlightTurn(forward, 16);
+    //             controller.MoveStraightWithSlightTurn(forward, 16);
 
-                break;
+    //             break;
 
-            case 2:
+    //         case 2:
 
-                break;
+    //             break;
 
-            default:
+    //         default:
 
-                break;
+    //             break;
 
-        }
+    //     }
 
-        armServo->SetDegree(145);
+    //     armServo->SetDegree(145);
 
-        Sleep(7.0);
+    //     Sleep(7.0);
 
-        armServo->SetDegree(40);
+    //     armServo->SetDegree(40);
 
 
 
-    }
+    // }
 
 };
