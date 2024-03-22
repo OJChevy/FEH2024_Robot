@@ -11,7 +11,7 @@ class Robot
     int backward = 1;
 
     float forwardSpeed = 40;
-    float slowForwardSpeed = 35;
+    float slowForwardSpeed = 38;
     
     float backwardSpeed = -40;
     float slowBackwardSpeed = -35;
@@ -57,7 +57,7 @@ public:
 
         Controller controller = Controller(leftIGWAN, rightIGWAN, cdsSensor, leftEncoder, 
                                     rightEncoder, armServo, forwardSpeed, slowForwardSpeed, 
-                                    backwardSpeed, slowBackwardSpeed, radius, rightTurn, leftTurn);
+                                    backwardSpeed, slowBackwardSpeed, radius);
 
         return controller;
 
@@ -220,61 +220,86 @@ public:
         controller().TurnDirection(leftTurn, 45.0);
     }
 
-    void Calibrate(std::shared_ptr<FEHServo> armServo)
+    void Calibrate()
     {
 
         LCD.Clear();
 
-        //controller.CalibrateServoArm(armServo);
+        armServo->TouchCalibrate();
 
     }
 
-    // void RunProgressCheck3() {
+    void RunProgressCheck3() {
 
-    //     // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 16, radius);
-    //     //RCS.InitializeTouchMenu("B7p93noDy");
+        // controller.MoveStraight(leftIGWAN, rightIGWAN, forwardSpeed, rightEncoder, 16, radius);
+        //RCS.InitializeTouchMenu("B7p93noDy");
 
-    //     int leverNumber = 0;
-    //     //int leverNumber = RCS.GetCorrectLever();
+        int leverNumber = 0;
+        //int leverNumber = RCS.GetCorrectLever();
 
-    //     // Start when Red light turns on
-    //     //while (1.0 < cdsSensor->Value());
+        // Start when Red light turns on
+        //while (1.0 < cdsSensor->Value());
 
-    //     armServo->SetDegree(115);
+        armServo->SetDegree(115);
 
-    //     switch(leverNumber) {
+        switch(leverNumber) {
 
-    //         case 0:
+            case 0:
 
-    //             controller.MoveStraight(forward, 1);
-    //             controller.MoveStraightWithSlightTurn(forward, 4);
+                controller().MoveStraight(forward, 1);
+                controller().MoveStraightWithSlightTurn(forward, 4);
 
-    //             break;
+                break;
             
-    //         case 1:
+            case 1:
 
-    //             controller.MoveStraightWithSlightTurn(forward, 16);
+                controller().MoveStraightWithSlightTurn(forward, 16);
 
-    //             break;
+                break;
 
-    //         case 2:
+            case 2:
 
-    //             break;
+                break;
 
-    //         default:
+            default:
 
-    //             break;
+                break;
 
-    //     }
+        }
 
-    //     armServo->SetDegree(145);
+        armServo->SetDegree(145);
 
-    //     Sleep(7.0);
+        Sleep(7.0);
 
-    //     armServo->SetDegree(40);
+        armServo->SetDegree(40);
 
 
 
-    // }
+    }
+
+    void RunProgressCheck4() {
+
+        // armServo->SetDegree(175);
+        
+        // Sleep(2.0);
+
+        armServo->SetDegree(0);
+
+        //26 inches to the ramp
+        controller().MoveStraightWithSlightTurn(leftTurn, 25.5);
+
+        //Turn to square up with ramp
+        controller().TurnDirection(leftTurn, 130);
+
+        //21 inches to top of the ramp
+        controller().MoveStraight(backward, 28);
+
+        //Turn right 45 degrees
+        controller().TurnDirection(rightTurn, 45);
+
+        //22 inches to passport 
+        controller().MoveStraight(backward, 22);
+
+    }
 
 };

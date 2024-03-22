@@ -21,9 +21,6 @@ class Controller
 
     float radius;
 
-    int rightTurn;
-    int leftTurn;
-
     std::shared_ptr<FEHMotor> leftIGWAN;
     std::shared_ptr<FEHMotor> rightIGWAN;
 
@@ -47,7 +44,7 @@ public:
     std::shared_ptr<DigitalEncoder> rightEncode,
     std::shared_ptr<FEHServo> clawArm,
     float fSpeed, float sFSpeed, float bSpeed,
-    float sBSpeed, float radi, int rTurn, int lTurn){
+    float sBSpeed, float radi){
 
         leftIGWAN = leftMotor;
         rightIGWAN = rightMotor;
@@ -64,9 +61,6 @@ public:
         backwardSpeed = bSpeed;
         slowBackwardSpeed = sBSpeed;
         radius = radi;
-
-        rightTurn = rTurn;
-        leftTurn = lTurn;
 
     }
 

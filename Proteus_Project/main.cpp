@@ -19,8 +19,11 @@ int main(void)
 
     auto armServo = std::make_shared<FEHServo>(FEHServo::Servo0);
 
-    armServo->SetMin(1290);
-    armServo->SetMax(2085);
+    // armServo->SetMin(1290);
+    // armServo->SetMax(2215);
+
+    armServo->SetMin(1132);
+    armServo->SetMax(2000);
 
     float xPos;
     float yPos;
@@ -48,7 +51,8 @@ int main(void)
 
                 //TODO: Call run function for course
                 //Iterations for Third Progress Check: 24
-                //robot.RunProgressCheck3();
+                //Iterations for Fourth Progress Check: 16
+                robot.RunProgressCheck4();
                 //2
                 //robot.MoveTest();
                 break;
@@ -57,7 +61,7 @@ int main(void)
 
                 //TODO: Calibrate various motors
                 //Iteration: 3
-                //robot.Calibrate(armServo);
+                robot.Calibrate();
                 break;
 
             default:
