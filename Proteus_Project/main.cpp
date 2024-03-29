@@ -6,7 +6,7 @@ int main(void)
 
     const float SPEED = 50;
 
-    char menuLabels[4][20] = { "System Chk", "Run", "Calibrate", "Quit" };
+    char menuLabels[4][20] = { "System Chk", "Run", "Calibrate", "Bty Life" };
 
     //IGWAN Motors
     auto leftIGWAN = std::make_shared<FEHMotor>(FEHMotor::Motor0, 9.0);
@@ -18,6 +18,7 @@ int main(void)
     auto rightEncoder = std::make_shared<DigitalEncoder>(FEHIO::P0_0);
 
     auto armServo = std::make_shared<FEHServo>(FEHServo::Servo0);
+    auto frontServo = std::make_shared<FEHServo>(FEHServo::Servo7);
 
     // armServo->SetMin(1290);
     // armServo->SetMax(2215);
@@ -25,10 +26,13 @@ int main(void)
     armServo->SetMin(1132);
     armServo->SetMax(2000);
 
+    frontServo->SetMin(500);
+    frontServo->SetMax(2320);
+
     float xPos;
     float yPos;
 
-    Robot robot = Robot(leftIGWAN, rightIGWAN, cdsSensor, leftEncoder, rightEncoder, armServo);
+    Robot robot = Robot(leftIGWAN, rightIGWAN, cdsSensor, leftEncoder, rightEncoder, armServo, frontServo);
 
     int selection = -2;
 
@@ -42,7 +46,7 @@ int main(void)
 
                 //TODO: Call System check
                 //Iteration for System Check: 27
-                robot.SystemCheck();
+                robot.CalibrateArm();
                 //controller.MoveStraight(leftIGWAN, rightIGWAN, -40, rightEncoder, 20, 1.75);
                 //controller.DisplayCDSSensorValue(cdsSensor);
                 break;
@@ -51,8 +55,10 @@ int main(void)
 
                 //TODO: Call run function for course
                 //Iterations for Third Progress Check: 24
-                //Iterations for Fourth Progress Check: 16
-                robot.RunProgressCheck4();
+                //Iterations for Fourth Progress Check: 28
+                //Iterations for Fifth Progress Check: 13 
+                //Owen is a bitch
+                robot.RunProgressCheck5();
                 //2
                 //robot.MoveTest();
                 break;
@@ -60,8 +66,14 @@ int main(void)
             case 2:
 
                 //TODO: Calibrate various motors
-                //Iteration: 3
+                //Iteration: 4
                 robot.Calibrate();
+                break;
+
+            case 3:
+
+                //Iteration: 7
+                robot.BatteryLife();
                 break;
 
             default:

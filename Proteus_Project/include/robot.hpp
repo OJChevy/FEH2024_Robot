@@ -11,7 +11,7 @@ class Robot
     int backward = 1;
 
     float forwardSpeed = 40;
-    float slowForwardSpeed = 38;
+    float slowForwardSpeed = 37;
     
     float backwardSpeed = -40;
     float slowBackwardSpeed = -35;
@@ -30,6 +30,7 @@ class Robot
     std::shared_ptr<DigitalEncoder> rightEncoder;
 
     std::shared_ptr<FEHServo> armServo;
+    std::shared_ptr<FEHServo> frontServo;
 
 public:
 
@@ -39,7 +40,8 @@ public:
     std::shared_ptr<AnalogInputPin> cds,
     std::shared_ptr<DigitalEncoder> leftEncode,
     std::shared_ptr<DigitalEncoder> rightEncode,
-    std::shared_ptr<FEHServo> clawArm) {
+    std::shared_ptr<FEHServo> clawArm,
+    std::shared_ptr<FEHServo> frontArmServo) {
 
         leftIGWAN = leftMotor;
         rightIGWAN = rightMotor;
@@ -50,13 +52,14 @@ public:
         rightEncoder = rightEncode;
 
         armServo = clawArm;
+        frontServo = frontArmServo;
 
     }
 
     Controller controller() {
 
         Controller controller = Controller(leftIGWAN, rightIGWAN, cdsSensor, leftEncoder, 
-                                    rightEncoder, armServo, forwardSpeed, slowForwardSpeed, 
+                                    rightEncoder, armServo, frontServo, forwardSpeed, slowForwardSpeed, 
                                     backwardSpeed, slowBackwardSpeed, radius);
 
         return controller;
@@ -131,7 +134,7 @@ public:
                 else if (menu[3].Pressed(x, y, 0))
                 {
 
-                    selection = -1;
+                    selection = 3;
                     actionSelected = true;
                 }
             }
@@ -225,7 +228,52 @@ public:
 
         LCD.Clear();
 
-        armServo->TouchCalibrate();
+        frontServo->TouchCalibrate();
+
+    }
+
+    void BatteryLife() {
+
+        LCD.Clear();
+
+        float currentBatteryLife = Battery.Voltage();
+        float maxBatteryLife = 11.5;
+        float batteryPercentage = (currentBatteryLife / maxBatteryLife) * 100.0;
+
+        LCD.Write(batteryPercentage);
+        LCD.Write("%");
+
+        LCD.SetFontColor(WHITE);
+
+        LCD.DrawRectangle(135, 70, 50, 100);
+
+        if (batteryPercentage >= 75) {
+
+            LCD.SetFontColor(GREEN);
+
+            LCD.FillRectangle(136, 71, 49, 99);
+
+        } else if (batteryPercentage < 75 && batteryPercentage >= 50) {
+
+            LCD.SetFontColor(GREEN);
+
+            LCD.FillRectangle(136, 96, 49, 74);
+
+        } else if (batteryPercentage < 50 && batteryPercentage >= 25) {
+
+            LCD.SetFontColor(YELLOW);
+
+            LCD.FillRectangle(136, 121, 49, 49);
+
+        } else if (batteryPercentage < 25) {
+
+            LCD.SetFontColor(RED);
+
+            LCD.FillRectangle(136, 146, 49, 24);
+
+        }
+
+        Sleep(2.0);
 
     }
 
@@ -283,22 +331,109 @@ public:
         
         // Sleep(2.0);
 
-        armServo->SetDegree(0);
+        // Start when Red light turns on
+        while (1.0 < cdsSensor->Value());
 
-        //26 inches to the ramp
+        armServo->SetDegree(0);
+        frontServo->SetDegree(90);
+
+        //25.5 inches to the ramp
         controller().MoveStraightWithSlightTurn(leftTurn, 25.5);
 
         //Turn to square up with ramp
         controller().TurnDirection(leftTurn, 130);
 
         //21 inches to top of the ramp
-        controller().MoveStraight(backward, 28);
+        controller().MoveStraight(backward, 33.5);
 
-        //Turn right 45 degrees
-        controller().TurnDirection(rightTurn, 45);
+        //Turn right 110 degrees
+        controller().TurnDirection(leftTurn, 80);
 
-        //22 inches to passport 
-        controller().MoveStraight(backward, 22);
+        frontServo->SetDegree(180);
+
+        //18 inches to passport 
+        controller().MoveStraight(forward, 16);
+
+        // //set front servo to *** degree to rotate passport lever up
+        frontServo->SetDegree(60);
+
+        Sleep(2.0);
+
+        // //set front servo to *** degree to rotate lever down if stuck up
+        frontServo->SetDegree(180);
+
+        // //back up from passport
+        // controller().MoveStraight(forward,5);
+        
+        // //drive forward to passport to try again
+        // controller().MoveStraight(backward,5);
+
+    }
+
+    void ArmCheck() {        
+
+        frontServo->SetDegree(180);
+
+        frontServo->SetDegree(60);
+
+        Sleep(2.0);
+
+        frontServo->SetDegree(180);
+
+    }
+
+    void CalibrateArm() {
+
+        frontServo->SetDegree(90);
+
+    }
+
+    void RunProgressCheck5() {
+
+        int leverNumber = -1;
+
+        RCS.InitializeTouchMenu("E7TOyD6Qc");
+
+        armServo->SetDegree(0);
+        frontServo->SetDegree(90);
+
+        // Start when Red light turns on
+        while (1.0 < cdsSensor->Value()) {
+
+            leverNumber = RCS.GetCorrectLever();
+
+        }
+
+        //25.5 inches to the ramp
+        controller().MoveStraightWithSlightTurn(leftTurn, 25.75);
+
+        //Turn to square up with ramp
+        controller().TurnDirection(leftTurn, 130);
+
+        //21 inches to top of the ramp
+        controller().MoveStraight(backward, 30.5);
+
+        controller().TurnDirection(leftTurn, 60);
+
+        controller().MoveStraight(forward, 9);
+
+        controller().TurnDirection(rightTurn, 60);
+
+        controller().MoveStraight(forward, 6);
+
+        frontServo->SetDegree(0);
+
+        controller().MoveStraight(backward, 2);
+
+        frontServo->SetDegree(90);
+
+        controller().TurnDirection(leftTurn, 60);
+
+        controller().MoveStraight(forward, 12);
+
+        controller().TurnDirection(rightTurn, 60);
+
+        controller().MoveStraightWithSlightTurn(rightTurn, 20);
 
     }
 

@@ -6,6 +6,7 @@
 #include <FEHLCD.h>
 #include <FEHServo.h>
 #include <FEHRCS.h>
+#include <FEHBattery.h>
 #include <memory>
 
 #define PI 3.14159265358979323846264338327
@@ -30,6 +31,7 @@ class Controller
     std::shared_ptr<DigitalEncoder> rightEncoder;
 
     std::shared_ptr<FEHServo> armServo;
+    std::shared_ptr<FEHServo> frontServo;
 
 public:
 
@@ -43,6 +45,7 @@ public:
     std::shared_ptr<DigitalEncoder> leftEncode,
     std::shared_ptr<DigitalEncoder> rightEncode,
     std::shared_ptr<FEHServo> clawArm,
+    std::shared_ptr<FEHServo> frontArmServo,
     float fSpeed, float sFSpeed, float bSpeed,
     float sBSpeed, float radi){
 
@@ -55,6 +58,7 @@ public:
         rightEncoder = rightEncode;
 
         armServo = clawArm;
+        frontServo = frontArmServo;
 
         forwardSpeed = fSpeed;
         slowForwardSpeed = sFSpeed;
@@ -221,15 +225,21 @@ public:
     void MoveStraight(int direction, float distance)
     {
 
+        float actualForwardSpeed = 11.5 / Battery.Voltage();
+        actualForwardSpeed *= forwardSpeed;
+
+        float actualBackwardSpeed = 11.5 / Battery.Voltage();
+        actualBackwardSpeed *= backwardSpeed;
+
         if (direction == 0) {
 
-            leftIGWAN->SetPercent(forwardSpeed * (-1));
-            rightIGWAN->SetPercent(forwardSpeed);
+            leftIGWAN->SetPercent(actualForwardSpeed * (-1));
+            rightIGWAN->SetPercent(actualForwardSpeed);
 
         } else if (direction == 1) {
 
-            leftIGWAN->SetPercent(backwardSpeed * (-1));
-            rightIGWAN->SetPercent(backwardSpeed);
+            leftIGWAN->SetPercent(actualBackwardSpeed * (-1));
+            rightIGWAN->SetPercent(actualBackwardSpeed);
 
         }
 
@@ -239,18 +249,26 @@ public:
 
     void TurnDirection(bool direction, float distance)
     {
+
+        float actualForwardSpeed = 11.5 / Battery.Voltage();
+        actualForwardSpeed *= forwardSpeed;
+
+        float actualBackwardSpeed = 11.5 / Battery.Voltage();
+        actualBackwardSpeed *= backwardSpeed;
+
+
         // direction 0 is right else turn left
         if (direction == 0)
         {
             //turn left
-            leftIGWAN->SetPercent(forwardSpeed); //Testing forward speed instead of backward speed
-            rightIGWAN->SetPercent(forwardSpeed);
+            leftIGWAN->SetPercent(actualForwardSpeed); //Testing forward speed instead of backward speed
+            rightIGWAN->SetPercent(actualForwardSpeed);
 
         } else {
 
             //turn right
-            leftIGWAN->SetPercent(backwardSpeed); //Testing backward speed instead of forward speed
-            rightIGWAN->SetPercent(backwardSpeed);
+            leftIGWAN->SetPercent(actualBackwardSpeed); //Testing backward speed instead of forward speed
+            rightIGWAN->SetPercent(actualBackwardSpeed);
         }
         moveRobot(turnDistance(distance));
 
@@ -258,17 +276,23 @@ public:
 
     void MoveStraightWithSlightTurn(int direction, float distance) {
 
+        float actualForwardSpeed = 11.5 / Battery.Voltage();
+        actualForwardSpeed *= forwardSpeed;
+
+        float actualSlowForwardSpeed = 11.5 / Battery.Voltage();
+        actualSlowForwardSpeed *= slowForwardSpeed;
+
         if (direction == 0) {
 
             //Turn left
-            leftIGWAN->SetPercent(slowForwardSpeed * (-1));
-            rightIGWAN->SetPercent(forwardSpeed);
+            leftIGWAN->SetPercent(actualSlowForwardSpeed * (-1));
+            rightIGWAN->SetPercent(actualForwardSpeed);
 
         } else {
 
             //Turn right
-            leftIGWAN->SetPercent(forwardSpeed * (-1));
-            rightIGWAN->SetPercent(slowForwardSpeed);
+            leftIGWAN->SetPercent(actualForwardSpeed * (-1));
+            rightIGWAN->SetPercent(actualSlowForwardSpeed);
 
         }
         moveRobot(distance);

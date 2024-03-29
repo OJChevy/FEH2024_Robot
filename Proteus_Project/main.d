@@ -3,7 +3,7 @@
  Libraries/FEHIO.h Drivers/adc16.h Libraries/FEHLCD.h Drivers/spi.h \
  ../fehproteusfirmware/Startup/derivative.h Libraries/LCDColors.h \
  Libraries/FEHServo.h Libraries/FEHRCS.h Drivers/FEHXBee.h \
- ../include/robot.hpp
+ Libraries/FEHBattery.h Libraries/FEHIO.h ../include/robot.hpp
 ../include/controller.hpp:
 Libraries/FEHUtility.h:
 Libraries/FEHMotor.h:
@@ -18,4 +18,6 @@ Libraries/LCDColors.h:
 Libraries/FEHServo.h:
 Libraries/FEHRCS.h:
 Drivers/FEHXBee.h:
+Libraries/FEHBattery.h:
+Libraries/FEHIO.h:
 ../include/robot.hpp:
