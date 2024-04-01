@@ -72,7 +72,7 @@ int main(void)
 
             case 3:
 
-                //Iteration: 7
+                //Iteration: 16
                 robot.BatteryLife();
                 break;
 
@@ -84,16 +84,6 @@ int main(void)
         }
 
     }
-
-    // controller.SetMotor(leftIGWAN, 15);
-    // controller.SetMotor(rightIGWAN, -15);
-
-    // rightEncoder.ResetCounts();
-
-    // while (rightEncoder.Counts() < 300);
-
-    // controller.SetMotor(leftIGWAN, 0);
-    // controller.SetMotor(rightIGWAN, 0);
 
 	return 0;
 }

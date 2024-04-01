@@ -234,46 +234,72 @@ public:
 
     void BatteryLife() {
 
+        bool quitEnabled = false;
+
+        float x;
+        float y;
+
+        FEHIcon::Icon backButton;
+
+        backButton.SetProperties("Quit", 219, 189, 100, 50, RED, RED);
+
         LCD.Clear();
 
-        float currentBatteryLife = Battery.Voltage();
-        float maxBatteryLife = 11.5;
-        float batteryPercentage = (currentBatteryLife / maxBatteryLife) * 100.0;
+        backButton.Draw();
 
-        LCD.Write(batteryPercentage);
-        LCD.Write("%");
+        while (!quitEnabled) {
 
-        LCD.SetFontColor(WHITE);
+            Sleep(0.25);
 
-        LCD.DrawRectangle(135, 70, 50, 100);
+            float currentBatteryLife = Battery.Voltage();
+            float maxBatteryLife = 11.5;
+            float batteryPercentage = (currentBatteryLife / maxBatteryLife) * 100.0;
 
-        if (batteryPercentage >= 75) {
+            LCD.WriteAt(batteryPercentage, 0, 0);
 
-            LCD.SetFontColor(GREEN);
+            LCD.SetFontColor(WHITE);
 
-            LCD.FillRectangle(136, 71, 49, 99);
+            LCD.DrawRectangle(135, 70, 50, 100);
 
-        } else if (batteryPercentage < 75 && batteryPercentage >= 50) {
+            if (batteryPercentage >= 75) {
 
-            LCD.SetFontColor(GREEN);
+                LCD.SetFontColor(GREEN);
 
-            LCD.FillRectangle(136, 96, 49, 74);
+                LCD.FillRectangle(136, 71, 49, 99);
 
-        } else if (batteryPercentage < 50 && batteryPercentage >= 25) {
+            } else if (batteryPercentage < 75 && batteryPercentage >= 50) {
 
-            LCD.SetFontColor(YELLOW);
+                LCD.SetFontColor(GREEN);
 
-            LCD.FillRectangle(136, 121, 49, 49);
+                LCD.FillRectangle(136, 96, 49, 74);
 
-        } else if (batteryPercentage < 25) {
+            } else if (batteryPercentage < 50 && batteryPercentage >= 25) {
 
-            LCD.SetFontColor(RED);
+                LCD.SetFontColor(YELLOW);
 
-            LCD.FillRectangle(136, 146, 49, 24);
+                LCD.FillRectangle(136, 121, 49, 49);
+
+            } else if (batteryPercentage < 25) {
+
+                LCD.SetFontColor(RED);
+
+                LCD.FillRectangle(136, 146, 49, 24);
+
+            }
+
+            LCD.WriteAt(batteryPercentage, 0, 0);
+
+            if (LCD.Touch(&x, &y)) {
+
+                if (backButton.Pressed(x, y, 0)) {
+
+                    quitEnabled = true;
+
+                }
+
+            }
 
         }
-
-        Sleep(2.0);
 
     }
 
