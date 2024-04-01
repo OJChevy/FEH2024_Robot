@@ -2,8 +2,6 @@
 
 #include "controller.hpp"
 
-#define TURNDISTANCE90 6.385
-
 class Robot
 {
 
