@@ -9,7 +9,7 @@ class Robot
     int backward = 1;
 
     float forwardSpeed = 40;
-    float slowForwardSpeed = 37;
+    float slowForwardSpeed = 36;
     
     float backwardSpeed = -40;
     float slowBackwardSpeed = -35;
@@ -210,6 +210,8 @@ public:
         // // Sleep(3.0);
         // // Turn left 180 degrees
 
+        frontServo->SetDegree(112);
+
         controller().TurnDirection(leftTurn, 180.0);
         // Wait 3 seconds
         Sleep(3.0);
@@ -226,7 +228,7 @@ public:
 
         LCD.Clear();
 
-        frontServo->TouchCalibrate();
+        armServo->TouchCalibrate();
 
     }
 
@@ -349,6 +351,8 @@ public:
 
     }
 
+
+
     void RunProgressCheck4() {
 
         // armServo->SetDegree(175);
@@ -359,7 +363,7 @@ public:
         while (1.0 < cdsSensor->Value());
 
         armServo->SetDegree(0);
-        frontServo->SetDegree(90);
+        frontServo->SetDegree(112);
 
         //25.5 inches to the ramp
         controller().MoveStraightWithSlightTurn(leftTurn, 25.5);
@@ -418,8 +422,8 @@ public:
 
         RCS.InitializeTouchMenu("E7TOyD6Qc");
 
-        armServo->SetDegree(0);
-        frontServo->SetDegree(90);
+        armServo->SetDegree(120);
+        frontServo->SetDegree(95);
 
         // Start when Red light turns on
         while (1.0 < cdsSensor->Value()) {
@@ -427,6 +431,12 @@ public:
             leverNumber = RCS.GetCorrectLever();
 
         }
+
+        //Move back to hit button
+        controller().MoveStraight(backward, 0.85);
+
+        //Move forward after hitting button
+        controller().MoveStraight(forward, 0.85);
 
         //25.5 inches to the ramp
         controller().MoveStraightWithSlightTurn(leftTurn, 25.75);
@@ -439,25 +449,95 @@ public:
 
         controller().TurnDirection(leftTurn, 60);
 
-        controller().MoveStraight(forward, 9);
+        controller().MoveStraight(forward, 8.5);
 
-        controller().TurnDirection(rightTurn, 60);
+        controller().TurnDirection(rightTurn, 65);
 
-        controller().MoveStraight(forward, 6);
+        controller().MoveStraight(forward, 5);
 
-        frontServo->SetDegree(0);
+        forwardSpeed = 55;
+
+        controller().MoveStraight(forward, 2);
+
+        forwardSpeed = 40;
+
+        armServo->SetDegree(0);
+
+        Sleep(3.0);
 
         controller().MoveStraight(backward, 2);
 
-        frontServo->SetDegree(90);
-
         controller().TurnDirection(leftTurn, 60);
 
-        controller().MoveStraight(forward, 12);
+        controller().MoveStraight(forward, 13.5);
 
-        controller().TurnDirection(rightTurn, 60);
+        controller().TurnDirection(rightTurn, 65);
 
-        controller().MoveStraightWithSlightTurn(rightTurn, 20);
+        frontServo->SetDegree(180);
+
+        controller().MoveStraightWithSlightTurn(rightTurn, 31.5);
+
+        controller().TurnDirection(leftTurn, 15);
+
+    }
+
+    void SmallProgressCheck5() {
+
+        int leverNumber = -1;
+
+        RCS.InitializeTouchMenu("E7TOyD6Qc");
+
+        armServo->SetDegree(0);
+        frontServo->SetDegree(112);
+
+        // Start when Red light turns on
+        while (1.0 < cdsSensor->Value()) {
+
+            leverNumber = RCS.GetCorrectLever();
+
+        }
+
+        //Move back to hit button
+        controller().MoveStraight(backward, 0.85);
+
+        //Move forward after hitting button
+        controller().MoveStraight(forward, 0.85);
+
+        controller().MoveStraight(forward, 11);
+
+        controller().TurnDirection(rightTurn, 40);
+
+        frontServo->SetDegree(0);
+
+        controller().MoveStraight(forward, 9);
+
+        Sleep(2.0);
+
+        controller().MoveStraight(backward, 8);
+
+        controller().TurnDirection(leftTurn, 25);
+
+        controller().MoveStraight(backward, 8);
+
+        controller().MoveStraight(backward, 0.85);
+
+    }
+
+    void ServoTest() {
+
+        frontServo->SetDegree(95);
+
+        while(true);
+
+        armServo->SetDegree(180);
+
+        Sleep(5.0);
+
+        armServo->SetDegree(120);
+
+        Sleep(2.0);
+
+        armServo->SetDegree(0);
 
     }
 
