@@ -630,4 +630,65 @@ public:
 
     }
 
+    void finalRun2() {
+
+        int leverNumber = 0;
+
+        armServo->SetDegree(120);
+        frontServo->SetDegree(95);
+
+        //RCS.InitializeTouchMenu("E7TOyD6Qc");
+
+        Sleep(2.0);
+
+        // Hit start button
+        controller().MoveStraight(forward, 0.5);
+        controller().MoveStraight(backward, 0.5);
+
+        // Go up small ramp
+        controller().TurnDirection(leftTurn, 35);
+        controller().MoveStraight(backward, 20);
+
+        // Drive to read light
+        controller().TurnDirection(rightTurn, 35);
+        controller().MoveStraight(backward, 18);
+
+        // Read light
+        // ** Code to read light **
+        // Sleep to read light
+        // lightColor = ** what value we read **
+
+        // Drive to luggage
+        controller().MoveStraight(forward, 10);
+        controller().TurnDirection(leftTurn, 35);
+        controller().MoveStraight(forward, 4);
+
+        // Drop luggage
+        armServo->SetDegree(0);
+        Sleep(2.0);
+        
+        // Drive to light
+        // if light is red
+        controller().MoveStraight(backward, 10);
+        controller().TurnDirection(leftTurn, 180);
+        // potentially lower the forward drive speed for the light to limit movement
+        controller().MoveStraight(forward, 4);
+        // set frontServo for pressing red or blue button
+        frontServo->SetDegree(145);
+        // set armServo for pressing white button
+        armServo->SetDegree(125);
+
+        // Drive to passport
+        controller().MoveStraight(backward, 12);
+        controller().TurnDirection(rightTurn, 90);
+
+        // Reset frontServo for passport lever
+        controller().MoveStraight(forward, 5);
+        frontServo->SetDegree(95);
+
+        // Flip passport
+        // lower the drive speed for moving forward
+        controller().MoveStraight(forward, 3);
+    }
+
 };
