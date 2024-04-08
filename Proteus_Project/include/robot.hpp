@@ -12,7 +12,7 @@ class Robot
     float slowForwardSpeed = 36;
     
     float backwardSpeed = -40;
-    float slowBackwardSpeed = -35;
+    float slowBackwardSpeed = -36;
 
     float radius = 1.5;
 
@@ -538,6 +538,95 @@ public:
         Sleep(2.0);
 
         armServo->SetDegree(0);
+
+    }
+
+    void finalRun() {
+
+        int leverNumber = 0;
+
+        armServo->SetDegree(120);
+        frontServo->SetDegree(95);
+
+        //RCS.InitializeTouchMenu("E7TOyD6Qc");
+
+        Sleep(2.0);
+
+        //Hit start button
+        controller().MoveStraight(forward, 0.5);
+        controller().MoveStraight(backward, 0.5);
+
+        switch(leverNumber) {
+
+            case 0:
+
+                controller().MoveStraightWithSlightTurnBackward(leftTurn, 15);
+
+                controller().TurnDirection(rightTurn, 35);
+
+                frontServo->SetDegree(160);
+
+                controller().MoveStraight(forward, 2.5);
+
+                frontServo->SetDegree(175);
+
+                controller().MoveStraight(backward, 3.75);
+
+                frontServo->SetDegree(95);
+
+                controller().TurnDirection(leftTurn, 65);
+
+                controller().MoveStraight(backward, 8.5);
+
+                leftIGWAN->SetPercent(25);
+                rightIGWAN->SetPercent(-25);
+
+                Sleep(2.0);
+
+                controller().StopBothMotors();
+
+                controller().MoveStraight(forward, 2);
+
+                controller().TurnDirection(rightTurn, 65);
+
+                break;
+
+            case 1:
+
+                break;
+
+            case 2:
+            
+                break;
+
+        }
+
+        //21 inches to top of the ramp
+        controller().MoveStraight(backward, 30.5);
+
+        controller().TurnDirection(leftTurn, 60);
+
+        controller().MoveStraight(forward, 8.5);
+
+        controller().TurnDirection(rightTurn, 65);
+
+        controller().MoveStraight(forward, 5);
+
+        forwardSpeed = 55;
+
+        controller().MoveStraight(forward, 2);
+
+        forwardSpeed = 40;
+
+        armServo->SetDegree(0);
+
+        Sleep(2.0);
+
+        controller().MoveStraight(backward, 12);
+
+        controller().TurnDirection(leftTurn, 20);
+
+        controller().MoveStraight(backward, 8);
 
     }
 

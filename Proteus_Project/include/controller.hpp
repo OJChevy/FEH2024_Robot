@@ -303,6 +303,35 @@ public:
         moveRobot(distance);
     }
 
+    void MoveStraightWithSlightTurnBackward(int direction, float distance) {
+
+                //Calculating actual forward speed based on the voltage of the battery
+        float actualBackwardSpeed = 11.5 / Battery.Voltage();
+        actualBackwardSpeed *= backwardSpeed;
+
+        //Calculating actual backward speed based on the voltage of the battery
+        float actualSlowBackwardSpeed = 11.5 / Battery.Voltage();
+        actualSlowBackwardSpeed *= slowBackwardSpeed;
+
+        if (direction == 0) {
+
+            //Turn right
+            leftIGWAN->SetPercent(actualSlowBackwardSpeed * (-1));
+            rightIGWAN->SetPercent(actualBackwardSpeed);
+
+        } else {
+
+            //Turn left
+            leftIGWAN->SetPercent(actualBackwardSpeed * (-1));
+            rightIGWAN->SetPercent(actualSlowBackwardSpeed);
+
+        }
+
+        //Move the robot until the distance has been reached
+        moveRobot(distance);
+
+    }
+
     /**
      * Stops both of the motors simultaneously.
     */
