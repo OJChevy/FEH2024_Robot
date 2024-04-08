@@ -6031,1048 +6031,1049 @@ LOAD c:/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb
                 0x0000d3d0       0x24 ../main.o
                 0x0000d3d0                Robot::ServoTest()
  .text._ZN5Robot8finalRunEv
-                0x0000d3f4      0x680 ../main.o
+                0x0000d3f4      0x67c ../main.o
                 0x0000d3f4                Robot::finalRun()
  .text._ZN5RobotD2Ev
-                0x0000da74       0x58 ../main.o
-                0x0000da74                Robot::~Robot()
-                0x0000da74                Robot::~Robot()
- .text.main     0x0000dacc      0x2d4 ../main.o
-                0x0000dacc                main
+                0x0000da70       0x58 ../main.o
+                0x0000da70                Robot::~Robot()
+                0x0000da70                Robot::~Robot()
+ .text.main     0x0000dac8      0x2d4 ../main.o
+                0x0000dac8                main
  .text._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE0EE10_M_destroyEv
-                0x0000dda0       0x22 ../main.o
-                0x0000dda0                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::_M_destroy()
+                0x0000dd9c       0x22 ../main.o
+                0x0000dd9c                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::_M_destroy()
  .text._ZNSt10shared_ptrI8FEHMotorEC2Ev
-                0x0000ddc2       0x1a ../main.o
-                0x0000ddc2                std::shared_ptr<FEHMotor>::shared_ptr()
-                0x0000ddc2                std::shared_ptr<FEHMotor>::shared_ptr()
+                0x0000ddbe       0x1a ../main.o
+                0x0000ddbe                std::shared_ptr<FEHMotor>::shared_ptr()
+                0x0000ddbe                std::shared_ptr<FEHMotor>::shared_ptr()
  .text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE0EED2Ev
-                0x0000dddc       0x24 ../main.o
-                0x0000dddc                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::~__shared_count()
-                0x0000dddc                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::~__shared_count()
+                0x0000ddd8       0x24 ../main.o
+                0x0000ddd8                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::~__shared_count()
+                0x0000ddd8                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::~__shared_count()
  .text._ZNSt10shared_ptrI14AnalogInputPinEC2Ev
-                0x0000de00       0x1a ../main.o
-                0x0000de00                std::shared_ptr<AnalogInputPin>::shared_ptr()
-                0x0000de00                std::shared_ptr<AnalogInputPin>::shared_ptr()
+                0x0000ddfc       0x1a ../main.o
+                0x0000ddfc                std::shared_ptr<AnalogInputPin>::shared_ptr()
+                0x0000ddfc                std::shared_ptr<AnalogInputPin>::shared_ptr()
  .text._ZNSt10shared_ptrI14DigitalEncoderEC2Ev
-                0x0000de1a       0x1a ../main.o
-                0x0000de1a                std::shared_ptr<DigitalEncoder>::shared_ptr()
-                0x0000de1a                std::shared_ptr<DigitalEncoder>::shared_ptr()
+                0x0000de16       0x1a ../main.o
+                0x0000de16                std::shared_ptr<DigitalEncoder>::shared_ptr()
+                0x0000de16                std::shared_ptr<DigitalEncoder>::shared_ptr()
  .text._ZNSt10shared_ptrI8FEHServoEC2Ev
-                0x0000de34       0x1a ../main.o
-                0x0000de34                std::shared_ptr<FEHServo>::shared_ptr()
-                0x0000de34                std::shared_ptr<FEHServo>::shared_ptr()
+                0x0000de30       0x1a ../main.o
+                0x0000de30                std::shared_ptr<FEHServo>::shared_ptr()
+                0x0000de30                std::shared_ptr<FEHServo>::shared_ptr()
  .text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE0EEaSERKS2_
-                0x0000de4e       0x48 ../main.o
-                0x0000de4e                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::operator=(std::__shared_count<(__gnu_cxx::_Lock_policy)0> const&)
+                0x0000de4a       0x48 ../main.o
+                0x0000de4a                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::operator=(std::__shared_count<(__gnu_cxx::_Lock_policy)0> const&)
  .text._ZNKSt19__shared_ptr_accessI8FEHMotorLN9__gnu_cxx12_Lock_policyE0ELb0ELb0EEptEv
-                0x0000de96       0x18 ../main.o
-                0x0000de96                std::__shared_ptr_access<FEHMotor, (__gnu_cxx::_Lock_policy)0, false, false>::operator->() const
+                0x0000de92       0x18 ../main.o
+                0x0000de92                std::__shared_ptr_access<FEHMotor, (__gnu_cxx::_Lock_policy)0, false, false>::operator->() const
  .text._ZNKSt19__shared_ptr_accessI8FEHServoLN9__gnu_cxx12_Lock_policyE0ELb0ELb0EEptEv
-                0x0000deae       0x18 ../main.o
-                0x0000deae                std::__shared_ptr_access<FEHServo, (__gnu_cxx::_Lock_policy)0, false, false>::operator->() const
+                0x0000deaa       0x18 ../main.o
+                0x0000deaa                std::__shared_ptr_access<FEHServo, (__gnu_cxx::_Lock_policy)0, false, false>::operator->() const
  .text._ZNKSt19__shared_ptr_accessI14DigitalEncoderLN9__gnu_cxx12_Lock_policyE0ELb0ELb0EEptEv
-                0x0000dec6       0x18 ../main.o
-                0x0000dec6                std::__shared_ptr_access<DigitalEncoder, (__gnu_cxx::_Lock_policy)0, false, false>::operator->() const
+                0x0000dec2       0x18 ../main.o
+                0x0000dec2                std::__shared_ptr_access<DigitalEncoder, (__gnu_cxx::_Lock_policy)0, false, false>::operator->() const
  .text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE0EEC2ERKS2_
-                0x0000dede       0x2e ../main.o
-                0x0000dede                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)0> const&)
-                0x0000dede                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)0> const&)
+                0x0000deda       0x2e ../main.o
+                0x0000deda                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)0> const&)
+                0x0000deda                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)0> const&)
  .text._ZSt11make_sharedI8FEHMotorJNS0_12FEHMotorPortEdEESt10shared_ptrIT_EDpOT0_
-                0x0000df0c       0x46 ../main.o
-                0x0000df0c                std::shared_ptr<FEHMotor> std::make_shared<FEHMotor, FEHMotor::FEHMotorPort, double>(FEHMotor::FEHMotorPort&&, double&&)
+                0x0000df08       0x46 ../main.o
+                0x0000df08                std::shared_ptr<FEHMotor> std::make_shared<FEHMotor, FEHMotor::FEHMotorPort, double>(FEHMotor::FEHMotorPort&&, double&&)
  .text._ZSt11make_sharedI14AnalogInputPinJN5FEHIO8FEHIOPinEEESt10shared_ptrIT_EDpOT0_
-                0x0000df52       0x3c ../main.o
-                0x0000df52                std::shared_ptr<AnalogInputPin> std::make_shared<AnalogInputPin, FEHIO::FEHIOPin>(FEHIO::FEHIOPin&&)
+                0x0000df4e       0x3c ../main.o
+                0x0000df4e                std::shared_ptr<AnalogInputPin> std::make_shared<AnalogInputPin, FEHIO::FEHIOPin>(FEHIO::FEHIOPin&&)
  .text._ZSt11make_sharedI14DigitalEncoderJN5FEHIO8FEHIOPinEEESt10shared_ptrIT_EDpOT0_
-                0x0000df8e       0x3c ../main.o
-                0x0000df8e                std::shared_ptr<DigitalEncoder> std::make_shared<DigitalEncoder, FEHIO::FEHIOPin>(FEHIO::FEHIOPin&&)
+                0x0000df8a       0x3c ../main.o
+                0x0000df8a                std::shared_ptr<DigitalEncoder> std::make_shared<DigitalEncoder, FEHIO::FEHIOPin>(FEHIO::FEHIOPin&&)
  .text._ZSt11make_sharedI8FEHServoJNS0_12FEHServoPortEEESt10shared_ptrIT_EDpOT0_
-                0x0000dfca       0x3c ../main.o
-                0x0000dfca                std::shared_ptr<FEHServo> std::make_shared<FEHServo, FEHServo::FEHServoPort>(FEHServo::FEHServoPort&&)
- *fill*         0x0000e006        0x2 
+                0x0000dfc6       0x3c ../main.o
+                0x0000dfc6                std::shared_ptr<FEHServo> std::make_shared<FEHServo, FEHServo::FEHServoPort>(FEHServo::FEHServoPort&&)
+ *fill*         0x0000e002        0x2 
  .text._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE0EED2Ev
-                0x0000e008       0x20 ../main.o
-                0x0000e008                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::~_Sp_counted_base()
-                0x0000e008                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::~_Sp_counted_base()
+                0x0000e004       0x20 ../main.o
+                0x0000e004                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::~_Sp_counted_base()
+                0x0000e004                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::~_Sp_counted_base()
  .text._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE0EED0Ev
-                0x0000e028       0x20 ../main.o
-                0x0000e028                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::~_Sp_counted_base()
+                0x0000e024       0x20 ../main.o
+                0x0000e024                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::~_Sp_counted_base()
  .text._ZNSt12__shared_ptrI8FEHMotorLN9__gnu_cxx12_Lock_policyE0EEC2Ev
-                0x0000e048       0x22 ../main.o
-                0x0000e048                std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
-                0x0000e048                std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
+                0x0000e044       0x22 ../main.o
+                0x0000e044                std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
+                0x0000e044                std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
  .text._ZNSt12__shared_ptrI14AnalogInputPinLN9__gnu_cxx12_Lock_policyE0EEC2Ev
-                0x0000e06a       0x22 ../main.o
-                0x0000e06a                std::__shared_ptr<AnalogInputPin, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
-                0x0000e06a                std::__shared_ptr<AnalogInputPin, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
+                0x0000e066       0x22 ../main.o
+                0x0000e066                std::__shared_ptr<AnalogInputPin, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
+                0x0000e066                std::__shared_ptr<AnalogInputPin, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
  .text._ZNSt12__shared_ptrI14DigitalEncoderLN9__gnu_cxx12_Lock_policyE0EEC2Ev
-                0x0000e08c       0x22 ../main.o
-                0x0000e08c                std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
-                0x0000e08c                std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
+                0x0000e088       0x22 ../main.o
+                0x0000e088                std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
+                0x0000e088                std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
  .text._ZNSt12__shared_ptrI8FEHServoLN9__gnu_cxx12_Lock_policyE0EEC2Ev
-                0x0000e0ae       0x22 ../main.o
-                0x0000e0ae                std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
-                0x0000e0ae                std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
+                0x0000e0aa       0x22 ../main.o
+                0x0000e0aa                std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
+                0x0000e0aa                std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::__shared_ptr()
  .text._ZNKSt19__shared_ptr_accessI8FEHMotorLN9__gnu_cxx12_Lock_policyE0ELb0ELb0EE6_M_getEv
-                0x0000e0d0       0x18 ../main.o
-                0x0000e0d0                std::__shared_ptr_access<FEHMotor, (__gnu_cxx::_Lock_policy)0, false, false>::_M_get() const
+                0x0000e0cc       0x18 ../main.o
+                0x0000e0cc                std::__shared_ptr_access<FEHMotor, (__gnu_cxx::_Lock_policy)0, false, false>::_M_get() const
  .text._ZNKSt19__shared_ptr_accessI8FEHServoLN9__gnu_cxx12_Lock_policyE0ELb0ELb0EE6_M_getEv
-                0x0000e0e8       0x18 ../main.o
-                0x0000e0e8                std::__shared_ptr_access<FEHServo, (__gnu_cxx::_Lock_policy)0, false, false>::_M_get() const
+                0x0000e0e4       0x18 ../main.o
+                0x0000e0e4                std::__shared_ptr_access<FEHServo, (__gnu_cxx::_Lock_policy)0, false, false>::_M_get() const
  .text._ZNKSt19__shared_ptr_accessI14DigitalEncoderLN9__gnu_cxx12_Lock_policyE0ELb0ELb0EE6_M_getEv
-                0x0000e100       0x18 ../main.o
-                0x0000e100                std::__shared_ptr_access<DigitalEncoder, (__gnu_cxx::_Lock_policy)0, false, false>::_M_get() const
+                0x0000e0fc       0x18 ../main.o
+                0x0000e0fc                std::__shared_ptr_access<DigitalEncoder, (__gnu_cxx::_Lock_policy)0, false, false>::_M_get() const
  .text._ZNSaI8FEHMotorEC2Ev
-                0x0000e118       0x18 ../main.o
-                0x0000e118                std::allocator<FEHMotor>::allocator()
-                0x0000e118                std::allocator<FEHMotor>::allocator()
+                0x0000e114       0x18 ../main.o
+                0x0000e114                std::allocator<FEHMotor>::allocator()
+                0x0000e114                std::allocator<FEHMotor>::allocator()
  .text._ZNSaI8FEHMotorED2Ev
-                0x0000e130       0x18 ../main.o
-                0x0000e130                std::allocator<FEHMotor>::~allocator()
-                0x0000e130                std::allocator<FEHMotor>::~allocator()
+                0x0000e12c       0x18 ../main.o
+                0x0000e12c                std::allocator<FEHMotor>::~allocator()
+                0x0000e12c                std::allocator<FEHMotor>::~allocator()
  .text._ZSt7forwardIN8FEHMotor12FEHMotorPortEEOT_RNSt16remove_referenceIS2_E4typeE
-                0x0000e148       0x14 ../main.o
-                0x0000e148                FEHMotor::FEHMotorPort&& std::forward<FEHMotor::FEHMotorPort>(std::remove_reference<FEHMotor::FEHMotorPort>::type&)
+                0x0000e144       0x14 ../main.o
+                0x0000e144                FEHMotor::FEHMotorPort&& std::forward<FEHMotor::FEHMotorPort>(std::remove_reference<FEHMotor::FEHMotorPort>::type&)
  .text._ZSt7forwardIdEOT_RNSt16remove_referenceIS0_E4typeE
-                0x0000e15c       0x14 ../main.o
-                0x0000e15c                double&& std::forward<double>(std::remove_reference<double>::type&)
+                0x0000e158       0x14 ../main.o
+                0x0000e158                double&& std::forward<double>(std::remove_reference<double>::type&)
  .text._ZSt15allocate_sharedI8FEHMotorSaIS0_EJNS0_12FEHMotorPortEdEESt10shared_ptrIT_ERKT0_DpOT1_
-                0x0000e170       0x32 ../main.o
-                0x0000e170                std::shared_ptr<FEHMotor> std::allocate_shared<FEHMotor, std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(std::allocator<FEHMotor> const&, FEHMotor::FEHMotorPort&&, double&&)
+                0x0000e16c       0x32 ../main.o
+                0x0000e16c                std::shared_ptr<FEHMotor> std::allocate_shared<FEHMotor, std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(std::allocator<FEHMotor> const&, FEHMotor::FEHMotorPort&&, double&&)
  .text._ZNSaI14AnalogInputPinEC2Ev
-                0x0000e1a2       0x18 ../main.o
-                0x0000e1a2                std::allocator<AnalogInputPin>::allocator()
-                0x0000e1a2                std::allocator<AnalogInputPin>::allocator()
+                0x0000e19e       0x18 ../main.o
+                0x0000e19e                std::allocator<AnalogInputPin>::allocator()
+                0x0000e19e                std::allocator<AnalogInputPin>::allocator()
  .text._ZNSaI14AnalogInputPinED2Ev
-                0x0000e1ba       0x18 ../main.o
-                0x0000e1ba                std::allocator<AnalogInputPin>::~allocator()
-                0x0000e1ba                std::allocator<AnalogInputPin>::~allocator()
+                0x0000e1b6       0x18 ../main.o
+                0x0000e1b6                std::allocator<AnalogInputPin>::~allocator()
+                0x0000e1b6                std::allocator<AnalogInputPin>::~allocator()
  .text._ZSt7forwardIN5FEHIO8FEHIOPinEEOT_RNSt16remove_referenceIS2_E4typeE
-                0x0000e1d2       0x14 ../main.o
-                0x0000e1d2                FEHIO::FEHIOPin&& std::forward<FEHIO::FEHIOPin>(std::remove_reference<FEHIO::FEHIOPin>::type&)
+                0x0000e1ce       0x14 ../main.o
+                0x0000e1ce                FEHIO::FEHIOPin&& std::forward<FEHIO::FEHIOPin>(std::remove_reference<FEHIO::FEHIOPin>::type&)
  .text._ZSt15allocate_sharedI14AnalogInputPinSaIS0_EJN5FEHIO8FEHIOPinEEESt10shared_ptrIT_ERKT0_DpOT1_
-                0x0000e1e6       0x28 ../main.o
-                0x0000e1e6                std::shared_ptr<AnalogInputPin> std::allocate_shared<AnalogInputPin, std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(std::allocator<AnalogInputPin> const&, FEHIO::FEHIOPin&&)
+                0x0000e1e2       0x28 ../main.o
+                0x0000e1e2                std::shared_ptr<AnalogInputPin> std::allocate_shared<AnalogInputPin, std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(std::allocator<AnalogInputPin> const&, FEHIO::FEHIOPin&&)
  .text._ZNSaI14DigitalEncoderEC2Ev
-                0x0000e20e       0x18 ../main.o
-                0x0000e20e                std::allocator<DigitalEncoder>::allocator()
-                0x0000e20e                std::allocator<DigitalEncoder>::allocator()
+                0x0000e20a       0x18 ../main.o
+                0x0000e20a                std::allocator<DigitalEncoder>::allocator()
+                0x0000e20a                std::allocator<DigitalEncoder>::allocator()
  .text._ZNSaI14DigitalEncoderED2Ev
-                0x0000e226       0x18 ../main.o
-                0x0000e226                std::allocator<DigitalEncoder>::~allocator()
-                0x0000e226                std::allocator<DigitalEncoder>::~allocator()
+                0x0000e222       0x18 ../main.o
+                0x0000e222                std::allocator<DigitalEncoder>::~allocator()
+                0x0000e222                std::allocator<DigitalEncoder>::~allocator()
  .text._ZSt15allocate_sharedI14DigitalEncoderSaIS0_EJN5FEHIO8FEHIOPinEEESt10shared_ptrIT_ERKT0_DpOT1_
-                0x0000e23e       0x28 ../main.o
-                0x0000e23e                std::shared_ptr<DigitalEncoder> std::allocate_shared<DigitalEncoder, std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(std::allocator<DigitalEncoder> const&, FEHIO::FEHIOPin&&)
+                0x0000e23a       0x28 ../main.o
+                0x0000e23a                std::shared_ptr<DigitalEncoder> std::allocate_shared<DigitalEncoder, std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(std::allocator<DigitalEncoder> const&, FEHIO::FEHIOPin&&)
  .text._ZNSaI8FEHServoEC2Ev
-                0x0000e266       0x18 ../main.o
-                0x0000e266                std::allocator<FEHServo>::allocator()
-                0x0000e266                std::allocator<FEHServo>::allocator()
+                0x0000e262       0x18 ../main.o
+                0x0000e262                std::allocator<FEHServo>::allocator()
+                0x0000e262                std::allocator<FEHServo>::allocator()
  .text._ZNSaI8FEHServoED2Ev
-                0x0000e27e       0x18 ../main.o
-                0x0000e27e                std::allocator<FEHServo>::~allocator()
-                0x0000e27e                std::allocator<FEHServo>::~allocator()
+                0x0000e27a       0x18 ../main.o
+                0x0000e27a                std::allocator<FEHServo>::~allocator()
+                0x0000e27a                std::allocator<FEHServo>::~allocator()
  .text._ZSt7forwardIN8FEHServo12FEHServoPortEEOT_RNSt16remove_referenceIS2_E4typeE
-                0x0000e296       0x14 ../main.o
-                0x0000e296                FEHServo::FEHServoPort&& std::forward<FEHServo::FEHServoPort>(std::remove_reference<FEHServo::FEHServoPort>::type&)
+                0x0000e292       0x14 ../main.o
+                0x0000e292                FEHServo::FEHServoPort&& std::forward<FEHServo::FEHServoPort>(std::remove_reference<FEHServo::FEHServoPort>::type&)
  .text._ZSt15allocate_sharedI8FEHServoSaIS0_EJNS0_12FEHServoPortEEESt10shared_ptrIT_ERKT0_DpOT1_
-                0x0000e2aa       0x28 ../main.o
-                0x0000e2aa                std::shared_ptr<FEHServo> std::allocate_shared<FEHServo, std::allocator<FEHServo>, FEHServo::FEHServoPort>(std::allocator<FEHServo> const&, FEHServo::FEHServoPort&&)
+                0x0000e2a6       0x28 ../main.o
+                0x0000e2a6                std::shared_ptr<FEHServo> std::allocate_shared<FEHServo, std::allocator<FEHServo>, FEHServo::FEHServoPort>(std::allocator<FEHServo> const&, FEHServo::FEHServoPort&&)
  .text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE0EEC2Ev
-                0x0000e2d2       0x1a ../main.o
-                0x0000e2d2                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count()
-                0x0000e2d2                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count()
+                0x0000e2ce       0x1a ../main.o
+                0x0000e2ce                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count()
+                0x0000e2ce                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count()
  .text._ZNKSt12__shared_ptrI8FEHMotorLN9__gnu_cxx12_Lock_policyE0EE3getEv
-                0x0000e2ec       0x16 ../main.o
-                0x0000e2ec                std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::get() const
+                0x0000e2e8       0x16 ../main.o
+                0x0000e2e8                std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::get() const
  .text._ZNKSt12__shared_ptrI8FEHServoLN9__gnu_cxx12_Lock_policyE0EE3getEv
-                0x0000e302       0x16 ../main.o
-                0x0000e302                std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::get() const
+                0x0000e2fe       0x16 ../main.o
+                0x0000e2fe                std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::get() const
  .text._ZNKSt12__shared_ptrI14DigitalEncoderLN9__gnu_cxx12_Lock_policyE0EE3getEv
-                0x0000e318       0x16 ../main.o
-                0x0000e318                std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::get() const
+                0x0000e314       0x16 ../main.o
+                0x0000e314                std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::get() const
  .text._ZN9__gnu_cxx13new_allocatorI8FEHMotorEC2Ev
-                0x0000e32e       0x14 ../main.o
-                0x0000e32e                __gnu_cxx::new_allocator<FEHMotor>::new_allocator()
-                0x0000e32e                __gnu_cxx::new_allocator<FEHMotor>::new_allocator()
+                0x0000e32a       0x14 ../main.o
+                0x0000e32a                __gnu_cxx::new_allocator<FEHMotor>::new_allocator()
+                0x0000e32a                __gnu_cxx::new_allocator<FEHMotor>::new_allocator()
  .text._ZN9__gnu_cxx13new_allocatorI8FEHMotorED2Ev
-                0x0000e342       0x14 ../main.o
-                0x0000e342                __gnu_cxx::new_allocator<FEHMotor>::~new_allocator()
-                0x0000e342                __gnu_cxx::new_allocator<FEHMotor>::~new_allocator()
+                0x0000e33e       0x14 ../main.o
+                0x0000e33e                __gnu_cxx::new_allocator<FEHMotor>::~new_allocator()
+                0x0000e33e                __gnu_cxx::new_allocator<FEHMotor>::~new_allocator()
  .text._ZNSt10shared_ptrI8FEHMotorEC2ISaIS0_EJNS0_12FEHMotorPortEdEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
-                0x0000e356       0x34 ../main.o
-                0x0000e356                std::shared_ptr<FEHMotor>::shared_ptr<std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(std::_Sp_alloc_shared_tag<std::allocator<FEHMotor> >, FEHMotor::FEHMotorPort&&, double&&)
-                0x0000e356                std::shared_ptr<FEHMotor>::shared_ptr<std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(std::_Sp_alloc_shared_tag<std::allocator<FEHMotor> >, FEHMotor::FEHMotorPort&&, double&&)
+                0x0000e352       0x34 ../main.o
+                0x0000e352                std::shared_ptr<FEHMotor>::shared_ptr<std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(std::_Sp_alloc_shared_tag<std::allocator<FEHMotor> >, FEHMotor::FEHMotorPort&&, double&&)
+                0x0000e352                std::shared_ptr<FEHMotor>::shared_ptr<std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(std::_Sp_alloc_shared_tag<std::allocator<FEHMotor> >, FEHMotor::FEHMotorPort&&, double&&)
  .text._ZN9__gnu_cxx13new_allocatorI14AnalogInputPinEC2Ev
-                0x0000e38a       0x14 ../main.o
-                0x0000e38a                __gnu_cxx::new_allocator<AnalogInputPin>::new_allocator()
-                0x0000e38a                __gnu_cxx::new_allocator<AnalogInputPin>::new_allocator()
+                0x0000e386       0x14 ../main.o
+                0x0000e386                __gnu_cxx::new_allocator<AnalogInputPin>::new_allocator()
+                0x0000e386                __gnu_cxx::new_allocator<AnalogInputPin>::new_allocator()
  .text._ZN9__gnu_cxx13new_allocatorI14AnalogInputPinED2Ev
-                0x0000e39e       0x14 ../main.o
-                0x0000e39e                __gnu_cxx::new_allocator<AnalogInputPin>::~new_allocator()
-                0x0000e39e                __gnu_cxx::new_allocator<AnalogInputPin>::~new_allocator()
+                0x0000e39a       0x14 ../main.o
+                0x0000e39a                __gnu_cxx::new_allocator<AnalogInputPin>::~new_allocator()
+                0x0000e39a                __gnu_cxx::new_allocator<AnalogInputPin>::~new_allocator()
  .text._ZNSt10shared_ptrI14AnalogInputPinEC2ISaIS0_EJN5FEHIO8FEHIOPinEEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
-                0x0000e3b2       0x2a ../main.o
-                0x0000e3b2                std::shared_ptr<AnalogInputPin>::shared_ptr<std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<AnalogInputPin> >, FEHIO::FEHIOPin&&)
-                0x0000e3b2                std::shared_ptr<AnalogInputPin>::shared_ptr<std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<AnalogInputPin> >, FEHIO::FEHIOPin&&)
+                0x0000e3ae       0x2a ../main.o
+                0x0000e3ae                std::shared_ptr<AnalogInputPin>::shared_ptr<std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<AnalogInputPin> >, FEHIO::FEHIOPin&&)
+                0x0000e3ae                std::shared_ptr<AnalogInputPin>::shared_ptr<std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<AnalogInputPin> >, FEHIO::FEHIOPin&&)
  .text._ZN9__gnu_cxx13new_allocatorI14DigitalEncoderEC2Ev
-                0x0000e3dc       0x14 ../main.o
-                0x0000e3dc                __gnu_cxx::new_allocator<DigitalEncoder>::new_allocator()
-                0x0000e3dc                __gnu_cxx::new_allocator<DigitalEncoder>::new_allocator()
+                0x0000e3d8       0x14 ../main.o
+                0x0000e3d8                __gnu_cxx::new_allocator<DigitalEncoder>::new_allocator()
+                0x0000e3d8                __gnu_cxx::new_allocator<DigitalEncoder>::new_allocator()
  .text._ZN9__gnu_cxx13new_allocatorI14DigitalEncoderED2Ev
-                0x0000e3f0       0x14 ../main.o
-                0x0000e3f0                __gnu_cxx::new_allocator<DigitalEncoder>::~new_allocator()
-                0x0000e3f0                __gnu_cxx::new_allocator<DigitalEncoder>::~new_allocator()
+                0x0000e3ec       0x14 ../main.o
+                0x0000e3ec                __gnu_cxx::new_allocator<DigitalEncoder>::~new_allocator()
+                0x0000e3ec                __gnu_cxx::new_allocator<DigitalEncoder>::~new_allocator()
  .text._ZNSt10shared_ptrI14DigitalEncoderEC2ISaIS0_EJN5FEHIO8FEHIOPinEEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
-                0x0000e404       0x2a ../main.o
-                0x0000e404                std::shared_ptr<DigitalEncoder>::shared_ptr<std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<DigitalEncoder> >, FEHIO::FEHIOPin&&)
-                0x0000e404                std::shared_ptr<DigitalEncoder>::shared_ptr<std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<DigitalEncoder> >, FEHIO::FEHIOPin&&)
+                0x0000e400       0x2a ../main.o
+                0x0000e400                std::shared_ptr<DigitalEncoder>::shared_ptr<std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<DigitalEncoder> >, FEHIO::FEHIOPin&&)
+                0x0000e400                std::shared_ptr<DigitalEncoder>::shared_ptr<std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<DigitalEncoder> >, FEHIO::FEHIOPin&&)
  .text._ZN9__gnu_cxx13new_allocatorI8FEHServoEC2Ev
-                0x0000e42e       0x14 ../main.o
-                0x0000e42e                __gnu_cxx::new_allocator<FEHServo>::new_allocator()
-                0x0000e42e                __gnu_cxx::new_allocator<FEHServo>::new_allocator()
+                0x0000e42a       0x14 ../main.o
+                0x0000e42a                __gnu_cxx::new_allocator<FEHServo>::new_allocator()
+                0x0000e42a                __gnu_cxx::new_allocator<FEHServo>::new_allocator()
  .text._ZN9__gnu_cxx13new_allocatorI8FEHServoED2Ev
-                0x0000e442       0x14 ../main.o
-                0x0000e442                __gnu_cxx::new_allocator<FEHServo>::~new_allocator()
-                0x0000e442                __gnu_cxx::new_allocator<FEHServo>::~new_allocator()
+                0x0000e43e       0x14 ../main.o
+                0x0000e43e                __gnu_cxx::new_allocator<FEHServo>::~new_allocator()
+                0x0000e43e                __gnu_cxx::new_allocator<FEHServo>::~new_allocator()
  .text._ZNSt10shared_ptrI8FEHServoEC2ISaIS0_EJNS0_12FEHServoPortEEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
-                0x0000e456       0x2a ../main.o
-                0x0000e456                std::shared_ptr<FEHServo>::shared_ptr<std::allocator<FEHServo>, FEHServo::FEHServoPort>(std::_Sp_alloc_shared_tag<std::allocator<FEHServo> >, FEHServo::FEHServoPort&&)
-                0x0000e456                std::shared_ptr<FEHServo>::shared_ptr<std::allocator<FEHServo>, FEHServo::FEHServoPort>(std::_Sp_alloc_shared_tag<std::allocator<FEHServo> >, FEHServo::FEHServoPort&&)
+                0x0000e452       0x2a ../main.o
+                0x0000e452                std::shared_ptr<FEHServo>::shared_ptr<std::allocator<FEHServo>, FEHServo::FEHServoPort>(std::_Sp_alloc_shared_tag<std::allocator<FEHServo> >, FEHServo::FEHServoPort&&)
+                0x0000e452                std::shared_ptr<FEHServo>::shared_ptr<std::allocator<FEHServo>, FEHServo::FEHServoPort>(std::_Sp_alloc_shared_tag<std::allocator<FEHServo> >, FEHServo::FEHServoPort&&)
  .text._ZNSt12__shared_ptrI8FEHMotorLN9__gnu_cxx12_Lock_policyE0EEC2ISaIS0_EJNS0_12FEHMotorPortEdEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
-                0x0000e480       0x4e ../main.o
-                0x0000e480                std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(std::_Sp_alloc_shared_tag<std::allocator<FEHMotor> >, FEHMotor::FEHMotorPort&&, double&&)
-                0x0000e480                std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(std::_Sp_alloc_shared_tag<std::allocator<FEHMotor> >, FEHMotor::FEHMotorPort&&, double&&)
+                0x0000e47c       0x4e ../main.o
+                0x0000e47c                std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(std::_Sp_alloc_shared_tag<std::allocator<FEHMotor> >, FEHMotor::FEHMotorPort&&, double&&)
+                0x0000e47c                std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(std::_Sp_alloc_shared_tag<std::allocator<FEHMotor> >, FEHMotor::FEHMotorPort&&, double&&)
  .text._ZNSt12__shared_ptrI14AnalogInputPinLN9__gnu_cxx12_Lock_policyE0EEC2ISaIS0_EJN5FEHIO8FEHIOPinEEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
-                0x0000e4ce       0x40 ../main.o
-                0x0000e4ce                std::__shared_ptr<AnalogInputPin, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<AnalogInputPin> >, FEHIO::FEHIOPin&&)
-                0x0000e4ce                std::__shared_ptr<AnalogInputPin, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<AnalogInputPin> >, FEHIO::FEHIOPin&&)
+                0x0000e4ca       0x40 ../main.o
+                0x0000e4ca                std::__shared_ptr<AnalogInputPin, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<AnalogInputPin> >, FEHIO::FEHIOPin&&)
+                0x0000e4ca                std::__shared_ptr<AnalogInputPin, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<AnalogInputPin> >, FEHIO::FEHIOPin&&)
  .text._ZNSt12__shared_ptrI14DigitalEncoderLN9__gnu_cxx12_Lock_policyE0EEC2ISaIS0_EJN5FEHIO8FEHIOPinEEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
-                0x0000e50e       0x40 ../main.o
-                0x0000e50e                std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<DigitalEncoder> >, FEHIO::FEHIOPin&&)
-                0x0000e50e                std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<DigitalEncoder> >, FEHIO::FEHIOPin&&)
+                0x0000e50a       0x40 ../main.o
+                0x0000e50a                std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<DigitalEncoder> >, FEHIO::FEHIOPin&&)
+                0x0000e50a                std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(std::_Sp_alloc_shared_tag<std::allocator<DigitalEncoder> >, FEHIO::FEHIOPin&&)
  .text._ZNSt12__shared_ptrI8FEHServoLN9__gnu_cxx12_Lock_policyE0EEC2ISaIS0_EJNS0_12FEHServoPortEEEESt20_Sp_alloc_shared_tagIT_EDpOT0_
-                0x0000e54e       0x40 ../main.o
-                0x0000e54e                std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<FEHServo>, FEHServo::FEHServoPort>(std::_Sp_alloc_shared_tag<std::allocator<FEHServo> >, FEHServo::FEHServoPort&&)
-                0x0000e54e                std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<FEHServo>, FEHServo::FEHServoPort>(std::_Sp_alloc_shared_tag<std::allocator<FEHServo> >, FEHServo::FEHServoPort&&)
+                0x0000e54a       0x40 ../main.o
+                0x0000e54a                std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<FEHServo>, FEHServo::FEHServoPort>(std::_Sp_alloc_shared_tag<std::allocator<FEHServo> >, FEHServo::FEHServoPort&&)
+                0x0000e54a                std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::__shared_ptr<std::allocator<FEHServo>, FEHServo::FEHServoPort>(std::_Sp_alloc_shared_tag<std::allocator<FEHServo> >, FEHServo::FEHServoPort&&)
  .text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE0EEC2I8FEHMotorSaIS4_EJNS4_12FEHMotorPortEdEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_
-                0x0000e58e       0xbe ../main.o
-                0x0000e58e                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<FEHMotor, std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(FEHMotor*&, std::_Sp_alloc_shared_tag<std::allocator<FEHMotor> >, FEHMotor::FEHMotorPort&&, double&&)
-                0x0000e58e                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<FEHMotor, std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(FEHMotor*&, std::_Sp_alloc_shared_tag<std::allocator<FEHMotor> >, FEHMotor::FEHMotorPort&&, double&&)
+                0x0000e58a       0xbe ../main.o
+                0x0000e58a                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<FEHMotor, std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(FEHMotor*&, std::_Sp_alloc_shared_tag<std::allocator<FEHMotor> >, FEHMotor::FEHMotorPort&&, double&&)
+                0x0000e58a                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<FEHMotor, std::allocator<FEHMotor>, FEHMotor::FEHMotorPort, double>(FEHMotor*&, std::_Sp_alloc_shared_tag<std::allocator<FEHMotor> >, FEHMotor::FEHMotorPort&&, double&&)
  .text._ZNSt12__shared_ptrI8FEHMotorLN9__gnu_cxx12_Lock_policyE0EE31_M_enable_shared_from_this_withIS0_S0_EENSt9enable_ifIXntsrNS3_15__has_esft_baseIT0_vEE5valueEvE4typeEPT_
-                0x0000e64c       0x14 ../main.o
-                0x0000e64c                std::enable_if<!std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::__has_esft_base<FEHMotor, void>::value, void>::type std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::_M_enable_shared_from_this_with<FEHMotor, FEHMotor>(FEHMotor*)
+                0x0000e648       0x14 ../main.o
+                0x0000e648                std::enable_if<!std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::__has_esft_base<FEHMotor, void>::value, void>::type std::__shared_ptr<FEHMotor, (__gnu_cxx::_Lock_policy)0>::_M_enable_shared_from_this_with<FEHMotor, FEHMotor>(FEHMotor*)
  .text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE0EEC2I14AnalogInputPinSaIS4_EJN5FEHIO8FEHIOPinEEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_
-                0x0000e660       0xb0 ../main.o
-                0x0000e660                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<AnalogInputPin, std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(AnalogInputPin*&, std::_Sp_alloc_shared_tag<std::allocator<AnalogInputPin> >, FEHIO::FEHIOPin&&)
-                0x0000e660                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<AnalogInputPin, std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(AnalogInputPin*&, std::_Sp_alloc_shared_tag<std::allocator<AnalogInputPin> >, FEHIO::FEHIOPin&&)
+                0x0000e65c       0xb0 ../main.o
+                0x0000e65c                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<AnalogInputPin, std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(AnalogInputPin*&, std::_Sp_alloc_shared_tag<std::allocator<AnalogInputPin> >, FEHIO::FEHIOPin&&)
+                0x0000e65c                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<AnalogInputPin, std::allocator<AnalogInputPin>, FEHIO::FEHIOPin>(AnalogInputPin*&, std::_Sp_alloc_shared_tag<std::allocator<AnalogInputPin> >, FEHIO::FEHIOPin&&)
  .text._ZNSt12__shared_ptrI14AnalogInputPinLN9__gnu_cxx12_Lock_policyE0EE31_M_enable_shared_from_this_withIS0_S0_EENSt9enable_ifIXntsrNS3_15__has_esft_baseIT0_vEE5valueEvE4typeEPT_
-                0x0000e710       0x14 ../main.o
-                0x0000e710                std::enable_if<!std::__shared_ptr<AnalogInputPin, (__gnu_cxx::_Lock_policy)0>::__has_esft_base<AnalogInputPin, void>::value, void>::type std::__shared_ptr<AnalogInputPin, (__gnu_cxx::_Lock_policy)0>::_M_enable_shared_from_this_with<AnalogInputPin, AnalogInputPin>(AnalogInputPin*)
+                0x0000e70c       0x14 ../main.o
+                0x0000e70c                std::enable_if<!std::__shared_ptr<AnalogInputPin, (__gnu_cxx::_Lock_policy)0>::__has_esft_base<AnalogInputPin, void>::value, void>::type std::__shared_ptr<AnalogInputPin, (__gnu_cxx::_Lock_policy)0>::_M_enable_shared_from_this_with<AnalogInputPin, AnalogInputPin>(AnalogInputPin*)
  .text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE0EEC2I14DigitalEncoderSaIS4_EJN5FEHIO8FEHIOPinEEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_
-                0x0000e724       0xb0 ../main.o
-                0x0000e724                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<DigitalEncoder, std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(DigitalEncoder*&, std::_Sp_alloc_shared_tag<std::allocator<DigitalEncoder> >, FEHIO::FEHIOPin&&)
-                0x0000e724                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<DigitalEncoder, std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(DigitalEncoder*&, std::_Sp_alloc_shared_tag<std::allocator<DigitalEncoder> >, FEHIO::FEHIOPin&&)
+                0x0000e720       0xb0 ../main.o
+                0x0000e720                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<DigitalEncoder, std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(DigitalEncoder*&, std::_Sp_alloc_shared_tag<std::allocator<DigitalEncoder> >, FEHIO::FEHIOPin&&)
+                0x0000e720                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<DigitalEncoder, std::allocator<DigitalEncoder>, FEHIO::FEHIOPin>(DigitalEncoder*&, std::_Sp_alloc_shared_tag<std::allocator<DigitalEncoder> >, FEHIO::FEHIOPin&&)
  .text._ZNSt12__shared_ptrI14DigitalEncoderLN9__gnu_cxx12_Lock_policyE0EE31_M_enable_shared_from_this_withIS0_S0_EENSt9enable_ifIXntsrNS3_15__has_esft_baseIT0_vEE5valueEvE4typeEPT_
-                0x0000e7d4       0x14 ../main.o
-                0x0000e7d4                std::enable_if<!std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::__has_esft_base<DigitalEncoder, void>::value, void>::type std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::_M_enable_shared_from_this_with<DigitalEncoder, DigitalEncoder>(DigitalEncoder*)
+                0x0000e7d0       0x14 ../main.o
+                0x0000e7d0                std::enable_if<!std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::__has_esft_base<DigitalEncoder, void>::value, void>::type std::__shared_ptr<DigitalEncoder, (__gnu_cxx::_Lock_policy)0>::_M_enable_shared_from_this_with<DigitalEncoder, DigitalEncoder>(DigitalEncoder*)
  .text._ZNSt14__shared_countILN9__gnu_cxx12_Lock_policyE0EEC2I8FEHServoSaIS4_EJNS4_12FEHServoPortEEEERPT_St20_Sp_alloc_shared_tagIT0_EDpOT1_
-                0x0000e7e8       0xb0 ../main.o
-                0x0000e7e8                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<FEHServo, std::allocator<FEHServo>, FEHServo::FEHServoPort>(FEHServo*&, std::_Sp_alloc_shared_tag<std::allocator<FEHServo> >, FEHServo::FEHServoPort&&)
-                0x0000e7e8                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<FEHServo, std::allocator<FEHServo>, FEHServo::FEHServoPort>(FEHServo*&, std::_Sp_alloc_shared_tag<std::allocator<FEHServo> >, FEHServo::FEHServoPort&&)
+                0x0000e7e4       0xb0 ../main.o
+                0x0000e7e4                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<FEHServo, std::allocator<FEHServo>, FEHServo::FEHServoPort>(FEHServo*&, std::_Sp_alloc_shared_tag<std::allocator<FEHServo> >, FEHServo::FEHServoPort&&)
+                0x0000e7e4                std::__shared_count<(__gnu_cxx::_Lock_policy)0>::__shared_count<FEHServo, std::allocator<FEHServo>, FEHServo::FEHServoPort>(FEHServo*&, std::_Sp_alloc_shared_tag<std::allocator<FEHServo> >, FEHServo::FEHServoPort&&)
  .text._ZNSt12__shared_ptrI8FEHServoLN9__gnu_cxx12_Lock_policyE0EE31_M_enable_shared_from_this_withIS0_S0_EENSt9enable_ifIXntsrNS3_15__has_esft_baseIT0_vEE5valueEvE4typeEPT_
-                0x0000e898       0x14 ../main.o
-                0x0000e898                std::enable_if<!std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::__has_esft_base<FEHServo, void>::value, void>::type std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::_M_enable_shared_from_this_with<FEHServo, FEHServo>(FEHServo*)
+                0x0000e894       0x14 ../main.o
+                0x0000e894                std::enable_if<!std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::__has_esft_base<FEHServo, void>::value, void>::type std::__shared_ptr<FEHServo, (__gnu_cxx::_Lock_policy)0>::_M_enable_shared_from_this_with<FEHServo, FEHServo>(FEHServo*)
  .text._ZNSaISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS0_ELN9__gnu_cxx12_Lock_policyE0EEEC2IS0_EERKSaIT_E
-                0x0000e8ac       0x1a ../main.o
-                0x0000e8ac                std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::allocator<FEHMotor>(std::allocator<FEHMotor> const&)
-                0x0000e8ac                std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::allocator<FEHMotor>(std::allocator<FEHMotor> const&)
+                0x0000e8a8       0x1a ../main.o
+                0x0000e8a8                std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::allocator<FEHMotor>(std::allocator<FEHMotor> const&)
+                0x0000e8a8                std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::allocator<FEHMotor>(std::allocator<FEHMotor> const&)
  .text._ZNSaISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS0_ELN9__gnu_cxx12_Lock_policyE0EEED2Ev
-                0x0000e8c6       0x18 ../main.o
-                0x0000e8c6                std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
-                0x0000e8c6                std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
+                0x0000e8c2       0x18 ../main.o
+                0x0000e8c2                std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
+                0x0000e8c2                std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
  .text._ZSt18__allocate_guardedISaISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEESt15__allocated_ptrIT_ERS8_
-                0x0000e8de       0x26 ../main.o
-                0x0000e8de                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >&)
+                0x0000e8da       0x26 ../main.o
+                0x0000e8da                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >&)
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEED2Ev
-                0x0000e904       0x2a ../main.o
-                0x0000e904                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
-                0x0000e904                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
+                0x0000e900       0x2a ../main.o
+                0x0000e900                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
+                0x0000e900                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEE3getEv
-                0x0000e92e       0x1c ../main.o
-                0x0000e92e                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::get()
+                0x0000e92a       0x1c ../main.o
+                0x0000e92a                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::get()
  .text._ZNSaI8FEHMotorEC2ERKS0_
-                0x0000e94a       0x1c ../main.o
-                0x0000e94a                std::allocator<FEHMotor>::allocator(std::allocator<FEHMotor> const&)
-                0x0000e94a                std::allocator<FEHMotor>::allocator(std::allocator<FEHMotor> const&)
+                0x0000e946       0x1c ../main.o
+                0x0000e946                std::allocator<FEHMotor>::allocator(std::allocator<FEHMotor> const&)
+                0x0000e946                std::allocator<FEHMotor>::allocator(std::allocator<FEHMotor> const&)
  .text._ZNSt14_Sp_ebo_helperILi0ESaI8FEHMotorELb1EED2Ev
-                0x0000e966       0x18 ../main.o
-                0x0000e966                std::_Sp_ebo_helper<0, std::allocator<FEHMotor>, true>::~_Sp_ebo_helper()
-                0x0000e966                std::_Sp_ebo_helper<0, std::allocator<FEHMotor>, true>::~_Sp_ebo_helper()
+                0x0000e962       0x18 ../main.o
+                0x0000e962                std::_Sp_ebo_helper<0, std::allocator<FEHMotor>, true>::~_Sp_ebo_helper()
+                0x0000e962                std::_Sp_ebo_helper<0, std::allocator<FEHMotor>, true>::~_Sp_ebo_helper()
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE5_ImplD2Ev
-                0x0000e97e       0x18 ../main.o
-                0x0000e97e                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
-                0x0000e97e                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
- *fill*         0x0000e996        0x2 
+                0x0000e97a       0x18 ../main.o
+                0x0000e97a                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
+                0x0000e97a                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
+ *fill*         0x0000e992        0x2 
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS0_ELN9__gnu_cxx12_Lock_policyE0EEC2IJNS0_12FEHMotorPortEdEEES1_DpOT_
-                0x0000e998       0x74 ../main.o
-                0x0000e998                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHMotor::FEHMotorPort, double>(std::allocator<FEHMotor>, FEHMotor::FEHMotorPort&&, double&&)
-                0x0000e998                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHMotor::FEHMotorPort, double>(std::allocator<FEHMotor>, FEHMotor::FEHMotorPort&&, double&&)
+                0x0000e994       0x74 ../main.o
+                0x0000e994                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHMotor::FEHMotorPort, double>(std::allocator<FEHMotor>, FEHMotor::FEHMotorPort&&, double&&)
+                0x0000e994                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHMotor::FEHMotorPort, double>(std::allocator<FEHMotor>, FEHMotor::FEHMotorPort&&, double&&)
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEEaSEDn
-                0x0000ea0c       0x1c ../main.o
-                0x0000ea0c                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::operator=(decltype(nullptr))
+                0x0000ea08       0x1c ../main.o
+                0x0000ea08                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::operator=(decltype(nullptr))
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE6_M_ptrEv
-                0x0000ea28       0x1c ../main.o
-                0x0000ea28                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_M_ptr()
+                0x0000ea24       0x1c ../main.o
+                0x0000ea24                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_M_ptr()
  .text._ZNSaISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS0_ELN9__gnu_cxx12_Lock_policyE0EEEC2IS0_EERKSaIT_E
-                0x0000ea44       0x1a ../main.o
-                0x0000ea44                std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::allocator<AnalogInputPin>(std::allocator<AnalogInputPin> const&)
-                0x0000ea44                std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::allocator<AnalogInputPin>(std::allocator<AnalogInputPin> const&)
+                0x0000ea40       0x1a ../main.o
+                0x0000ea40                std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::allocator<AnalogInputPin>(std::allocator<AnalogInputPin> const&)
+                0x0000ea40                std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::allocator<AnalogInputPin>(std::allocator<AnalogInputPin> const&)
  .text._ZNSaISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS0_ELN9__gnu_cxx12_Lock_policyE0EEED2Ev
-                0x0000ea5e       0x18 ../main.o
-                0x0000ea5e                std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
-                0x0000ea5e                std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
+                0x0000ea5a       0x18 ../main.o
+                0x0000ea5a                std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
+                0x0000ea5a                std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
  .text._ZSt18__allocate_guardedISaISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEESt15__allocated_ptrIT_ERS8_
-                0x0000ea76       0x26 ../main.o
-                0x0000ea76                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >&)
+                0x0000ea72       0x26 ../main.o
+                0x0000ea72                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >&)
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEED2Ev
-                0x0000ea9c       0x2a ../main.o
-                0x0000ea9c                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
-                0x0000ea9c                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
+                0x0000ea98       0x2a ../main.o
+                0x0000ea98                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
+                0x0000ea98                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEE3getEv
-                0x0000eac6       0x1c ../main.o
-                0x0000eac6                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::get()
+                0x0000eac2       0x1c ../main.o
+                0x0000eac2                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::get()
  .text._ZNSaI14AnalogInputPinEC2ERKS0_
-                0x0000eae2       0x1c ../main.o
-                0x0000eae2                std::allocator<AnalogInputPin>::allocator(std::allocator<AnalogInputPin> const&)
-                0x0000eae2                std::allocator<AnalogInputPin>::allocator(std::allocator<AnalogInputPin> const&)
+                0x0000eade       0x1c ../main.o
+                0x0000eade                std::allocator<AnalogInputPin>::allocator(std::allocator<AnalogInputPin> const&)
+                0x0000eade                std::allocator<AnalogInputPin>::allocator(std::allocator<AnalogInputPin> const&)
  .text._ZNSt14_Sp_ebo_helperILi0ESaI14AnalogInputPinELb1EED2Ev
-                0x0000eafe       0x18 ../main.o
-                0x0000eafe                std::_Sp_ebo_helper<0, std::allocator<AnalogInputPin>, true>::~_Sp_ebo_helper()
-                0x0000eafe                std::_Sp_ebo_helper<0, std::allocator<AnalogInputPin>, true>::~_Sp_ebo_helper()
+                0x0000eafa       0x18 ../main.o
+                0x0000eafa                std::_Sp_ebo_helper<0, std::allocator<AnalogInputPin>, true>::~_Sp_ebo_helper()
+                0x0000eafa                std::_Sp_ebo_helper<0, std::allocator<AnalogInputPin>, true>::~_Sp_ebo_helper()
  .text._ZNSt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE5_ImplD2Ev
-                0x0000eb16       0x18 ../main.o
-                0x0000eb16                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
-                0x0000eb16                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
- *fill*         0x0000eb2e        0x2 
+                0x0000eb12       0x18 ../main.o
+                0x0000eb12                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
+                0x0000eb12                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
+ *fill*         0x0000eb2a        0x2 
  .text._ZNSt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS0_ELN9__gnu_cxx12_Lock_policyE0EEC2IJN5FEHIO8FEHIOPinEEEES1_DpOT_
-                0x0000eb30       0x6c ../main.o
-                0x0000eb30                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHIO::FEHIOPin>(std::allocator<AnalogInputPin>, FEHIO::FEHIOPin&&)
-                0x0000eb30                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHIO::FEHIOPin>(std::allocator<AnalogInputPin>, FEHIO::FEHIOPin&&)
+                0x0000eb2c       0x6c ../main.o
+                0x0000eb2c                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHIO::FEHIOPin>(std::allocator<AnalogInputPin>, FEHIO::FEHIOPin&&)
+                0x0000eb2c                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHIO::FEHIOPin>(std::allocator<AnalogInputPin>, FEHIO::FEHIOPin&&)
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEEaSEDn
-                0x0000eb9c       0x1c ../main.o
-                0x0000eb9c                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::operator=(decltype(nullptr))
+                0x0000eb98       0x1c ../main.o
+                0x0000eb98                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::operator=(decltype(nullptr))
  .text._ZNSt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE6_M_ptrEv
-                0x0000ebb8       0x1c ../main.o
-                0x0000ebb8                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_M_ptr()
+                0x0000ebb4       0x1c ../main.o
+                0x0000ebb4                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_M_ptr()
  .text._ZNSaISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS0_ELN9__gnu_cxx12_Lock_policyE0EEEC2IS0_EERKSaIT_E
-                0x0000ebd4       0x1a ../main.o
-                0x0000ebd4                std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::allocator<DigitalEncoder>(std::allocator<DigitalEncoder> const&)
-                0x0000ebd4                std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::allocator<DigitalEncoder>(std::allocator<DigitalEncoder> const&)
+                0x0000ebd0       0x1a ../main.o
+                0x0000ebd0                std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::allocator<DigitalEncoder>(std::allocator<DigitalEncoder> const&)
+                0x0000ebd0                std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::allocator<DigitalEncoder>(std::allocator<DigitalEncoder> const&)
  .text._ZNSaISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS0_ELN9__gnu_cxx12_Lock_policyE0EEED2Ev
-                0x0000ebee       0x18 ../main.o
-                0x0000ebee                std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
-                0x0000ebee                std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
+                0x0000ebea       0x18 ../main.o
+                0x0000ebea                std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
+                0x0000ebea                std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
  .text._ZSt18__allocate_guardedISaISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEESt15__allocated_ptrIT_ERS8_
-                0x0000ec06       0x26 ../main.o
-                0x0000ec06                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >&)
+                0x0000ec02       0x26 ../main.o
+                0x0000ec02                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >&)
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEED2Ev
-                0x0000ec2c       0x2a ../main.o
-                0x0000ec2c                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
-                0x0000ec2c                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
+                0x0000ec28       0x2a ../main.o
+                0x0000ec28                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
+                0x0000ec28                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEE3getEv
-                0x0000ec56       0x1c ../main.o
-                0x0000ec56                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::get()
+                0x0000ec52       0x1c ../main.o
+                0x0000ec52                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::get()
  .text._ZNSaI14DigitalEncoderEC2ERKS0_
-                0x0000ec72       0x1c ../main.o
-                0x0000ec72                std::allocator<DigitalEncoder>::allocator(std::allocator<DigitalEncoder> const&)
-                0x0000ec72                std::allocator<DigitalEncoder>::allocator(std::allocator<DigitalEncoder> const&)
+                0x0000ec6e       0x1c ../main.o
+                0x0000ec6e                std::allocator<DigitalEncoder>::allocator(std::allocator<DigitalEncoder> const&)
+                0x0000ec6e                std::allocator<DigitalEncoder>::allocator(std::allocator<DigitalEncoder> const&)
  .text._ZNSt14_Sp_ebo_helperILi0ESaI14DigitalEncoderELb1EED2Ev
-                0x0000ec8e       0x18 ../main.o
-                0x0000ec8e                std::_Sp_ebo_helper<0, std::allocator<DigitalEncoder>, true>::~_Sp_ebo_helper()
-                0x0000ec8e                std::_Sp_ebo_helper<0, std::allocator<DigitalEncoder>, true>::~_Sp_ebo_helper()
+                0x0000ec8a       0x18 ../main.o
+                0x0000ec8a                std::_Sp_ebo_helper<0, std::allocator<DigitalEncoder>, true>::~_Sp_ebo_helper()
+                0x0000ec8a                std::_Sp_ebo_helper<0, std::allocator<DigitalEncoder>, true>::~_Sp_ebo_helper()
  .text._ZNSt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE5_ImplD2Ev
-                0x0000eca6       0x18 ../main.o
-                0x0000eca6                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
-                0x0000eca6                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
- *fill*         0x0000ecbe        0x2 
+                0x0000eca2       0x18 ../main.o
+                0x0000eca2                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
+                0x0000eca2                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
+ *fill*         0x0000ecba        0x2 
  .text._ZNSt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS0_ELN9__gnu_cxx12_Lock_policyE0EEC2IJN5FEHIO8FEHIOPinEEEES1_DpOT_
-                0x0000ecc0       0x6c ../main.o
-                0x0000ecc0                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHIO::FEHIOPin>(std::allocator<DigitalEncoder>, FEHIO::FEHIOPin&&)
-                0x0000ecc0                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHIO::FEHIOPin>(std::allocator<DigitalEncoder>, FEHIO::FEHIOPin&&)
+                0x0000ecbc       0x6c ../main.o
+                0x0000ecbc                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHIO::FEHIOPin>(std::allocator<DigitalEncoder>, FEHIO::FEHIOPin&&)
+                0x0000ecbc                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHIO::FEHIOPin>(std::allocator<DigitalEncoder>, FEHIO::FEHIOPin&&)
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEEaSEDn
-                0x0000ed2c       0x1c ../main.o
-                0x0000ed2c                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::operator=(decltype(nullptr))
+                0x0000ed28       0x1c ../main.o
+                0x0000ed28                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::operator=(decltype(nullptr))
  .text._ZNSt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE6_M_ptrEv
-                0x0000ed48       0x1c ../main.o
-                0x0000ed48                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_M_ptr()
+                0x0000ed44       0x1c ../main.o
+                0x0000ed44                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_M_ptr()
  .text._ZNSaISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS0_ELN9__gnu_cxx12_Lock_policyE0EEEC2IS0_EERKSaIT_E
-                0x0000ed64       0x1a ../main.o
-                0x0000ed64                std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::allocator<FEHServo>(std::allocator<FEHServo> const&)
-                0x0000ed64                std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::allocator<FEHServo>(std::allocator<FEHServo> const&)
+                0x0000ed60       0x1a ../main.o
+                0x0000ed60                std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::allocator<FEHServo>(std::allocator<FEHServo> const&)
+                0x0000ed60                std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::allocator<FEHServo>(std::allocator<FEHServo> const&)
  .text._ZNSaISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS0_ELN9__gnu_cxx12_Lock_policyE0EEED2Ev
-                0x0000ed7e       0x18 ../main.o
-                0x0000ed7e                std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
-                0x0000ed7e                std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
+                0x0000ed7a       0x18 ../main.o
+                0x0000ed7a                std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
+                0x0000ed7a                std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::~allocator()
  .text._ZSt18__allocate_guardedISaISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEESt15__allocated_ptrIT_ERS8_
-                0x0000ed96       0x26 ../main.o
-                0x0000ed96                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >&)
+                0x0000ed92       0x26 ../main.o
+                0x0000ed92                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > > std::__allocate_guarded<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >&)
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEED2Ev
-                0x0000edbc       0x2a ../main.o
-                0x0000edbc                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
-                0x0000edbc                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
+                0x0000edb8       0x2a ../main.o
+                0x0000edb8                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
+                0x0000edb8                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEE3getEv
-                0x0000ede6       0x1c ../main.o
-                0x0000ede6                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::get()
+                0x0000ede2       0x1c ../main.o
+                0x0000ede2                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::get()
  .text._ZNSaI8FEHServoEC2ERKS0_
-                0x0000ee02       0x1c ../main.o
-                0x0000ee02                std::allocator<FEHServo>::allocator(std::allocator<FEHServo> const&)
-                0x0000ee02                std::allocator<FEHServo>::allocator(std::allocator<FEHServo> const&)
+                0x0000edfe       0x1c ../main.o
+                0x0000edfe                std::allocator<FEHServo>::allocator(std::allocator<FEHServo> const&)
+                0x0000edfe                std::allocator<FEHServo>::allocator(std::allocator<FEHServo> const&)
  .text._ZNSt14_Sp_ebo_helperILi0ESaI8FEHServoELb1EED2Ev
-                0x0000ee1e       0x18 ../main.o
-                0x0000ee1e                std::_Sp_ebo_helper<0, std::allocator<FEHServo>, true>::~_Sp_ebo_helper()
-                0x0000ee1e                std::_Sp_ebo_helper<0, std::allocator<FEHServo>, true>::~_Sp_ebo_helper()
+                0x0000ee1a       0x18 ../main.o
+                0x0000ee1a                std::_Sp_ebo_helper<0, std::allocator<FEHServo>, true>::~_Sp_ebo_helper()
+                0x0000ee1a                std::_Sp_ebo_helper<0, std::allocator<FEHServo>, true>::~_Sp_ebo_helper()
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHServoSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE5_ImplD2Ev
-                0x0000ee36       0x18 ../main.o
-                0x0000ee36                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
-                0x0000ee36                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
- *fill*         0x0000ee4e        0x2 
+                0x0000ee32       0x18 ../main.o
+                0x0000ee32                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
+                0x0000ee32                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Impl::~_Impl()
+ *fill*         0x0000ee4a        0x2 
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHServoSaIS0_ELN9__gnu_cxx12_Lock_policyE0EEC2IJNS0_12FEHServoPortEEEES1_DpOT_
-                0x0000ee50       0x6c ../main.o
-                0x0000ee50                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHServo::FEHServoPort>(std::allocator<FEHServo>, FEHServo::FEHServoPort&&)
-                0x0000ee50                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHServo::FEHServoPort>(std::allocator<FEHServo>, FEHServo::FEHServoPort&&)
+                0x0000ee4c       0x6c ../main.o
+                0x0000ee4c                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHServo::FEHServoPort>(std::allocator<FEHServo>, FEHServo::FEHServoPort&&)
+                0x0000ee4c                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Sp_counted_ptr_inplace<FEHServo::FEHServoPort>(std::allocator<FEHServo>, FEHServo::FEHServoPort&&)
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEEaSEDn
-                0x0000eebc       0x1c ../main.o
-                0x0000eebc                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::operator=(decltype(nullptr))
+                0x0000eeb8       0x1c ../main.o
+                0x0000eeb8                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::operator=(decltype(nullptr))
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHServoSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE6_M_ptrEv
-                0x0000eed8       0x1c ../main.o
-                0x0000eed8                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_M_ptr()
+                0x0000eed4       0x1c ../main.o
+                0x0000eed4                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_M_ptr()
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS2_ELNS_12_Lock_policyE0EEEC2Ev
-                0x0000eef4       0x14 ../main.o
-                0x0000eef4                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
-                0x0000eef4                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
+                0x0000eef0       0x14 ../main.o
+                0x0000eef0                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
+                0x0000eef0                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS2_ELNS_12_Lock_policyE0EEED2Ev
-                0x0000ef08       0x14 ../main.o
-                0x0000ef08                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
-                0x0000ef08                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
+                0x0000ef04       0x14 ../main.o
+                0x0000ef04                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
+                0x0000ef04                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
  .text._ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEE8allocateERS6_j
-                0x0000ef1c       0x1e ../main.o
-                0x0000ef1c                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::allocate(std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >&, unsigned int)
+                0x0000ef18       0x1e ../main.o
+                0x0000ef18                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::allocate(std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >&, unsigned int)
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEEC2ERS6_PS5_
-                0x0000ef3a       0x28 ../main.o
-                0x0000ef3a                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>*)
-                0x0000ef3a                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>*)
+                0x0000ef36       0x28 ../main.o
+                0x0000ef36                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>*)
+                0x0000ef36                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>*)
  .text._ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEE10deallocateERS6_PS5_j
-                0x0000ef62       0x1e ../main.o
-                0x0000ef62                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::deallocate(std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
+                0x0000ef5e       0x1e ../main.o
+                0x0000ef5e                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >::deallocate(std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
  .text._ZSt12__to_addressISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEPT_S7_
-                0x0000ef80       0x14 ../main.o
-                0x0000ef80                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>* std::__to_address<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >(std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>*)
+                0x0000ef7c       0x14 ../main.o
+                0x0000ef7c                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>* std::__to_address<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >(std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>*)
  .text._ZN9__gnu_cxx13new_allocatorI8FEHMotorEC2ERKS2_
-                0x0000ef94       0x16 ../main.o
-                0x0000ef94                __gnu_cxx::new_allocator<FEHMotor>::new_allocator(__gnu_cxx::new_allocator<FEHMotor> const&)
-                0x0000ef94                __gnu_cxx::new_allocator<FEHMotor>::new_allocator(__gnu_cxx::new_allocator<FEHMotor> const&)
- *fill*         0x0000efaa        0x2 
+                0x0000ef90       0x16 ../main.o
+                0x0000ef90                __gnu_cxx::new_allocator<FEHMotor>::new_allocator(__gnu_cxx::new_allocator<FEHMotor> const&)
+                0x0000ef90                __gnu_cxx::new_allocator<FEHMotor>::new_allocator(__gnu_cxx::new_allocator<FEHMotor> const&)
+ *fill*         0x0000efa6        0x2 
  .text._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE0EEC2Ev
-                0x0000efac       0x2c ../main.o
-                0x0000efac                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::_Sp_counted_base()
-                0x0000efac                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::_Sp_counted_base()
+                0x0000efa8       0x2c ../main.o
+                0x0000efa8                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::_Sp_counted_base()
+                0x0000efa8                std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::_Sp_counted_base()
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE5_ImplC2ES1_
-                0x0000efd8       0x1c ../main.o
-                0x0000efd8                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<FEHMotor>)
-                0x0000efd8                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<FEHMotor>)
+                0x0000efd4       0x1c ../main.o
+                0x0000efd4                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<FEHMotor>)
+                0x0000efd4                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<FEHMotor>)
  .text._ZNSt16allocator_traitsISaI8FEHMotorEE9constructIS0_JNS0_12FEHMotorPortEdEEEvRS1_PT_DpOT0_
-                0x0000eff4       0x30 ../main.o
-                0x0000eff4                void std::allocator_traits<std::allocator<FEHMotor> >::construct<FEHMotor, FEHMotor::FEHMotorPort, double>(std::allocator<FEHMotor>&, FEHMotor*, FEHMotor::FEHMotorPort&&, double&&)
+                0x0000eff0       0x30 ../main.o
+                0x0000eff0                void std::allocator_traits<std::allocator<FEHMotor> >::construct<FEHMotor, FEHMotor::FEHMotorPort, double>(std::allocator<FEHMotor>&, FEHMotor*, FEHMotor::FEHMotorPort&&, double&&)
  .text._ZN9__gnu_cxx16__aligned_bufferI8FEHMotorE6_M_ptrEv
-                0x0000f024       0x18 ../main.o
-                0x0000f024                __gnu_cxx::__aligned_buffer<FEHMotor>::_M_ptr()
+                0x0000f020       0x18 ../main.o
+                0x0000f020                __gnu_cxx::__aligned_buffer<FEHMotor>::_M_ptr()
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS2_ELNS_12_Lock_policyE0EEEC2Ev
-                0x0000f03c       0x14 ../main.o
-                0x0000f03c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
-                0x0000f03c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
+                0x0000f038       0x14 ../main.o
+                0x0000f038                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
+                0x0000f038                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS2_ELNS_12_Lock_policyE0EEED2Ev
-                0x0000f050       0x14 ../main.o
-                0x0000f050                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
-                0x0000f050                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
+                0x0000f04c       0x14 ../main.o
+                0x0000f04c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
+                0x0000f04c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
  .text._ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEE8allocateERS6_j
-                0x0000f064       0x1e ../main.o
-                0x0000f064                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::allocate(std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >&, unsigned int)
+                0x0000f060       0x1e ../main.o
+                0x0000f060                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::allocate(std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >&, unsigned int)
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEEC2ERS6_PS5_
-                0x0000f082       0x28 ../main.o
-                0x0000f082                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>*)
-                0x0000f082                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>*)
+                0x0000f07e       0x28 ../main.o
+                0x0000f07e                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>*)
+                0x0000f07e                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>*)
  .text._ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEE10deallocateERS6_PS5_j
-                0x0000f0aa       0x1e ../main.o
-                0x0000f0aa                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::deallocate(std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
+                0x0000f0a6       0x1e ../main.o
+                0x0000f0a6                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >::deallocate(std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
  .text._ZSt12__to_addressISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEPT_S7_
-                0x0000f0c8       0x14 ../main.o
-                0x0000f0c8                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>* std::__to_address<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >(std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>*)
+                0x0000f0c4       0x14 ../main.o
+                0x0000f0c4                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>* std::__to_address<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >(std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>*)
  .text._ZN9__gnu_cxx13new_allocatorI14AnalogInputPinEC2ERKS2_
-                0x0000f0dc       0x16 ../main.o
-                0x0000f0dc                __gnu_cxx::new_allocator<AnalogInputPin>::new_allocator(__gnu_cxx::new_allocator<AnalogInputPin> const&)
-                0x0000f0dc                __gnu_cxx::new_allocator<AnalogInputPin>::new_allocator(__gnu_cxx::new_allocator<AnalogInputPin> const&)
+                0x0000f0d8       0x16 ../main.o
+                0x0000f0d8                __gnu_cxx::new_allocator<AnalogInputPin>::new_allocator(__gnu_cxx::new_allocator<AnalogInputPin> const&)
+                0x0000f0d8                __gnu_cxx::new_allocator<AnalogInputPin>::new_allocator(__gnu_cxx::new_allocator<AnalogInputPin> const&)
  .text._ZNSt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE5_ImplC2ES1_
-                0x0000f0f2       0x1c ../main.o
-                0x0000f0f2                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<AnalogInputPin>)
-                0x0000f0f2                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<AnalogInputPin>)
+                0x0000f0ee       0x1c ../main.o
+                0x0000f0ee                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<AnalogInputPin>)
+                0x0000f0ee                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<AnalogInputPin>)
  .text._ZNSt16allocator_traitsISaI14AnalogInputPinEE9constructIS0_JN5FEHIO8FEHIOPinEEEEvRS1_PT_DpOT0_
-                0x0000f10e       0x26 ../main.o
-                0x0000f10e                void std::allocator_traits<std::allocator<AnalogInputPin> >::construct<AnalogInputPin, FEHIO::FEHIOPin>(std::allocator<AnalogInputPin>&, AnalogInputPin*, FEHIO::FEHIOPin&&)
+                0x0000f10a       0x26 ../main.o
+                0x0000f10a                void std::allocator_traits<std::allocator<AnalogInputPin> >::construct<AnalogInputPin, FEHIO::FEHIOPin>(std::allocator<AnalogInputPin>&, AnalogInputPin*, FEHIO::FEHIOPin&&)
  .text._ZN9__gnu_cxx16__aligned_bufferI14AnalogInputPinE6_M_ptrEv
-                0x0000f134       0x18 ../main.o
-                0x0000f134                __gnu_cxx::__aligned_buffer<AnalogInputPin>::_M_ptr()
+                0x0000f130       0x18 ../main.o
+                0x0000f130                __gnu_cxx::__aligned_buffer<AnalogInputPin>::_M_ptr()
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS2_ELNS_12_Lock_policyE0EEEC2Ev
-                0x0000f14c       0x14 ../main.o
-                0x0000f14c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
-                0x0000f14c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
+                0x0000f148       0x14 ../main.o
+                0x0000f148                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
+                0x0000f148                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS2_ELNS_12_Lock_policyE0EEED2Ev
-                0x0000f160       0x14 ../main.o
-                0x0000f160                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
-                0x0000f160                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
+                0x0000f15c       0x14 ../main.o
+                0x0000f15c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
+                0x0000f15c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
  .text._ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEE8allocateERS6_j
-                0x0000f174       0x1e ../main.o
-                0x0000f174                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::allocate(std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >&, unsigned int)
+                0x0000f170       0x1e ../main.o
+                0x0000f170                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::allocate(std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >&, unsigned int)
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEEC2ERS6_PS5_
-                0x0000f192       0x28 ../main.o
-                0x0000f192                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>*)
-                0x0000f192                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>*)
+                0x0000f18e       0x28 ../main.o
+                0x0000f18e                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>*)
+                0x0000f18e                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>*)
  .text._ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEE10deallocateERS6_PS5_j
-                0x0000f1ba       0x1e ../main.o
-                0x0000f1ba                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::deallocate(std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
+                0x0000f1b6       0x1e ../main.o
+                0x0000f1b6                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >::deallocate(std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
  .text._ZSt12__to_addressISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEPT_S7_
-                0x0000f1d8       0x14 ../main.o
-                0x0000f1d8                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>* std::__to_address<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >(std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>*)
+                0x0000f1d4       0x14 ../main.o
+                0x0000f1d4                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>* std::__to_address<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >(std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>*)
  .text._ZN9__gnu_cxx13new_allocatorI14DigitalEncoderEC2ERKS2_
-                0x0000f1ec       0x16 ../main.o
-                0x0000f1ec                __gnu_cxx::new_allocator<DigitalEncoder>::new_allocator(__gnu_cxx::new_allocator<DigitalEncoder> const&)
-                0x0000f1ec                __gnu_cxx::new_allocator<DigitalEncoder>::new_allocator(__gnu_cxx::new_allocator<DigitalEncoder> const&)
+                0x0000f1e8       0x16 ../main.o
+                0x0000f1e8                __gnu_cxx::new_allocator<DigitalEncoder>::new_allocator(__gnu_cxx::new_allocator<DigitalEncoder> const&)
+                0x0000f1e8                __gnu_cxx::new_allocator<DigitalEncoder>::new_allocator(__gnu_cxx::new_allocator<DigitalEncoder> const&)
  .text._ZNSt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE5_ImplC2ES1_
-                0x0000f202       0x1c ../main.o
-                0x0000f202                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<DigitalEncoder>)
-                0x0000f202                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<DigitalEncoder>)
+                0x0000f1fe       0x1c ../main.o
+                0x0000f1fe                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<DigitalEncoder>)
+                0x0000f1fe                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<DigitalEncoder>)
  .text._ZNSt16allocator_traitsISaI14DigitalEncoderEE9constructIS0_JN5FEHIO8FEHIOPinEEEEvRS1_PT_DpOT0_
-                0x0000f21e       0x26 ../main.o
-                0x0000f21e                void std::allocator_traits<std::allocator<DigitalEncoder> >::construct<DigitalEncoder, FEHIO::FEHIOPin>(std::allocator<DigitalEncoder>&, DigitalEncoder*, FEHIO::FEHIOPin&&)
+                0x0000f21a       0x26 ../main.o
+                0x0000f21a                void std::allocator_traits<std::allocator<DigitalEncoder> >::construct<DigitalEncoder, FEHIO::FEHIOPin>(std::allocator<DigitalEncoder>&, DigitalEncoder*, FEHIO::FEHIOPin&&)
  .text._ZN9__gnu_cxx16__aligned_bufferI14DigitalEncoderE6_M_ptrEv
-                0x0000f244       0x18 ../main.o
-                0x0000f244                __gnu_cxx::__aligned_buffer<DigitalEncoder>::_M_ptr()
+                0x0000f240       0x18 ../main.o
+                0x0000f240                __gnu_cxx::__aligned_buffer<DigitalEncoder>::_M_ptr()
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS2_ELNS_12_Lock_policyE0EEEC2Ev
-                0x0000f25c       0x14 ../main.o
-                0x0000f25c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
-                0x0000f25c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
+                0x0000f258       0x14 ../main.o
+                0x0000f258                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
+                0x0000f258                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::new_allocator()
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS2_ELNS_12_Lock_policyE0EEED2Ev
-                0x0000f270       0x14 ../main.o
-                0x0000f270                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
-                0x0000f270                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
+                0x0000f26c       0x14 ../main.o
+                0x0000f26c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
+                0x0000f26c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::~new_allocator()
  .text._ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEE8allocateERS6_j
-                0x0000f284       0x1e ../main.o
-                0x0000f284                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::allocate(std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >&, unsigned int)
+                0x0000f280       0x1e ../main.o
+                0x0000f280                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::allocate(std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >&, unsigned int)
  .text._ZNSt15__allocated_ptrISaISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEEC2ERS6_PS5_
-                0x0000f2a2       0x28 ../main.o
-                0x0000f2a2                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>*)
-                0x0000f2a2                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>*)
+                0x0000f29e       0x28 ../main.o
+                0x0000f29e                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>*)
+                0x0000f29e                std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::__allocated_ptr(std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>*)
  .text._ZNSt16allocator_traitsISaISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEE10deallocateERS6_PS5_j
-                0x0000f2ca       0x1e ../main.o
-                0x0000f2ca                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::deallocate(std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
+                0x0000f2c6       0x1e ../main.o
+                0x0000f2c6                std::allocator_traits<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >::deallocate(std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >&, std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
  .text._ZSt12__to_addressISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEPT_S7_
-                0x0000f2e8       0x14 ../main.o
-                0x0000f2e8                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>* std::__to_address<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >(std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>*)
+                0x0000f2e4       0x14 ../main.o
+                0x0000f2e4                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>* std::__to_address<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >(std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>*)
  .text._ZN9__gnu_cxx13new_allocatorI8FEHServoEC2ERKS2_
-                0x0000f2fc       0x16 ../main.o
-                0x0000f2fc                __gnu_cxx::new_allocator<FEHServo>::new_allocator(__gnu_cxx::new_allocator<FEHServo> const&)
-                0x0000f2fc                __gnu_cxx::new_allocator<FEHServo>::new_allocator(__gnu_cxx::new_allocator<FEHServo> const&)
+                0x0000f2f8       0x16 ../main.o
+                0x0000f2f8                __gnu_cxx::new_allocator<FEHServo>::new_allocator(__gnu_cxx::new_allocator<FEHServo> const&)
+                0x0000f2f8                __gnu_cxx::new_allocator<FEHServo>::new_allocator(__gnu_cxx::new_allocator<FEHServo> const&)
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHServoSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE5_ImplC2ES1_
-                0x0000f312       0x1c ../main.o
-                0x0000f312                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<FEHServo>)
-                0x0000f312                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<FEHServo>)
+                0x0000f30e       0x1c ../main.o
+                0x0000f30e                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<FEHServo>)
+                0x0000f30e                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Impl::_Impl(std::allocator<FEHServo>)
  .text._ZNSt16allocator_traitsISaI8FEHServoEE9constructIS0_JNS0_12FEHServoPortEEEEvRS1_PT_DpOT0_
-                0x0000f32e       0x26 ../main.o
-                0x0000f32e                void std::allocator_traits<std::allocator<FEHServo> >::construct<FEHServo, FEHServo::FEHServoPort>(std::allocator<FEHServo>&, FEHServo*, FEHServo::FEHServoPort&&)
+                0x0000f32a       0x26 ../main.o
+                0x0000f32a                void std::allocator_traits<std::allocator<FEHServo> >::construct<FEHServo, FEHServo::FEHServoPort>(std::allocator<FEHServo>&, FEHServo*, FEHServo::FEHServoPort&&)
  .text._ZN9__gnu_cxx16__aligned_bufferI8FEHServoE6_M_ptrEv
-                0x0000f354       0x18 ../main.o
-                0x0000f354                __gnu_cxx::__aligned_buffer<FEHServo>::_M_ptr()
+                0x0000f350       0x18 ../main.o
+                0x0000f350                __gnu_cxx::__aligned_buffer<FEHServo>::_M_ptr()
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS2_ELNS_12_Lock_policyE0EEE8allocateEjPKv
-                0x0000f36c       0x42 ../main.o
-                0x0000f36c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::allocate(unsigned int, void const*)
+                0x0000f368       0x42 ../main.o
+                0x0000f368                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::allocate(unsigned int, void const*)
  .text._ZSt11__addressofISaISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEEPT_RS7_
-                0x0000f3ae       0x14 ../main.o
-                0x0000f3ae                std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >* std::__addressof<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >&)
+                0x0000f3aa       0x14 ../main.o
+                0x0000f3aa                std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >* std::__addressof<std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >&)
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS2_ELNS_12_Lock_policyE0EEE10deallocateEPS5_j
-                0x0000f3c2       0x26 ../main.o
-                0x0000f3c2                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::deallocate(std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
+                0x0000f3be       0x26 ../main.o
+                0x0000f3be                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::deallocate(std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
  .text._ZNSt14_Sp_ebo_helperILi0ESaI8FEHMotorELb1EEC2ERKS1_
-                0x0000f3e8       0x1c ../main.o
-                0x0000f3e8                std::_Sp_ebo_helper<0, std::allocator<FEHMotor>, true>::_Sp_ebo_helper(std::allocator<FEHMotor> const&)
-                0x0000f3e8                std::_Sp_ebo_helper<0, std::allocator<FEHMotor>, true>::_Sp_ebo_helper(std::allocator<FEHMotor> const&)
+                0x0000f3e4       0x1c ../main.o
+                0x0000f3e4                std::_Sp_ebo_helper<0, std::allocator<FEHMotor>, true>::_Sp_ebo_helper(std::allocator<FEHMotor> const&)
+                0x0000f3e4                std::_Sp_ebo_helper<0, std::allocator<FEHMotor>, true>::_Sp_ebo_helper(std::allocator<FEHMotor> const&)
  .text._ZN9__gnu_cxx13new_allocatorI8FEHMotorE9constructIS1_JNS1_12FEHMotorPortEdEEEvPT_DpOT0_
-                0x0000f404       0x4c ../main.o
-                0x0000f404                void __gnu_cxx::new_allocator<FEHMotor>::construct<FEHMotor, FEHMotor::FEHMotorPort, double>(FEHMotor*, FEHMotor::FEHMotorPort&&, double&&)
+                0x0000f400       0x4c ../main.o
+                0x0000f400                void __gnu_cxx::new_allocator<FEHMotor>::construct<FEHMotor, FEHMotor::FEHMotorPort, double>(FEHMotor*, FEHMotor::FEHMotorPort&&, double&&)
  .text._ZN9__gnu_cxx16__aligned_bufferI8FEHMotorE7_M_addrEv
-                0x0000f450       0x14 ../main.o
-                0x0000f450                __gnu_cxx::__aligned_buffer<FEHMotor>::_M_addr()
+                0x0000f44c       0x14 ../main.o
+                0x0000f44c                __gnu_cxx::__aligned_buffer<FEHMotor>::_M_addr()
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS2_ELNS_12_Lock_policyE0EEE8allocateEjPKv
-                0x0000f464       0x3c ../main.o
-                0x0000f464                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::allocate(unsigned int, void const*)
+                0x0000f460       0x3c ../main.o
+                0x0000f460                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::allocate(unsigned int, void const*)
  .text._ZSt11__addressofISaISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEEPT_RS7_
-                0x0000f4a0       0x14 ../main.o
-                0x0000f4a0                std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >* std::__addressof<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >&)
+                0x0000f49c       0x14 ../main.o
+                0x0000f49c                std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >* std::__addressof<std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >&)
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS2_ELNS_12_Lock_policyE0EEE10deallocateEPS5_j
-                0x0000f4b4       0x20 ../main.o
-                0x0000f4b4                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::deallocate(std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
+                0x0000f4b0       0x20 ../main.o
+                0x0000f4b0                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::deallocate(std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
  .text._ZNSt14_Sp_ebo_helperILi0ESaI14AnalogInputPinELb1EEC2ERKS1_
-                0x0000f4d4       0x1c ../main.o
-                0x0000f4d4                std::_Sp_ebo_helper<0, std::allocator<AnalogInputPin>, true>::_Sp_ebo_helper(std::allocator<AnalogInputPin> const&)
-                0x0000f4d4                std::_Sp_ebo_helper<0, std::allocator<AnalogInputPin>, true>::_Sp_ebo_helper(std::allocator<AnalogInputPin> const&)
+                0x0000f4d0       0x1c ../main.o
+                0x0000f4d0                std::_Sp_ebo_helper<0, std::allocator<AnalogInputPin>, true>::_Sp_ebo_helper(std::allocator<AnalogInputPin> const&)
+                0x0000f4d0                std::_Sp_ebo_helper<0, std::allocator<AnalogInputPin>, true>::_Sp_ebo_helper(std::allocator<AnalogInputPin> const&)
  .text._ZN9__gnu_cxx13new_allocatorI14AnalogInputPinE9constructIS1_JN5FEHIO8FEHIOPinEEEEvPT_DpOT0_
-                0x0000f4f0       0x32 ../main.o
-                0x0000f4f0                void __gnu_cxx::new_allocator<AnalogInputPin>::construct<AnalogInputPin, FEHIO::FEHIOPin>(AnalogInputPin*, FEHIO::FEHIOPin&&)
+                0x0000f4ec       0x32 ../main.o
+                0x0000f4ec                void __gnu_cxx::new_allocator<AnalogInputPin>::construct<AnalogInputPin, FEHIO::FEHIOPin>(AnalogInputPin*, FEHIO::FEHIOPin&&)
  .text._ZN9__gnu_cxx16__aligned_bufferI14AnalogInputPinE7_M_addrEv
-                0x0000f522       0x14 ../main.o
-                0x0000f522                __gnu_cxx::__aligned_buffer<AnalogInputPin>::_M_addr()
+                0x0000f51e       0x14 ../main.o
+                0x0000f51e                __gnu_cxx::__aligned_buffer<AnalogInputPin>::_M_addr()
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS2_ELNS_12_Lock_policyE0EEE8allocateEjPKv
-                0x0000f536       0x3c ../main.o
-                0x0000f536                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::allocate(unsigned int, void const*)
+                0x0000f532       0x3c ../main.o
+                0x0000f532                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::allocate(unsigned int, void const*)
  .text._ZSt11__addressofISaISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEEPT_RS7_
-                0x0000f572       0x14 ../main.o
-                0x0000f572                std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >* std::__addressof<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >&)
+                0x0000f56e       0x14 ../main.o
+                0x0000f56e                std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >* std::__addressof<std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >&)
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS2_ELNS_12_Lock_policyE0EEE10deallocateEPS5_j
-                0x0000f586       0x20 ../main.o
-                0x0000f586                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::deallocate(std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
+                0x0000f582       0x20 ../main.o
+                0x0000f582                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::deallocate(std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
  .text._ZNSt14_Sp_ebo_helperILi0ESaI14DigitalEncoderELb1EEC2ERKS1_
-                0x0000f5a6       0x1c ../main.o
-                0x0000f5a6                std::_Sp_ebo_helper<0, std::allocator<DigitalEncoder>, true>::_Sp_ebo_helper(std::allocator<DigitalEncoder> const&)
-                0x0000f5a6                std::_Sp_ebo_helper<0, std::allocator<DigitalEncoder>, true>::_Sp_ebo_helper(std::allocator<DigitalEncoder> const&)
+                0x0000f5a2       0x1c ../main.o
+                0x0000f5a2                std::_Sp_ebo_helper<0, std::allocator<DigitalEncoder>, true>::_Sp_ebo_helper(std::allocator<DigitalEncoder> const&)
+                0x0000f5a2                std::_Sp_ebo_helper<0, std::allocator<DigitalEncoder>, true>::_Sp_ebo_helper(std::allocator<DigitalEncoder> const&)
  .text._ZN9__gnu_cxx13new_allocatorI14DigitalEncoderE9constructIS1_JN5FEHIO8FEHIOPinEEEEvPT_DpOT0_
-                0x0000f5c2       0x32 ../main.o
-                0x0000f5c2                void __gnu_cxx::new_allocator<DigitalEncoder>::construct<DigitalEncoder, FEHIO::FEHIOPin>(DigitalEncoder*, FEHIO::FEHIOPin&&)
+                0x0000f5be       0x32 ../main.o
+                0x0000f5be                void __gnu_cxx::new_allocator<DigitalEncoder>::construct<DigitalEncoder, FEHIO::FEHIOPin>(DigitalEncoder*, FEHIO::FEHIOPin&&)
  .text._ZN9__gnu_cxx16__aligned_bufferI14DigitalEncoderE7_M_addrEv
-                0x0000f5f4       0x14 ../main.o
-                0x0000f5f4                __gnu_cxx::__aligned_buffer<DigitalEncoder>::_M_addr()
+                0x0000f5f0       0x14 ../main.o
+                0x0000f5f0                __gnu_cxx::__aligned_buffer<DigitalEncoder>::_M_addr()
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS2_ELNS_12_Lock_policyE0EEE8allocateEjPKv
-                0x0000f608       0x42 ../main.o
-                0x0000f608                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::allocate(unsigned int, void const*)
+                0x0000f604       0x42 ../main.o
+                0x0000f604                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::allocate(unsigned int, void const*)
  .text._ZSt11__addressofISaISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS1_ELN9__gnu_cxx12_Lock_policyE0EEEEPT_RS7_
-                0x0000f64a       0x14 ../main.o
-                0x0000f64a                std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >* std::__addressof<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >&)
+                0x0000f646       0x14 ../main.o
+                0x0000f646                std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >* std::__addressof<std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> > >(std::allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >&)
  .text._ZN9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS2_ELNS_12_Lock_policyE0EEE10deallocateEPS5_j
-                0x0000f65e       0x26 ../main.o
-                0x0000f65e                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::deallocate(std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
+                0x0000f65a       0x26 ../main.o
+                0x0000f65a                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::deallocate(std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>*, unsigned int)
  .text._ZNSt14_Sp_ebo_helperILi0ESaI8FEHServoELb1EEC2ERKS1_
-                0x0000f684       0x1c ../main.o
-                0x0000f684                std::_Sp_ebo_helper<0, std::allocator<FEHServo>, true>::_Sp_ebo_helper(std::allocator<FEHServo> const&)
-                0x0000f684                std::_Sp_ebo_helper<0, std::allocator<FEHServo>, true>::_Sp_ebo_helper(std::allocator<FEHServo> const&)
+                0x0000f680       0x1c ../main.o
+                0x0000f680                std::_Sp_ebo_helper<0, std::allocator<FEHServo>, true>::_Sp_ebo_helper(std::allocator<FEHServo> const&)
+                0x0000f680                std::_Sp_ebo_helper<0, std::allocator<FEHServo>, true>::_Sp_ebo_helper(std::allocator<FEHServo> const&)
  .text._ZN9__gnu_cxx13new_allocatorI8FEHServoE9constructIS1_JNS1_12FEHServoPortEEEEvPT_DpOT0_
-                0x0000f6a0       0x32 ../main.o
-                0x0000f6a0                void __gnu_cxx::new_allocator<FEHServo>::construct<FEHServo, FEHServo::FEHServoPort>(FEHServo*, FEHServo::FEHServoPort&&)
+                0x0000f69c       0x32 ../main.o
+                0x0000f69c                void __gnu_cxx::new_allocator<FEHServo>::construct<FEHServo, FEHServo::FEHServoPort>(FEHServo*, FEHServo::FEHServoPort&&)
  .text._ZN9__gnu_cxx16__aligned_bufferI8FEHServoE7_M_addrEv
-                0x0000f6d2       0x14 ../main.o
-                0x0000f6d2                __gnu_cxx::__aligned_buffer<FEHServo>::_M_addr()
- *fill*         0x0000f6e6        0x2 
+                0x0000f6ce       0x14 ../main.o
+                0x0000f6ce                __gnu_cxx::__aligned_buffer<FEHServo>::_M_addr()
+ *fill*         0x0000f6e2        0x2 
  .text._ZNK9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS2_ELNS_12_Lock_policyE0EEE11_M_max_sizeEv
-                0x0000f6e8       0x18 ../main.o
-                0x0000f6e8                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::_M_max_size() const
+                0x0000f6e4       0x18 ../main.o
+                0x0000f6e4                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0> >::_M_max_size() const
  .text._ZNK9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS2_ELNS_12_Lock_policyE0EEE11_M_max_sizeEv
-                0x0000f700       0x16 ../main.o
-                0x0000f700                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::_M_max_size() const
+                0x0000f6fc       0x16 ../main.o
+                0x0000f6fc                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0> >::_M_max_size() const
  .text._ZNK9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS2_ELNS_12_Lock_policyE0EEE11_M_max_sizeEv
-                0x0000f716       0x16 ../main.o
-                0x0000f716                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::_M_max_size() const
+                0x0000f712       0x16 ../main.o
+                0x0000f712                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0> >::_M_max_size() const
  .text._ZNK9__gnu_cxx13new_allocatorISt23_Sp_counted_ptr_inplaceI8FEHServoSaIS2_ELNS_12_Lock_policyE0EEE11_M_max_sizeEv
-                0x0000f72c       0x18 ../main.o
-                0x0000f72c                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::_M_max_size() const
+                0x0000f728       0x18 ../main.o
+                0x0000f728                __gnu_cxx::new_allocator<std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0> >::_M_max_size() const
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHServoSaIS0_ELN9__gnu_cxx12_Lock_policyE0EED2Ev
-                0x0000f744       0x30 ../main.o
-                0x0000f744                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
-                0x0000f744                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+                0x0000f740       0x30 ../main.o
+                0x0000f740                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+                0x0000f740                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHServoSaIS0_ELN9__gnu_cxx12_Lock_policyE0EED0Ev
-                0x0000f774       0x20 ../main.o
-                0x0000f774                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+                0x0000f770       0x20 ../main.o
+                0x0000f770                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHServoSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE10_M_disposeEv
-                0x0000f794       0x2c ../main.o
-                0x0000f794                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_M_dispose()
+                0x0000f790       0x2c ../main.o
+                0x0000f790                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_M_dispose()
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHServoSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE10_M_destroyEv
-                0x0000f7c0       0x52 ../main.o
-                0x0000f7c0                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_M_destroy()
- *fill*         0x0000f812        0x2 
+                0x0000f7bc       0x52 ../main.o
+                0x0000f7bc                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_M_destroy()
+ *fill*         0x0000f80e        0x2 
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHServoSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE14_M_get_deleterERKSt9type_info
-                0x0000f814       0x48 ../main.o
-                0x0000f814                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_M_get_deleter(std::type_info const&)
+                0x0000f810       0x48 ../main.o
+                0x0000f810                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_M_get_deleter(std::type_info const&)
  .text._ZNSt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS0_ELN9__gnu_cxx12_Lock_policyE0EED2Ev
-                0x0000f85c       0x30 ../main.o
-                0x0000f85c                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
-                0x0000f85c                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+                0x0000f858       0x30 ../main.o
+                0x0000f858                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+                0x0000f858                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
  .text._ZNSt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS0_ELN9__gnu_cxx12_Lock_policyE0EED0Ev
-                0x0000f88c       0x20 ../main.o
-                0x0000f88c                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+                0x0000f888       0x20 ../main.o
+                0x0000f888                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
  .text._ZNSt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE10_M_disposeEv
-                0x0000f8ac       0x2c ../main.o
-                0x0000f8ac                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_M_dispose()
+                0x0000f8a8       0x2c ../main.o
+                0x0000f8a8                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_M_dispose()
  .text._ZNSt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE10_M_destroyEv
-                0x0000f8d8       0x52 ../main.o
-                0x0000f8d8                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_M_destroy()
- *fill*         0x0000f92a        0x2 
+                0x0000f8d4       0x52 ../main.o
+                0x0000f8d4                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_M_destroy()
+ *fill*         0x0000f926        0x2 
  .text._ZNSt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE14_M_get_deleterERKSt9type_info
-                0x0000f92c       0x48 ../main.o
-                0x0000f92c                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_M_get_deleter(std::type_info const&)
+                0x0000f928       0x48 ../main.o
+                0x0000f928                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_M_get_deleter(std::type_info const&)
  .text._ZNSt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS0_ELN9__gnu_cxx12_Lock_policyE0EED2Ev
-                0x0000f974       0x30 ../main.o
-                0x0000f974                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
-                0x0000f974                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+                0x0000f970       0x30 ../main.o
+                0x0000f970                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+                0x0000f970                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
  .text._ZNSt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS0_ELN9__gnu_cxx12_Lock_policyE0EED0Ev
-                0x0000f9a4       0x20 ../main.o
-                0x0000f9a4                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+                0x0000f9a0       0x20 ../main.o
+                0x0000f9a0                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
  .text._ZNSt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE10_M_disposeEv
-                0x0000f9c4       0x2c ../main.o
-                0x0000f9c4                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_M_dispose()
+                0x0000f9c0       0x2c ../main.o
+                0x0000f9c0                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_M_dispose()
  .text._ZNSt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE10_M_destroyEv
-                0x0000f9f0       0x52 ../main.o
-                0x0000f9f0                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_M_destroy()
- *fill*         0x0000fa42        0x2 
+                0x0000f9ec       0x52 ../main.o
+                0x0000f9ec                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_M_destroy()
+ *fill*         0x0000fa3e        0x2 
  .text._ZNSt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE14_M_get_deleterERKSt9type_info
-                0x0000fa44       0x48 ../main.o
-                0x0000fa44                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_M_get_deleter(std::type_info const&)
+                0x0000fa40       0x48 ../main.o
+                0x0000fa40                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_M_get_deleter(std::type_info const&)
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS0_ELN9__gnu_cxx12_Lock_policyE0EED2Ev
-                0x0000fa8c       0x30 ../main.o
-                0x0000fa8c                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
-                0x0000fa8c                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+                0x0000fa88       0x30 ../main.o
+                0x0000fa88                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+                0x0000fa88                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS0_ELN9__gnu_cxx12_Lock_policyE0EED0Ev
-                0x0000fabc       0x20 ../main.o
-                0x0000fabc                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+                0x0000fab8       0x20 ../main.o
+                0x0000fab8                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE10_M_disposeEv
-                0x0000fadc       0x2c ../main.o
-                0x0000fadc                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_M_dispose()
+                0x0000fad8       0x2c ../main.o
+                0x0000fad8                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_M_dispose()
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE10_M_destroyEv
-                0x0000fb08       0x52 ../main.o
-                0x0000fb08                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_M_destroy()
- *fill*         0x0000fb5a        0x2 
+                0x0000fb04       0x52 ../main.o
+                0x0000fb04                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_M_destroy()
+ *fill*         0x0000fb56        0x2 
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE14_M_get_deleterERKSt9type_info
-                0x0000fb5c       0x48 ../main.o
-                0x0000fb5c                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_M_get_deleter(std::type_info const&)
+                0x0000fb58       0x48 ../main.o
+                0x0000fb58                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_M_get_deleter(std::type_info const&)
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHServoSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE5_Impl8_M_allocEv
-                0x0000fba4       0x18 ../main.o
-                0x0000fba4                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Impl::_M_alloc()
+                0x0000fba0       0x18 ../main.o
+                0x0000fba0                std::_Sp_counted_ptr_inplace<FEHServo, std::allocator<FEHServo>, (__gnu_cxx::_Lock_policy)0>::_Impl::_M_alloc()
  .text._ZNSt16allocator_traitsISaI8FEHServoEE7destroyIS0_EEvRS1_PT_
-                0x0000fbbc       0x1a ../main.o
-                0x0000fbbc                void std::allocator_traits<std::allocator<FEHServo> >::destroy<FEHServo>(std::allocator<FEHServo>&, FEHServo*)
+                0x0000fbb8       0x1a ../main.o
+                0x0000fbb8                void std::allocator_traits<std::allocator<FEHServo> >::destroy<FEHServo>(std::allocator<FEHServo>&, FEHServo*)
  .text._ZNSt23_Sp_counted_ptr_inplaceI14DigitalEncoderSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE5_Impl8_M_allocEv
-                0x0000fbd6       0x18 ../main.o
-                0x0000fbd6                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Impl::_M_alloc()
+                0x0000fbd2       0x18 ../main.o
+                0x0000fbd2                std::_Sp_counted_ptr_inplace<DigitalEncoder, std::allocator<DigitalEncoder>, (__gnu_cxx::_Lock_policy)0>::_Impl::_M_alloc()
  .text._ZNSt16allocator_traitsISaI14DigitalEncoderEE7destroyIS0_EEvRS1_PT_
-                0x0000fbee       0x1a ../main.o
-                0x0000fbee                void std::allocator_traits<std::allocator<DigitalEncoder> >::destroy<DigitalEncoder>(std::allocator<DigitalEncoder>&, DigitalEncoder*)
+                0x0000fbea       0x1a ../main.o
+                0x0000fbea                void std::allocator_traits<std::allocator<DigitalEncoder> >::destroy<DigitalEncoder>(std::allocator<DigitalEncoder>&, DigitalEncoder*)
  .text._ZNSt23_Sp_counted_ptr_inplaceI14AnalogInputPinSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE5_Impl8_M_allocEv
-                0x0000fc08       0x18 ../main.o
-                0x0000fc08                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Impl::_M_alloc()
+                0x0000fc04       0x18 ../main.o
+                0x0000fc04                std::_Sp_counted_ptr_inplace<AnalogInputPin, std::allocator<AnalogInputPin>, (__gnu_cxx::_Lock_policy)0>::_Impl::_M_alloc()
  .text._ZNSt16allocator_traitsISaI14AnalogInputPinEE7destroyIS0_EEvRS1_PT_
-                0x0000fc20       0x1a ../main.o
-                0x0000fc20                void std::allocator_traits<std::allocator<AnalogInputPin> >::destroy<AnalogInputPin>(std::allocator<AnalogInputPin>&, AnalogInputPin*)
+                0x0000fc1c       0x1a ../main.o
+                0x0000fc1c                void std::allocator_traits<std::allocator<AnalogInputPin> >::destroy<AnalogInputPin>(std::allocator<AnalogInputPin>&, AnalogInputPin*)
  .text._ZNSt23_Sp_counted_ptr_inplaceI8FEHMotorSaIS0_ELN9__gnu_cxx12_Lock_policyE0EE5_Impl8_M_allocEv
-                0x0000fc3a       0x18 ../main.o
-                0x0000fc3a                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Impl::_M_alloc()
+                0x0000fc36       0x18 ../main.o
+                0x0000fc36                std::_Sp_counted_ptr_inplace<FEHMotor, std::allocator<FEHMotor>, (__gnu_cxx::_Lock_policy)0>::_Impl::_M_alloc()
  .text._ZNSt16allocator_traitsISaI8FEHMotorEE7destroyIS0_EEvRS1_PT_
-                0x0000fc52       0x1a ../main.o
-                0x0000fc52                void std::allocator_traits<std::allocator<FEHMotor> >::destroy<FEHMotor>(std::allocator<FEHMotor>&, FEHMotor*)
+                0x0000fc4e       0x1a ../main.o
+                0x0000fc4e                void std::allocator_traits<std::allocator<FEHMotor> >::destroy<FEHMotor>(std::allocator<FEHMotor>&, FEHMotor*)
  .text._ZNSt14_Sp_ebo_helperILi0ESaI8FEHServoELb1EE6_S_getERS2_
-                0x0000fc6c       0x14 ../main.o
-                0x0000fc6c                std::_Sp_ebo_helper<0, std::allocator<FEHServo>, true>::_S_get(std::_Sp_ebo_helper<0, std::allocator<FEHServo>, true>&)
+                0x0000fc68       0x14 ../main.o
+                0x0000fc68                std::_Sp_ebo_helper<0, std::allocator<FEHServo>, true>::_S_get(std::_Sp_ebo_helper<0, std::allocator<FEHServo>, true>&)
  .text._ZN9__gnu_cxx13new_allocatorI8FEHServoE7destroyIS1_EEvPT_
-                0x0000fc80       0x14 ../main.o
-                0x0000fc80                void __gnu_cxx::new_allocator<FEHServo>::destroy<FEHServo>(FEHServo*)
+                0x0000fc7c       0x14 ../main.o
+                0x0000fc7c                void __gnu_cxx::new_allocator<FEHServo>::destroy<FEHServo>(FEHServo*)
  .text._ZNSt14_Sp_ebo_helperILi0ESaI14DigitalEncoderELb1EE6_S_getERS2_
-                0x0000fc94       0x14 ../main.o
-                0x0000fc94                std::_Sp_ebo_helper<0, std::allocator<DigitalEncoder>, true>::_S_get(std::_Sp_ebo_helper<0, std::allocator<DigitalEncoder>, true>&)
+                0x0000fc90       0x14 ../main.o
+                0x0000fc90                std::_Sp_ebo_helper<0, std::allocator<DigitalEncoder>, true>::_S_get(std::_Sp_ebo_helper<0, std::allocator<DigitalEncoder>, true>&)
  .text._ZN9__gnu_cxx13new_allocatorI14DigitalEncoderE7destroyIS1_EEvPT_
-                0x0000fca8       0x14 ../main.o
-                0x0000fca8                void __gnu_cxx::new_allocator<DigitalEncoder>::destroy<DigitalEncoder>(DigitalEncoder*)
+                0x0000fca4       0x14 ../main.o
+                0x0000fca4                void __gnu_cxx::new_allocator<DigitalEncoder>::destroy<DigitalEncoder>(DigitalEncoder*)
  .text._ZNSt14_Sp_ebo_helperILi0ESaI14AnalogInputPinELb1EE6_S_getERS2_
-                0x0000fcbc       0x14 ../main.o
-                0x0000fcbc                std::_Sp_ebo_helper<0, std::allocator<AnalogInputPin>, true>::_S_get(std::_Sp_ebo_helper<0, std::allocator<AnalogInputPin>, true>&)
+                0x0000fcb8       0x14 ../main.o
+                0x0000fcb8                std::_Sp_ebo_helper<0, std::allocator<AnalogInputPin>, true>::_S_get(std::_Sp_ebo_helper<0, std::allocator<AnalogInputPin>, true>&)
  .text._ZN9__gnu_cxx13new_allocatorI14AnalogInputPinE7destroyIS1_EEvPT_
-                0x0000fcd0       0x14 ../main.o
-                0x0000fcd0                void __gnu_cxx::new_allocator<AnalogInputPin>::destroy<AnalogInputPin>(AnalogInputPin*)
+                0x0000fccc       0x14 ../main.o
+                0x0000fccc                void __gnu_cxx::new_allocator<AnalogInputPin>::destroy<AnalogInputPin>(AnalogInputPin*)
  .text._ZNSt14_Sp_ebo_helperILi0ESaI8FEHMotorELb1EE6_S_getERS2_
-                0x0000fce4       0x14 ../main.o
-                0x0000fce4                std::_Sp_ebo_helper<0, std::allocator<FEHMotor>, true>::_S_get(std::_Sp_ebo_helper<0, std::allocator<FEHMotor>, true>&)
+                0x0000fce0       0x14 ../main.o
+                0x0000fce0                std::_Sp_ebo_helper<0, std::allocator<FEHMotor>, true>::_S_get(std::_Sp_ebo_helper<0, std::allocator<FEHMotor>, true>&)
  .text._ZN9__gnu_cxx13new_allocatorI8FEHMotorE7destroyIS1_EEvPT_
-                0x0000fcf8       0x14 ../main.o
-                0x0000fcf8                void __gnu_cxx::new_allocator<FEHMotor>::destroy<FEHMotor>(FEHMotor*)
+                0x0000fcf4       0x14 ../main.o
+                0x0000fcf4                void __gnu_cxx::new_allocator<FEHMotor>::destroy<FEHMotor>(FEHMotor*)
  .text.PORTD_IRQHandler
-                0x0000fd0c       0x50 Startup/startup_mk60d10.o
-                0x0000fd0c                PORTD_IRQHandler
+                0x0000fd08       0x50 Startup/startup_mk60d10.o
+                0x0000fd08                PORTD_IRQHandler
  .text._Z15InitPowerButtonv
-                0x0000fd5c       0x60 Startup/startup_mk60d10.o
-                0x0000fd5c                InitPowerButton()
+                0x0000fd58       0x60 Startup/startup_mk60d10.o
+                0x0000fd58                InitPowerButton()
  .text._ZL11pll_init_blv
-                0x0000fdbc       0xe0 Startup/startup_mk60d10.o
+                0x0000fdb8       0xe0 Startup/startup_mk60d10.o
  .text._Z14InitFEHProteusv
-                0x0000fe9c       0xec Startup/startup_mk60d10.o
-                0x0000fe9c                InitFEHProteus()
+                0x0000fe98       0xec Startup/startup_mk60d10.o
+                0x0000fe98                InitFEHProteus()
  .text.DMA0_IRQHandler
-                0x0000ff88        0xc Startup/startup_mk60d10.o
-                0x0000ff88                DMA0_IRQHandler
+                0x0000ff84        0xc Startup/startup_mk60d10.o
+                0x0000ff84                DMA0_IRQHandler
  .text.DMA1_IRQHandler
-                0x0000ff94        0xc Startup/startup_mk60d10.o
-                0x0000ff94                DMA1_IRQHandler
+                0x0000ff90        0xc Startup/startup_mk60d10.o
+                0x0000ff90                DMA1_IRQHandler
  .text.DMA2_IRQHandler
-                0x0000ffa0        0xc Startup/startup_mk60d10.o
-                0x0000ffa0                DMA2_IRQHandler
+                0x0000ff9c        0xc Startup/startup_mk60d10.o
+                0x0000ff9c                DMA2_IRQHandler
  .text.DMA3_IRQHandler
-                0x0000ffac        0xc Startup/startup_mk60d10.o
-                0x0000ffac                DMA3_IRQHandler
+                0x0000ffa8        0xc Startup/startup_mk60d10.o
+                0x0000ffa8                DMA3_IRQHandler
  .text.DMA4_IRQHandler
-                0x0000ffb8        0xc Startup/startup_mk60d10.o
-                0x0000ffb8                DMA4_IRQHandler
+                0x0000ffb4        0xc Startup/startup_mk60d10.o
+                0x0000ffb4                DMA4_IRQHandler
  .text.DMA5_IRQHandler
-                0x0000ffc4        0xc Startup/startup_mk60d10.o
-                0x0000ffc4                DMA5_IRQHandler
+                0x0000ffc0        0xc Startup/startup_mk60d10.o
+                0x0000ffc0                DMA5_IRQHandler
  .text.DMA6_IRQHandler
-                0x0000ffd0        0xc Startup/startup_mk60d10.o
-                0x0000ffd0                DMA6_IRQHandler
+                0x0000ffcc        0xc Startup/startup_mk60d10.o
+                0x0000ffcc                DMA6_IRQHandler
  .text.DMA7_IRQHandler
-                0x0000ffdc        0xc Startup/startup_mk60d10.o
-                0x0000ffdc                DMA7_IRQHandler
+                0x0000ffd8        0xc Startup/startup_mk60d10.o
+                0x0000ffd8                DMA7_IRQHandler
  .text.DMA8_IRQHandler
-                0x0000ffe8        0xc Startup/startup_mk60d10.o
-                0x0000ffe8                DMA8_IRQHandler
+                0x0000ffe4        0xc Startup/startup_mk60d10.o
+                0x0000ffe4                DMA8_IRQHandler
  .text.DMA9_IRQHandler
-                0x0000fff4        0xc Startup/startup_mk60d10.o
-                0x0000fff4                DMA9_IRQHandler
+                0x0000fff0        0xc Startup/startup_mk60d10.o
+                0x0000fff0                DMA9_IRQHandler
  .text.DMA10_IRQHandler
-                0x00010000        0xc Startup/startup_mk60d10.o
-                0x00010000                DMA10_IRQHandler
+                0x0000fffc        0xc Startup/startup_mk60d10.o
+                0x0000fffc                DMA10_IRQHandler
  .text.DMA11_IRQHandler
-                0x0001000c        0xc Startup/startup_mk60d10.o
-                0x0001000c                DMA11_IRQHandler
+                0x00010008        0xc Startup/startup_mk60d10.o
+                0x00010008                DMA11_IRQHandler
  .text.DMA12_IRQHandler
-                0x00010018        0xc Startup/startup_mk60d10.o
-                0x00010018                DMA12_IRQHandler
+                0x00010014        0xc Startup/startup_mk60d10.o
+                0x00010014                DMA12_IRQHandler
  .text.DMA13_IRQHandler
-                0x00010024        0xc Startup/startup_mk60d10.o
-                0x00010024                DMA13_IRQHandler
+                0x00010020        0xc Startup/startup_mk60d10.o
+                0x00010020                DMA13_IRQHandler
  .text.DMA14_IRQHandler
-                0x00010030        0xc Startup/startup_mk60d10.o
-                0x00010030                DMA14_IRQHandler
+                0x0001002c        0xc Startup/startup_mk60d10.o
+                0x0001002c                DMA14_IRQHandler
  .text.DMA15_IRQHandler
-                0x0001003c        0xc Startup/startup_mk60d10.o
-                0x0001003c                DMA15_IRQHandler
+                0x00010038        0xc Startup/startup_mk60d10.o
+                0x00010038                DMA15_IRQHandler
  .text.DMA_Error_IRQHandler
-                0x00010048        0xc Startup/startup_mk60d10.o
-                0x00010048                DMA_Error_IRQHandler
+                0x00010044        0xc Startup/startup_mk60d10.o
+                0x00010044                DMA_Error_IRQHandler
  .text.MCM_IRQHandler
-                0x00010054        0xc Startup/startup_mk60d10.o
-                0x00010054                MCM_IRQHandler
+                0x00010050        0xc Startup/startup_mk60d10.o
+                0x00010050                MCM_IRQHandler
  .text.FTFL_IRQHandler
-                0x00010060        0xc Startup/startup_mk60d10.o
-                0x00010060                FTFL_IRQHandler
+                0x0001005c        0xc Startup/startup_mk60d10.o
+                0x0001005c                FTFL_IRQHandler
  .text.Read_Collision_IRQHandler
-                0x0001006c        0xc Startup/startup_mk60d10.o
-                0x0001006c                Read_Collision_IRQHandler
+                0x00010068        0xc Startup/startup_mk60d10.o
+                0x00010068                Read_Collision_IRQHandler
  .text.LVD_LVW_IRQHandler
-                0x00010078        0xc Startup/startup_mk60d10.o
-                0x00010078                LVD_LVW_IRQHandler
+                0x00010074        0xc Startup/startup_mk60d10.o
+                0x00010074                LVD_LVW_IRQHandler
  .text.LLWU_IRQHandler
-                0x00010084        0xc Startup/startup_mk60d10.o
-                0x00010084                LLWU_IRQHandler
+                0x00010080        0xc Startup/startup_mk60d10.o
+                0x00010080                LLWU_IRQHandler
  .text.WDOG_EWM_IRQHandler
-                0x00010090        0xc Startup/startup_mk60d10.o
-                0x00010090                WDOG_EWM_IRQHandler
+                0x0001008c        0xc Startup/startup_mk60d10.o
+                0x0001008c                WDOG_EWM_IRQHandler
  .text.RNG_IRQHandler
-                0x0001009c        0xc Startup/startup_mk60d10.o
-                0x0001009c                RNG_IRQHandler
+                0x00010098        0xc Startup/startup_mk60d10.o
+                0x00010098                RNG_IRQHandler
  .text.I2C0_IRQHandler
-                0x000100a8        0xc Startup/startup_mk60d10.o
-                0x000100a8                I2C0_IRQHandler
+                0x000100a4        0xc Startup/startup_mk60d10.o
+                0x000100a4                I2C0_IRQHandler
  .text.I2C1_IRQHandler
-                0x000100b4        0xc Startup/startup_mk60d10.o
-                0x000100b4                I2C1_IRQHandler
+                0x000100b0        0xc Startup/startup_mk60d10.o
+                0x000100b0                I2C1_IRQHandler
  .text.SPI0_IRQHandler
-                0x000100c0        0xc Startup/startup_mk60d10.o
-                0x000100c0                SPI0_IRQHandler
+                0x000100bc        0xc Startup/startup_mk60d10.o
+                0x000100bc                SPI0_IRQHandler
  .text.SPI1_IRQHandler
-                0x000100cc        0xc Startup/startup_mk60d10.o
-                0x000100cc                SPI1_IRQHandler
+                0x000100c8        0xc Startup/startup_mk60d10.o
+                0x000100c8                SPI1_IRQHandler
  .text.SPI2_IRQHandler
-                0x000100d8        0xc Startup/startup_mk60d10.o
-                0x000100d8                SPI2_IRQHandler
+                0x000100d4        0xc Startup/startup_mk60d10.o
+                0x000100d4                SPI2_IRQHandler
  .text.CAN0_ORed_Message_buffer_IRQHandler
-                0x000100e4        0xc Startup/startup_mk60d10.o
-                0x000100e4                CAN0_ORed_Message_buffer_IRQHandler
+                0x000100e0        0xc Startup/startup_mk60d10.o
+                0x000100e0                CAN0_ORed_Message_buffer_IRQHandler
  .text.CAN0_Bus_Off_IRQHandler
-                0x000100f0        0xc Startup/startup_mk60d10.o
-                0x000100f0                CAN0_Bus_Off_IRQHandler
+                0x000100ec        0xc Startup/startup_mk60d10.o
+                0x000100ec                CAN0_Bus_Off_IRQHandler
  .text.CAN0_Error_IRQHandler
-                0x000100fc        0xc Startup/startup_mk60d10.o
-                0x000100fc                CAN0_Error_IRQHandler
+                0x000100f8        0xc Startup/startup_mk60d10.o
+                0x000100f8                CAN0_Error_IRQHandler
  .text.CAN0_Tx_Warning_IRQHandler
-                0x00010108        0xc Startup/startup_mk60d10.o
-                0x00010108                CAN0_Tx_Warning_IRQHandler
+                0x00010104        0xc Startup/startup_mk60d10.o
+                0x00010104                CAN0_Tx_Warning_IRQHandler
  .text.CAN0_Rx_Warning_IRQHandler
-                0x00010114        0xc Startup/startup_mk60d10.o
-                0x00010114                CAN0_Rx_Warning_IRQHandler
+                0x00010110        0xc Startup/startup_mk60d10.o
+                0x00010110                CAN0_Rx_Warning_IRQHandler
  .text.CAN0_Wake_Up_IRQHandler
-                0x00010120        0xc Startup/startup_mk60d10.o
-                0x00010120                CAN0_Wake_Up_IRQHandler
+                0x0001011c        0xc Startup/startup_mk60d10.o
+                0x0001011c                CAN0_Wake_Up_IRQHandler
  .text.I2S0_Tx_IRQHandler
-                0x0001012c        0xc Startup/startup_mk60d10.o
-                0x0001012c                I2S0_Tx_IRQHandler
+                0x00010128        0xc Startup/startup_mk60d10.o
+                0x00010128                I2S0_Tx_IRQHandler
  .text.I2S0_Rx_IRQHandler
-                0x00010138        0xc Startup/startup_mk60d10.o
-                0x00010138                I2S0_Rx_IRQHandler
+                0x00010134        0xc Startup/startup_mk60d10.o
+                0x00010134                I2S0_Rx_IRQHandler
  .text.CAN1_ORed_Message_buffer_IRQHandler
-                0x00010144        0xc Startup/startup_mk60d10.o
-                0x00010144                CAN1_ORed_Message_buffer_IRQHandler
+                0x00010140        0xc Startup/startup_mk60d10.o
+                0x00010140                CAN1_ORed_Message_buffer_IRQHandler
  .text.CAN1_Bus_Off_IRQHandler
-                0x00010150        0xc Startup/startup_mk60d10.o
-                0x00010150                CAN1_Bus_Off_IRQHandler
+                0x0001014c        0xc Startup/startup_mk60d10.o
+                0x0001014c                CAN1_Bus_Off_IRQHandler
  .text.CAN1_Error_IRQHandler
-                0x0001015c        0xc Startup/startup_mk60d10.o
-                0x0001015c                CAN1_Error_IRQHandler
+                0x00010158        0xc Startup/startup_mk60d10.o
+                0x00010158                CAN1_Error_IRQHandler
  .text.CAN1_Tx_Warning_IRQHandler
-                0x00010168        0xc Startup/startup_mk60d10.o
-                0x00010168                CAN1_Tx_Warning_IRQHandler
+                0x00010164        0xc Startup/startup_mk60d10.o
+                0x00010164                CAN1_Tx_Warning_IRQHandler
  .text.CAN1_Rx_Warning_IRQHandler
-                0x00010174        0xc Startup/startup_mk60d10.o
-                0x00010174                CAN1_Rx_Warning_IRQHandler
+                0x00010170        0xc Startup/startup_mk60d10.o
+                0x00010170                CAN1_Rx_Warning_IRQHandler
  .text.CAN1_Wake_Up_IRQHandler
-                0x00010180        0xc Startup/startup_mk60d10.o
-                0x00010180                CAN1_Wake_Up_IRQHandler
+                0x0001017c        0xc Startup/startup_mk60d10.o
+                0x0001017c                CAN1_Wake_Up_IRQHandler
  .text.Reserved59_IRQHandler
-                0x0001018c        0xc Startup/startup_mk60d10.o
-                0x0001018c                Reserved59_IRQHandler
+                0x00010188        0xc Startup/startup_mk60d10.o
+                0x00010188                Reserved59_IRQHandler
  .text.UART0_LON_IRQHandler
-                0x00010198        0xc Startup/startup_mk60d10.o
-                0x00010198                UART0_LON_IRQHandler
+                0x00010194        0xc Startup/startup_mk60d10.o
+                0x00010194                UART0_LON_IRQHandler
  .text.UART0_ERR_IRQHandler
-                0x000101a4        0xc Startup/startup_mk60d10.o
-                0x000101a4                UART0_ERR_IRQHandler
+                0x000101a0        0xc Startup/startup_mk60d10.o
+                0x000101a0                UART0_ERR_IRQHandler
  .text.UART1_RX_TX_IRQHandler
-                0x000101b0        0xc Startup/startup_mk60d10.o
-                0x000101b0                UART1_RX_TX_IRQHandler
+                0x000101ac        0xc Startup/startup_mk60d10.o
+                0x000101ac                UART1_RX_TX_IRQHandler
  .text.UART1_ERR_IRQHandler
-                0x000101bc        0xc Startup/startup_mk60d10.o
-                0x000101bc                UART1_ERR_IRQHandler
+                0x000101b8        0xc Startup/startup_mk60d10.o
+                0x000101b8                UART1_ERR_IRQHandler
  .text.UART2_RX_TX_IRQHandler
-                0x000101c8        0xc Startup/startup_mk60d10.o
-                0x000101c8                UART2_RX_TX_IRQHandler
+                0x000101c4        0xc Startup/startup_mk60d10.o
+                0x000101c4                UART2_RX_TX_IRQHandler
  .text.UART2_ERR_IRQHandler
-                0x000101d4        0xc Startup/startup_mk60d10.o
-                0x000101d4                UART2_ERR_IRQHandler
+                0x000101d0        0xc Startup/startup_mk60d10.o
+                0x000101d0                UART2_ERR_IRQHandler
  .text.UART3_RX_TX_IRQHandler
-                0x000101e0        0xc Startup/startup_mk60d10.o
-                0x000101e0                UART3_RX_TX_IRQHandler
+                0x000101dc        0xc Startup/startup_mk60d10.o
+                0x000101dc                UART3_RX_TX_IRQHandler
  .text.UART3_ERR_IRQHandler
-                0x000101ec        0xc Startup/startup_mk60d10.o
-                0x000101ec                UART3_ERR_IRQHandler
+                0x000101e8        0xc Startup/startup_mk60d10.o
+                0x000101e8                UART3_ERR_IRQHandler
  .text.UART4_RX_TX_IRQHandler
-                0x000101f8        0xc Startup/startup_mk60d10.o
-                0x000101f8                UART4_RX_TX_IRQHandler
+                0x000101f4        0xc Startup/startup_mk60d10.o
+                0x000101f4                UART4_RX_TX_IRQHandler
  .text.UART4_ERR_IRQHandler
-                0x00010204        0xc Startup/startup_mk60d10.o
-                0x00010204                UART4_ERR_IRQHandler
+                0x00010200        0xc Startup/startup_mk60d10.o
+                0x00010200                UART4_ERR_IRQHandler
  .text.UART5_RX_TX_IRQHandler
-                0x00010210        0xc Startup/startup_mk60d10.o
-                0x00010210                UART5_RX_TX_IRQHandler
+                0x0001020c        0xc Startup/startup_mk60d10.o
+                0x0001020c                UART5_RX_TX_IRQHandler
  .text.UART5_ERR_IRQHandler
-                0x0001021c        0xc Startup/startup_mk60d10.o
-                0x0001021c                UART5_ERR_IRQHandler
+                0x00010218        0xc Startup/startup_mk60d10.o
+                0x00010218                UART5_ERR_IRQHandler
  .text.ADC0_IRQHandler
-                0x00010228        0xc Startup/startup_mk60d10.o
-                0x00010228                ADC0_IRQHandler
+                0x00010224        0xc Startup/startup_mk60d10.o
+                0x00010224                ADC0_IRQHandler
  .text.ADC1_IRQHandler
-                0x00010234        0xc Startup/startup_mk60d10.o
-                0x00010234                ADC1_IRQHandler
+                0x00010230        0xc Startup/startup_mk60d10.o
+                0x00010230                ADC1_IRQHandler
  .text.CMP0_IRQHandler
-                0x00010240        0xc Startup/startup_mk60d10.o
-                0x00010240                CMP0_IRQHandler
+                0x0001023c        0xc Startup/startup_mk60d10.o
+                0x0001023c                CMP0_IRQHandler
  .text.CMP1_IRQHandler
-                0x0001024c        0xc Startup/startup_mk60d10.o
-                0x0001024c                CMP1_IRQHandler
+                0x00010248        0xc Startup/startup_mk60d10.o
+                0x00010248                CMP1_IRQHandler
  .text.CMP2_IRQHandler
-                0x00010258        0xc Startup/startup_mk60d10.o
-                0x00010258                CMP2_IRQHandler
+                0x00010254        0xc Startup/startup_mk60d10.o
+                0x00010254                CMP2_IRQHandler
  .text.FTM0_IRQHandler
-                0x00010264        0xc Startup/startup_mk60d10.o
-                0x00010264                FTM0_IRQHandler
+                0x00010260        0xc Startup/startup_mk60d10.o
+                0x00010260                FTM0_IRQHandler
  .text.FTM1_IRQHandler
-                0x00010270        0xc Startup/startup_mk60d10.o
-                0x00010270                FTM1_IRQHandler
+                0x0001026c        0xc Startup/startup_mk60d10.o
+                0x0001026c                FTM1_IRQHandler
  .text.FTM2_IRQHandler
-                0x0001027c        0xc Startup/startup_mk60d10.o
-                0x0001027c                FTM2_IRQHandler
+                0x00010278        0xc Startup/startup_mk60d10.o
+                0x00010278                FTM2_IRQHandler
  .text.CMT_IRQHandler
-                0x00010288        0xc Startup/startup_mk60d10.o
-                0x00010288                CMT_IRQHandler
+                0x00010284        0xc Startup/startup_mk60d10.o
+                0x00010284                CMT_IRQHandler
  .text.RTC_IRQHandler
-                0x00010294        0xc Startup/startup_mk60d10.o
-                0x00010294                RTC_IRQHandler
+                0x00010290        0xc Startup/startup_mk60d10.o
+                0x00010290                RTC_IRQHandler
  .text.RTC_Seconds_IRQHandler
-                0x000102a0        0xc Startup/startup_mk60d10.o
-                0x000102a0                RTC_Seconds_IRQHandler
+                0x0001029c        0xc Startup/startup_mk60d10.o
+                0x0001029c                RTC_Seconds_IRQHandler
  .text.PIT1_IRQHandler
-                0x000102ac        0xc Startup/startup_mk60d10.o
-                0x000102ac                PIT1_IRQHandler
+                0x000102a8        0xc Startup/startup_mk60d10.o
+                0x000102a8                PIT1_IRQHandler
  .text.PIT2_IRQHandler
-                0x000102b8        0xc Startup/startup_mk60d10.o
-                0x000102b8                PIT2_IRQHandler
+                0x000102b4        0xc Startup/startup_mk60d10.o
+                0x000102b4                PIT2_IRQHandler
  .text.PIT3_IRQHandler
-                0x000102c4        0xc Startup/startup_mk60d10.o
-                0x000102c4                PIT3_IRQHandler
+                0x000102c0        0xc Startup/startup_mk60d10.o
+                0x000102c0                PIT3_IRQHandler
  .text.PDB0_IRQHandler
-                0x000102d0        0xc Startup/startup_mk60d10.o
-                0x000102d0                PDB0_IRQHandler
+                0x000102cc        0xc Startup/startup_mk60d10.o
+                0x000102cc                PDB0_IRQHandler
  .text.USB0_IRQHandler
-                0x000102dc        0xc Startup/startup_mk60d10.o
-                0x000102dc                USB0_IRQHandler
+                0x000102d8        0xc Startup/startup_mk60d10.o
+                0x000102d8                USB0_IRQHandler
  .text.USBDCD_IRQHandler
-                0x000102e8        0xc Startup/startup_mk60d10.o
-                0x000102e8                USBDCD_IRQHandler
+                0x000102e4        0xc Startup/startup_mk60d10.o
+                0x000102e4                USBDCD_IRQHandler
  .text.ENET_1588_Timer_IRQHandler
-                0x000102f4        0xc Startup/startup_mk60d10.o
-                0x000102f4                ENET_1588_Timer_IRQHandler
+                0x000102f0        0xc Startup/startup_mk60d10.o
+                0x000102f0                ENET_1588_Timer_IRQHandler
  .text.ENET_Transmit_IRQHandler
-                0x00010300        0xc Startup/startup_mk60d10.o
-                0x00010300                ENET_Transmit_IRQHandler
+                0x000102fc        0xc Startup/startup_mk60d10.o
+                0x000102fc                ENET_Transmit_IRQHandler
  .text.ENET_Receive_IRQHandler
-                0x0001030c        0xc Startup/startup_mk60d10.o
-                0x0001030c                ENET_Receive_IRQHandler
+                0x00010308        0xc Startup/startup_mk60d10.o
+                0x00010308                ENET_Receive_IRQHandler
  .text.ENET_Error_IRQHandler
-                0x00010318        0xc Startup/startup_mk60d10.o
-                0x00010318                ENET_Error_IRQHandler
+                0x00010314        0xc Startup/startup_mk60d10.o
+                0x00010314                ENET_Error_IRQHandler
  .text.Reserved95_IRQHandler
-                0x00010324        0xc Startup/startup_mk60d10.o
-                0x00010324                Reserved95_IRQHandler
+                0x00010320        0xc Startup/startup_mk60d10.o
+                0x00010320                Reserved95_IRQHandler
  .text.SDHC_IRQHandler
-                0x00010330        0xc Startup/startup_mk60d10.o
-                0x00010330                SDHC_IRQHandler
+                0x0001032c        0xc Startup/startup_mk60d10.o
+                0x0001032c                SDHC_IRQHandler
  .text.DAC0_IRQHandler
-                0x0001033c        0xc Startup/startup_mk60d10.o
-                0x0001033c                DAC0_IRQHandler
+                0x00010338        0xc Startup/startup_mk60d10.o
+                0x00010338                DAC0_IRQHandler
  .text.DAC1_IRQHandler
-                0x00010348        0xc Startup/startup_mk60d10.o
-                0x00010348                DAC1_IRQHandler
+                0x00010344        0xc Startup/startup_mk60d10.o
+                0x00010344                DAC1_IRQHandler
  .text.TSI0_IRQHandler
-                0x00010354        0xc Startup/startup_mk60d10.o
-                0x00010354                TSI0_IRQHandler
+                0x00010350        0xc Startup/startup_mk60d10.o
+                0x00010350                TSI0_IRQHandler
  .text.MCG_IRQHandler
-                0x00010360        0xc Startup/startup_mk60d10.o
-                0x00010360                MCG_IRQHandler
+                0x0001035c        0xc Startup/startup_mk60d10.o
+                0x0001035c                MCG_IRQHandler
  .text.LPTMR0_IRQHandler
-                0x0001036c        0xc Startup/startup_mk60d10.o
-                0x0001036c                LPTMR0_IRQHandler
+                0x00010368        0xc Startup/startup_mk60d10.o
+                0x00010368                LPTMR0_IRQHandler
  .text.Reserved102_IRQHandler
-                0x00010378        0xc Startup/startup_mk60d10.o
-                0x00010378                Reserved102_IRQHandler
+                0x00010374        0xc Startup/startup_mk60d10.o
+                0x00010374                Reserved102_IRQHandler
  .text.Reserved108_IRQHandler
-                0x00010384        0xc Startup/startup_mk60d10.o
-                0x00010384                Reserved108_IRQHandler
+                0x00010380        0xc Startup/startup_mk60d10.o
+                0x00010380                Reserved108_IRQHandler
  .text.Reserved109_IRQHandler
-                0x00010390        0xc Startup/startup_mk60d10.o
-                0x00010390                Reserved109_IRQHandler
+                0x0001038c        0xc Startup/startup_mk60d10.o
+                0x0001038c                Reserved109_IRQHandler
  .text.SWI_IRQHandler
-                0x0001039c        0xc Startup/startup_mk60d10.o
-                0x0001039c                SWI_IRQHandler
+                0x00010398        0xc Startup/startup_mk60d10.o
+                0x00010398                SWI_IRQHandler
+ *fill*         0x000103a4        0x4 
  .text._ZN8FEHMotorC2ENS_12FEHMotorPortEf
                 0x000103a8       0x7c Libraries/FEHMotor.o
                 0x000103a8                FEHMotor::FEHMotor(FEHMotor::FEHMotorPort, float)

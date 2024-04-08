@@ -570,7 +570,7 @@ public:
 
                 frontServo->SetDegree(175);
 
-                controller().MoveStraight(backward, 3.75);
+                controller().MoveStraight(backward, 3.8);
 
                 frontServo->SetDegree(95);
 
@@ -602,7 +602,7 @@ public:
         }
 
         //21 inches to top of the ramp
-        controller().MoveStraight(backward, 30.5);
+        controller().MoveStraight(backward, 32.5);
 
         controller().TurnDirection(leftTurn, 60);
 
