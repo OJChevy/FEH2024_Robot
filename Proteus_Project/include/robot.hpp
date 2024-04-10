@@ -210,7 +210,9 @@ public:
         // // Sleep(3.0);
         // // Turn left 180 degrees
 
-        frontServo->SetDegree(112);
+        controller().MoveStraight(backward, 5);
+
+        controller().MoveStraight(forward, 5);
 
         controller().TurnDirection(leftTurn, 180.0);
         // Wait 3 seconds
@@ -645,12 +647,76 @@ public:
         controller().MoveStraight(forward, 0.5);
         controller().MoveStraight(backward, 0.5);
 
-        // Go up small ramp
-        controller().TurnDirection(leftTurn, 35);
-        controller().MoveStraight(backward, 20);
+                switch(leverNumber) {
+
+            case 0:
+
+                //controller().MoveStraightWithSlightTurnBackward(leftTurn, 15);
+
+                controller().MoveStraight(backward, 10);
+
+                frontServo->SetDegree(160);
+
+                controller().TurnDirection(rightTurn, 40);
+
+                //controller().MoveStraight(forward, 2.5);
+
+                frontServo->SetDegree(175);
+
+                controller().MoveStraight(backward, 2.5);
+
+                frontServo->SetDegree(95);
+
+                controller().TurnDirection(leftTurn, 65);
+
+                controller().MoveStraight(forward, 10);
+
+                controller().StopBothMotors();
+
+                leftIGWAN->SetPercent(-20);
+                rightIGWAN->SetPercent(20);
+
+                Sleep(1.5);
+
+                controller().StopBothMotors();
+
+                controller().MoveStraight(backward, 0.5);
+
+                controller().TurnDirection(rightTurn, 80);
+
+                controller().MoveStraight(backward, 30);
+
+                // controller().MoveStraight(backward, 8.5);
+
+                // leftIGWAN->SetPercent(25);
+                // rightIGWAN->SetPercent(-25);
+
+                // Sleep(2.0);
+
+                // controller().StopBothMotors();
+
+                // controller().MoveStraight(forward, 2);
+
+                //controller().TurnDirection(rightTurn, 65);
+
+                break;
+
+            case 1:
+
+                break;
+
+            case 2:
+            
+                break;
+
+        }
+
+        // // Go up small ramp
+        // controller().TurnDirection(rightTurn, 35);
+        // controller().MoveStraight(backward, 20);
 
         // Drive to read light
-        controller().TurnDirection(rightTurn, 35);
+        controller().TurnDirection(leftTurn, 35);
         controller().MoveStraight(backward, 18);
 
         // Read light
@@ -658,19 +724,72 @@ public:
         // Sleep to read light
         // lightColor = ** what value we read **
 
-        // Drive to luggage
-        controller().MoveStraight(forward, 10);
-        controller().TurnDirection(leftTurn, 35);
-        controller().MoveStraight(forward, 4);
+    //     // Drive to luggage
+    //     controller().MoveStraight(forward, 10);
+    //     controller().TurnDirection(rightTurn, 35);
+    //     controller().MoveStraight(forward, 4);
+
+    //     // Drop luggage
+    //     armServo->SetDegree(0);
+    //     Sleep(2.0);
+        
+        // // Drive to light
+        // // if light is red
+        // controller().MoveStraight(backward, 10);
+        // controller().TurnDirection(rightTurn, 180);
+        // // potentially lower the forward drive speed for the light to limit movement
+        // controller().MoveStraight(forward, 4);
+        // // set frontServo for pressing red or blue button
+        // frontServo->SetDegree(145);
+        // // set armServo for pressing white button
+        // armServo->SetDegree(125);
+
+    //     // Drive to passport
+    //     controller().MoveStraight(backward, 12);
+    //     controller().TurnDirection(leftTurn, 90);
+
+    //     // Reset frontServo for passport lever
+    //     controller().MoveStraight(forward, 5);
+    //     frontServo->SetDegree(95);
+
+    //     // Flip passport
+    //     // lower the drive speed for moving forward
+    //     controller().MoveStraight(forward, 3);
+     }
+
+     void finalRun3() {
+
+        armServo->SetDegree(120);
+        frontServo->SetDegree(95);
+
+        controller().TurnDirection(leftTurn, 15);
+
+        Sleep(0.5);
+
+        controller().TurnDirection(rightTurn, 15);
+
+        controller().MoveStraight(backward, 32);
+
+        controller().TurnDirection(leftTurn, 15);
+
+        controller().MoveStraight(backward, 26);
+
+        Sleep(3.0);
+
+        controller().MoveStraight(forward, 8);
+
+        controller().TurnDirection(rightTurn, 25);
+
+        controller().MoveStraight(forward, 8);
 
         // Drop luggage
         armServo->SetDegree(0);
-        Sleep(2.0);
-        
+        Sleep(2.0);    
+
         // Drive to light
         // if light is red
         controller().MoveStraight(backward, 10);
-        controller().TurnDirection(leftTurn, 180);
+        controller().TurnDirection(rightTurn, 145);
         // potentially lower the forward drive speed for the light to limit movement
         controller().MoveStraight(forward, 4);
         // set frontServo for pressing red or blue button
@@ -678,17 +797,162 @@ public:
         // set armServo for pressing white button
         armServo->SetDegree(125);
 
-        // Drive to passport
-        controller().MoveStraight(backward, 12);
-        controller().TurnDirection(rightTurn, 90);
+     }
 
-        // Reset frontServo for passport lever
-        controller().MoveStraight(forward, 5);
+     void finalRun4() {
+
+        int color = 0;
+
+        armServo->SetDegree(120);
         frontServo->SetDegree(95);
 
-        // Flip passport
-        // lower the drive speed for moving forward
-        controller().MoveStraight(forward, 3);
-    }
+        // // Hit start button
+        // controller().MoveStraight(forward, 0.5);
+        // controller().MoveStraight(backward, 0.5);
+
+        // controller().MoveStraight(backward, 8);
+
+        // controller().TurnDirection(leftTurn, 15);
+
+        // controller().MoveStraight(forward, 8);
+
+        // leftIGWAN->SetPercent(-20);
+        // rightIGWAN->SetPercent(20);
+
+        // Sleep(2.0);
+
+        // controller().StopBothMotors();
+
+        // controller().TurnDirection(rightTurn, 90);
+
+        //Pos: At top of ramp, move toward light
+        controller().TurnDirection(leftTurn, 30);
+
+        controller().MoveStraight(backward, 26);
+
+        //TODO: Read light
+        Sleep(3.0);
+
+        //Move forward from light, and position at luggage drop
+        controller().MoveStraight(forward, 6);
+
+        controller().TurnDirection(rightTurn, 40);
+
+        controller().MoveStraight(forward, 14);
+
+        // Drop luggage
+        armServo->SetDegree(0);
+
+        //Sleep
+        Sleep(2.0);  
+
+        //Rotate and get in position for kiosk buttons
+        controller().MoveStraight(backward, 2);
+
+        controller().TurnDirection(rightTurn, 90);
+
+        controller().MoveStraight(backward, 6);
+
+        controller().TurnDirection(rightTurn, 90);
+
+        //Rotate front servo according to light read
+        switch(color) {
+
+            //If red,
+            case 0:
+
+                frontServo->SetDegree(180);
+
+                break;
+
+            //If blue,
+            case 1:
+
+                frontServo->SetDegree(65);
+
+                break;
+
+            default:
+
+                frontServo->SetDegree(180);
+                break;
+
+        }
+
+        //Move toward kiosk buttons
+        controller().MoveStraight(forward, 12);
+
+        //Back up
+        controller().MoveStraight(backward, 2);
+
+        //Reset servos to original position
+        frontServo->SetDegree(95);
+        armServo->SetDegree(120);
+
+        //Rotate towards kiosk
+        controller().TurnDirection(rightTurn, 75);
+
+        //Move back to make way for front servo positioning
+        controller().MoveStraight(backward, 2);
+
+        //Set servo for passport flip
+        frontServo->SetDegree(180);
+
+        //Sleep to check positioning
+        Sleep(2.0);
+
+        //Move forward to get under passport lever
+        controller().MoveStraight(forward, 1.5);
+
+        //Move servo up to flip passport lever
+        frontServo->SetDegree(60);
+
+        Sleep(1.0);
+
+        //Flip servo back down to bring passport lever back down
+        frontServo->SetDegree(180);
+
+        //Begin moving to steep ramp
+        controller().MoveStraight(backward, 15);
+
+        controller().TurnDirection(leftTurn, 60);
+
+        controller().MoveStraight(backward, 15);
+
+
+
+
+
+     }
+
+     void begin() {
+
+        armServo->SetDegree(120);
+        frontServo->SetDegree(95);
+
+        Sleep(3.0);
+
+        // Hit start button
+        controller().MoveStraight(forward, 0.5);
+        controller().MoveStraight(backward, 0.5);
+
+        controller().MoveStraight(backward, 10);
+
+        controller().TurnDirection(leftTurn, 25);
+
+        controller().MoveStraight(forward, 8);
+
+        leftIGWAN->SetPercent(-20);
+        rightIGWAN->SetPercent(20);
+
+        Sleep(2.0);
+
+        controller().StopBothMotors();
+
+        controller().TurnDirection(rightTurn, 90);
+
+        controller().MoveStraight(backward, 28);
+        
+     }
 
 };

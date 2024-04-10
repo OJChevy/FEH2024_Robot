@@ -58,9 +58,9 @@ int main(void)
             case 0:
 
                 //Run robot.SystemCheck() when System check is selected in icon array
-                //Iteration for System Check: 36
-                //robot.SystemCheck();
-                robot.ServoTest();
+                //Iteration for System Check: 37
+                robot.SystemCheck();
+                //robot.ServoTest();
                 //controller.MoveStraight(leftIGWAN, rightIGWAN, -40, rightEncoder, 20, 1.75);
                 //controller.DisplayCDSSensorValue(cdsSensor);
                 break;
@@ -71,9 +71,12 @@ int main(void)
                 //Iterations for Third Progress Check: 24
                 //Iterations for Fourth Progress Check: 28
                 //Iterations for Fifth Progress Check: 40
-                //Iterations for Final Run: 37
+                //Iterations for Final Run: 39
+                //Iterations for Final Run 2: 11
+                //Iterations for Final Run 3: 9
+                //Iterations for Final Run 4: 24
                 //Owen is a bitch
-                robot.finalRun();
+                robot.begin();
                 break;
 
             case 2:
