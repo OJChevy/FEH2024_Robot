@@ -802,39 +802,49 @@ public:
      void finalRun4() {
 
         int color = 0;
+        int leverNumber = 0;
 
         armServo->SetDegree(120);
         frontServo->SetDegree(95);
 
-        // // Hit start button
-        // controller().MoveStraight(forward, 0.5);
-        // controller().MoveStraight(backward, 0.5);
+        Sleep(3.0);
 
-        // controller().MoveStraight(backward, 8);
+        // Hit start button
+        controller().MoveStraight(forward, 0.5);
+        controller().MoveStraight(backward, 0.5);
 
-        // controller().TurnDirection(leftTurn, 15);
+        controller().MoveStraight(backward, 10);
 
-        // controller().MoveStraight(forward, 8);
+        controller().TurnDirection(leftTurn, 25);
 
-        // leftIGWAN->SetPercent(-20);
-        // rightIGWAN->SetPercent(20);
+        controller().MoveStraight(forward, 8);
 
-        // Sleep(2.0);
+        leftIGWAN->SetPercent(-20);
+        rightIGWAN->SetPercent(20);
 
-        // controller().StopBothMotors();
+        Sleep(2.0);
 
-        // controller().TurnDirection(rightTurn, 90);
+        controller().StopBothMotors();
+
+        controller().TurnDirection(rightTurn, 86);
+
+        controller().MoveStraight(backward, 28);
 
         //Pos: At top of ramp, move toward light
-        controller().TurnDirection(leftTurn, 30);
+        controller().TurnDirection(leftTurn, 15);
 
-        controller().MoveStraight(backward, 26);
+        controller().MoveStraight(backward, 24);
+
+        //Pos: At top of ramp, move toward light
+        // controller().TurnDirection(leftTurn, 30);
+
+        // controller().MoveStraight(backward, 26);
 
         //TODO: Read light
         Sleep(3.0);
 
         //Move forward from light, and position at luggage drop
-        controller().MoveStraight(forward, 6);
+        controller().MoveStraight(forward, 5);
 
         controller().TurnDirection(rightTurn, 40);
 
@@ -861,7 +871,7 @@ public:
             //If red,
             case 0:
 
-                frontServo->SetDegree(180);
+                frontServo->SetDegree(165);
 
                 break;
 
@@ -874,7 +884,7 @@ public:
 
             default:
 
-                frontServo->SetDegree(180);
+                frontServo->SetDegree(0);
                 break;
 
         }
@@ -913,11 +923,39 @@ public:
         frontServo->SetDegree(180);
 
         //Begin moving to steep ramp
-        controller().MoveStraight(backward, 15);
+        controller().MoveStraight(backward, 14.5);
 
         controller().TurnDirection(leftTurn, 60);
 
-        controller().MoveStraight(backward, 15);
+        controller().MoveStraight(backward, 29);
+
+        switch (leverNumber) {
+
+            case 0:
+
+                controller().TurnDirection(rightTurn, 75);
+
+                controller().MoveStraight(forward, 8);
+
+                controller().TurnDirection(rightTurn, 75);
+
+                controller().MoveStraight(forward, 0.5);
+
+                break;
+
+            case 1:
+
+                break;
+
+            case 2:
+
+                break;
+
+            default:
+
+                break;
+
+        }
 
 
 
@@ -949,9 +987,14 @@ public:
 
         controller().StopBothMotors();
 
-        controller().TurnDirection(rightTurn, 90);
+        controller().TurnDirection(rightTurn, 85);
 
-        controller().MoveStraight(backward, 28);
+        controller().MoveStraight(backward, 25);
+
+        //Pos: At top of ramp, move toward light
+        controller().TurnDirection(leftTurn, 15);
+
+        controller().MoveStraight(backward, 26);
         
      }
 
