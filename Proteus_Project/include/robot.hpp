@@ -826,12 +826,12 @@ public:
 
         controller().StopBothMotors();
 
-        controller().TurnDirection(rightTurn, 86);
+        controller().TurnDirection(rightTurn, 72.5);
 
-        controller().MoveStraight(backward, 28);
+        controller().MoveStraight(backward, 26.5);
 
         //Pos: At top of ramp, move toward light
-        controller().TurnDirection(leftTurn, 15);
+        controller().TurnDirection(leftTurn, 18.5);
 
         controller().MoveStraight(backward, 24);
 
@@ -844,11 +844,11 @@ public:
         Sleep(3.0);
 
         //Move forward from light, and position at luggage drop
-        controller().MoveStraight(forward, 5);
+        controller().MoveStraight(forward, 8.5);
 
-        controller().TurnDirection(rightTurn, 40);
+        controller().TurnDirection(rightTurn, 25);
 
-        controller().MoveStraight(forward, 14);
+        controller().MoveStraight(forward, 12);
 
         // Drop luggage
         armServo->SetDegree(0);
@@ -871,7 +871,7 @@ public:
             //If red,
             case 0:
 
-                frontServo->SetDegree(165);
+                frontServo->SetDegree(150);
 
                 break;
 
@@ -895,6 +895,17 @@ public:
         //Back up
         controller().MoveStraight(backward, 2);
 
+        //Second attempt at pressing kiosk button moving slower this time
+        leftIGWAN->SetPercent(-20);
+        rightIGWAN->SetPercent(20);
+
+        Sleep(2.0);
+
+        controller().StopBothMotors();
+
+        //Back up for passport
+        controller().MoveStraight(backward, 2);
+
         //Reset servos to original position
         frontServo->SetDegree(95);
         armServo->SetDegree(120);
@@ -911,8 +922,8 @@ public:
         //Sleep to check positioning
         Sleep(2.0);
 
-        //Move forward to get under passport lever
-        controller().MoveStraight(forward, 1.5);
+        //Move forward to get under passport lever (maybe back to 1.5)
+        controller().MoveStraight(forward, 2);
 
         //Move servo up to flip passport lever
         frontServo->SetDegree(60);
@@ -922,12 +933,14 @@ public:
         //Flip servo back down to bring passport lever back down
         frontServo->SetDegree(180);
 
+        Sleep(1.0);
+
         //Begin moving to steep ramp
-        controller().MoveStraight(backward, 14.5);
+        controller().MoveStraight(backward, 13.5);
 
         controller().TurnDirection(leftTurn, 60);
 
-        controller().MoveStraight(backward, 29);
+        controller().MoveStraight(backward, 35);
 
         switch (leverNumber) {
 
@@ -935,7 +948,7 @@ public:
 
                 controller().TurnDirection(rightTurn, 75);
 
-                controller().MoveStraight(forward, 8);
+                controller().MoveStraight(forward, 12);
 
                 controller().TurnDirection(rightTurn, 75);
 
