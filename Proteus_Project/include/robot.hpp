@@ -807,7 +807,16 @@ public:
         armServo->SetDegree(120);
         frontServo->SetDegree(95);
 
-        Sleep(3.0);
+        RCS.InitializeTouchMenu("E7TOyD6Qc");
+
+        // Start when Red light turns on
+        while (1.0 < cdsSensor->Value()) {
+
+            //leverNumber = RCS.GetCorrectLever();
+
+        }
+
+        //Sleep(3.0);
 
         // Hit start button
         controller().MoveStraight(forward, 0.5);
@@ -826,12 +835,12 @@ public:
 
         controller().StopBothMotors();
 
-        controller().TurnDirection(rightTurn, 72.5);
+        controller().TurnDirection(rightTurn, 78.5);
 
         controller().MoveStraight(backward, 26.5);
 
         //Pos: At top of ramp, move toward light
-        controller().TurnDirection(leftTurn, 18.5);
+        controller().TurnDirection(leftTurn, 24.5);
 
         controller().MoveStraight(backward, 24);
 
@@ -846,7 +855,7 @@ public:
         //Move forward from light, and position at luggage drop
         controller().MoveStraight(forward, 8.5);
 
-        controller().TurnDirection(rightTurn, 25);
+        controller().TurnDirection(rightTurn, 29);
 
         controller().MoveStraight(forward, 12);
 
@@ -950,9 +959,13 @@ public:
 
                 controller().MoveStraight(forward, 12);
 
-                controller().TurnDirection(rightTurn, 75);
+                controller().MoveStraightWithSlightTurn(rightTurn, 50);
 
-                controller().MoveStraight(forward, 0.5);
+                // controller().TurnDirection(rightTurn, 75);
+
+                // controller().MoveStraight(forward, 0.5);
+
+
 
                 break;
 
