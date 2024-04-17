@@ -819,12 +819,12 @@ public:
         //Sleep(3.0);
 
         // Hit start button
-        controller().MoveStraight(forward, 0.5);
-        controller().MoveStraight(backward, 0.5);
+        controller().MoveStraight(forward, 1);
+        controller().MoveStraight(backward, 1);
 
         controller().MoveStraight(backward, 10);
 
-        controller().TurnDirection(leftTurn, 25);
+        controller().TurnDirection(leftTurn, 22);
 
         controller().MoveStraight(forward, 8);
 
@@ -835,14 +835,18 @@ public:
 
         controller().StopBothMotors();
 
-        controller().TurnDirection(rightTurn, 78.5);
+        controller().TurnDirection(rightTurn, 81.5);
 
-        controller().MoveStraight(backward, 26.5);
+        //backwardSpeed = -50;
+
+        controller().MoveStraight(backward, 26);
+
+        //backwardSpeed = -40;
 
         //Pos: At top of ramp, move toward light
-        controller().TurnDirection(leftTurn, 24.5);
+        controller().TurnDirection(leftTurn, 20.5);
 
-        controller().MoveStraight(backward, 24);
+        controller().MoveStraight(backward, 26);
 
         //Pos: At top of ramp, move toward light
         // controller().TurnDirection(leftTurn, 30);
@@ -853,11 +857,11 @@ public:
         Sleep(3.0);
 
         //Move forward from light, and position at luggage drop
-        controller().MoveStraight(forward, 8.5);
+        controller().MoveStraight(forward, 7);
 
-        controller().TurnDirection(rightTurn, 29);
+        controller().TurnDirection(rightTurn, 34);
 
-        controller().MoveStraight(forward, 12);
+        controller().MoveStraight(forward, 14);
 
         // Drop luggage
         armServo->SetDegree(0);
@@ -868,9 +872,9 @@ public:
         //Rotate and get in position for kiosk buttons
         controller().MoveStraight(backward, 2);
 
-        controller().TurnDirection(rightTurn, 90);
+        controller().TurnDirection(rightTurn, 95);
 
-        controller().MoveStraight(backward, 6);
+        controller().MoveStraight(backward, 4);
 
         controller().TurnDirection(rightTurn, 90);
 
@@ -880,7 +884,7 @@ public:
             //If red,
             case 0:
 
-                frontServo->SetDegree(150);
+                frontServo->SetDegree(162);
 
                 break;
 
@@ -899,10 +903,12 @@ public:
         }
 
         //Move toward kiosk buttons
-        controller().MoveStraight(forward, 12);
+        controller().MoveStraight(forward, 11);
 
         //Back up
         controller().MoveStraight(backward, 2);
+
+        Sleep(0.5);
 
         //Second attempt at pressing kiosk button moving slower this time
         leftIGWAN->SetPercent(-20);
@@ -913,7 +919,7 @@ public:
         controller().StopBothMotors();
 
         //Back up for passport
-        controller().MoveStraight(backward, 2);
+        controller().MoveStraight(backward, 1.5);
 
         //Reset servos to original position
         frontServo->SetDegree(95);
@@ -945,21 +951,23 @@ public:
         Sleep(1.0);
 
         //Begin moving to steep ramp
-        controller().MoveStraight(backward, 13.5);
+        controller().MoveStraight(backward, 14);
 
-        controller().TurnDirection(leftTurn, 60);
+        controller().TurnDirection(leftTurn, 55);
 
-        controller().MoveStraight(backward, 35);
+        controller().MoveStraight(backward, 34);
 
         switch (leverNumber) {
 
             case 0:
 
-                controller().TurnDirection(rightTurn, 75);
+                controller().TurnDirection(rightTurn, 90);
 
-                controller().MoveStraight(forward, 12);
+                controller().MoveStraight(forward, 10.5);
 
-                controller().MoveStraightWithSlightTurn(rightTurn, 50);
+                controller().TurnDirection(rightTurn, 90);
+
+                //controller().MoveStraightWithSlightTurn(rightTurn, 50);
 
                 // controller().TurnDirection(rightTurn, 75);
 

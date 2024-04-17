@@ -74,8 +74,7 @@ int main(void)
                 //Iterations for Final Run: 39
                 //Iterations for Final Run 2: 11
                 //Iterations for Final Run 3: 9
-                //Iterations for Final Run 4: 50
-                //Owen is a bitch
+                //Iterations for Final Run 4: 86
                 robot.finalRun4();
                 break;
 
