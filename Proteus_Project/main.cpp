@@ -45,6 +45,10 @@ int main(void)
     //Creating an object of robot class using custom constructor
     Robot robot = Robot(leftIGWAN, rightIGWAN, cdsSensor, leftEncoder, rightEncoder, armServo, frontServo);
 
+    int leverNumber = 0;
+
+    char region = 'A';
+
     //While loop for icon array, returns back to icon array after each function completes
     while (selection != -1) {
 
@@ -74,8 +78,10 @@ int main(void)
                 //Iterations for Final Run: 39
                 //Iterations for Final Run 2: 11
                 //Iterations for Final Run 3: 9
-                //Iterations for Final Run 4: 86
-                robot.finalRun4();
+                //Iterations for Final Run 4: 93
+                
+                robot.finalRun4A();
+
                 break;
 
             case 2:
